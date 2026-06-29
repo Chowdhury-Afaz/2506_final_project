@@ -15,7 +15,6 @@ class AdminDashboardController extends Controller
         return view('backend.products');
     }
 
-    function categories(){
-        return view('backend.categories');
-    }
+   
+    
 }

@@ -29,6 +29,10 @@
 	--danger:#ea4b48;
 }
 
+a{
+	text-decoration: none;
+}
+
 body {
 	background: var(--green-50);
 }
@@ -239,32 +243,47 @@ body {
 <div class="modal-body">
 <div class="row">
 
+<form action="{{ route('admin.categories.store') }}" method="POST">
+	@csrf
 <div class="col-md-6 mb-3">
 <label>Name</label>
-<input class="form-control">
+<input class="form-control" name="name">
+@error('name')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 </div>
 
 <div class="col-md-6 mb-3">
 <label>Slug</label>
-<input class="form-control">
+<input class="form-control" name="slug">
+@error('slug')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 </div>
 
 <div class="col-md-6 mb-3">
 <label>Parent</label>
-<select class="form-select">
+<select class="form-select" name="parent">
+	@error('parent')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 <option>None</option>
 </select>
 </div>
 
 <div class="col-md-6 mb-3">
 <label>Image</label>
-<input type="file" class="form-control">
+<input type="file" class="form-control" name="image">
 </div>
 
 <div class="col-12 mb-3">
 <label>Description</label>
-<textarea class="form-control" rows="4"></textarea>
+<textarea class="form-control" rows="4" name="description"></textarea>
+@error('description')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 </div>
+
 
 </div>
 </div>
@@ -273,6 +292,7 @@ body {
 <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
 <button class="btn btn-primary">Add Category</button>
 </div>
+</form>
 
 </div>
 </div>

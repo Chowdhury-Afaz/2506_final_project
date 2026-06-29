@@ -25,6 +25,9 @@
 	--warning:#ff8a00;
 	--danger:#ea4b48;
 }
+a{
+	text-decoration: none;
+}
 
 body {
 	background: var(--green-50);
