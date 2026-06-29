@@ -1,9 +1,9 @@
 <ul class="menu-inner py-1">
     <!-- Dashboard -->
-    <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+    <li class="menu-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+        <a href="{{ route('admin.dashboard') }}" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-            <div data-i18n="Analytics">Dashboard</div>
+            <div>Dashboard</div>
         </a>
     </li>
     <li class="menu-header small text-uppercase">
@@ -44,6 +44,16 @@
             </li>
         </ul>
     </li>
+
+
+  <!-- Category -->
+    <li class="menu-item {{ request()->routeIs('admin.category.*') ? 'active open' : '' }}">
+        <a href="{{ route('admin.category.index') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-category"></i>
+            <div>Category</div>
+        </a>
+    </li>
+
 
   
   
