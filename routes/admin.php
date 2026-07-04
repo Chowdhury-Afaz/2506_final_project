@@ -5,16 +5,11 @@ use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', [AdminDashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/products', [AdminDashboardController::class, 'products'])->name('products');
 
-Route::get('/product', [AdminDashboardController::class, 'dashboard'])->name('dashboard');
 
-// Category Routes
-Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+Route::prefix('/categories')->controller(CategoryController::class)->name('categories.')->group(function(){
+    Route::get('/', 'categories')->name('index');
+    Route::post('/store', 'store')->name('store');
+});
 
-Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
-
-Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
-
-Route::post('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
-
-Route::get('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
