@@ -100,7 +100,7 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                     
+                                    
                                         <img src="https://api.dicebear.com/10.x/initials/svg?seed={{ auth()->user()->name }}" alt
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
@@ -166,11 +166,65 @@
                     </div>
                 </nav>
 
+
+<style>
+
+:root{
+
+--primary:#00B207;
+
+--primary-light:#e8f9eb;
+
+}
+
+.btn-success{
+
+background:var(--primary);
+
+border:none;
+
+}
+
+.btn-success:hover{
+
+background:#049b07;
+
+}
+
+.card{
+
+border:none;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.table thead{
+
+background:#00B207;
+
+color:white;
+
+}
+
+.badge-active{
+
+background:#00B207;
+
+}
+
+</style>
+
+
+
+
                 <!-- / Navbar -->
 
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-                    @yield('main')
+                    @yield('content')
                 </div>
                 <!-- Content wrapper -->
             </div>

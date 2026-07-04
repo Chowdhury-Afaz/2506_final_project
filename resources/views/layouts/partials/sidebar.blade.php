@@ -44,7 +44,21 @@
             </li>
         </ul>
     </li>
+<!-- Category Menu -->
+<li class="menu-item">
+    <a href="{{ route('admin.category.index') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-category"></i>
+        <div data-i18n="Category">Category</div>
+    </a>
+</li>
 
+<!-- Product Menu -->
+<li class="menu-item">
+    <a href="#" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-box"></i>
+        <div data-i18n="Products">Products</div>
+    </a>
+</li>
   
-  
+
 </ul>

@@ -227,13 +227,14 @@
             <div class="login-box">
     <h2>Sign In</h2>
 
-    <form>
+    <form action="{{ route('login') }}" method="POST">
+        @csrf
         <div class="input-group">
-            <input type="email" placeholder="Email">
+            <input type="email" placeholder="Email" name="email">
         </div>
 
         <div class="input-group password-group">
-            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Password" name="password">
             <iconify-icon class="eye" icon="iconoir:eye" width="24" height="24"></iconify-icon>
         </div>
 
@@ -242,7 +243,7 @@
             </label>
             <a href="#" class="forgetPass text-end">Forget Password</a>
 
-        <button class="login-btn">Login</button>
+        <button type="submit" class="login-btn">Login</button>
 
         <p class="login-text text-center"><a href="./signup.html">
         Don’t have account? <b>  Register </b></a>
