@@ -11,6 +11,6 @@ Route::get('/products', [AdminDashboardController::class, 'products'])->name('pr
 
 Route::prefix('/categories')->controller(CategoryController::class)->name('categories.')->group(function(){
     Route::get('/', 'categories')->name('index');
-    Route::post('/store', 'categoryStore')->name('store');
+    Route::post('/store', 'store')->name('store');
 });
 
