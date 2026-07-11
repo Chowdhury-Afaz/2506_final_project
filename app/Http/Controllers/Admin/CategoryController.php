@@ -84,8 +84,9 @@ class CategoryController extends Controller
             'image' => $imageName,
         ]);
 
-        return redirect()->route('admin.category.index')
-            ->with('success', 'Category Updated Successfully!');
+return redirect()
+    ->route('admin.categories.index')
+    ->with('success', 'Category Updated Successfully!');
     }
 
     public function destroy($id)
@@ -99,7 +100,10 @@ class CategoryController extends Controller
         // Database Delete
         $category->delete();
 
-        return redirect()->route('admin.category.index')
-            ->with('success', 'Category Deleted Successfully!');
+        return redirect()
+    ->route('admin.categories.index')
+    ->with('success', 'Category Deleted Successfully!');
     }
+    
+    
 }
