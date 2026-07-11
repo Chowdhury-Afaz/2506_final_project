@@ -2,12 +2,18 @@
 
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/dashboard', [AdminDashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/products', [AdminDashboardController::class, 'products'])->name('products');
 
+Route::prefix('/products')->name('products.')->controller(ProductController::class)->group(function(){
+    Route::get('/', 'getAllProducts')->name('all');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/store', 'store')->name('store');
+
+});
 
 Route::prefix('categories')
     ->controller(CategoryController::class)

@@ -7,7 +7,7 @@
         </a>
     </li>
     <li class="menu-item {{ request()->routeIs('admin.products') ? 'active' : '' }}">
-        <a href="{{ route('admin.products') }}" class="menu-link">
+        <a href="{{ route('admin.products.all') }}" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div data-i18n="Analytics">Products</div>
         </a>

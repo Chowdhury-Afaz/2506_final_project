@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('short_description')->nullable();
             $table->float('price');
             $table->float('selling_price')->nullable();
+            $table->string('image')->nullable();
+            $table->string('gall_image')->nullable();
             // SEO
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();
