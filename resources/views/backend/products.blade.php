@@ -425,7 +425,7 @@
         <div class="d-flex align-items-center gap-3">
 
             <img
-                src="{{ asset('storage/'.$product->image) }}"
+                src="{{ getImage($product->image) }}"
                 class="product-image">
 
             <div>
