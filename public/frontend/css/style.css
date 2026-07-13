@@ -2109,3 +2109,805 @@ top: 9px;
 left: 9px;
 z-index: 2;
     }
+
+
+/* Login Page Css Redesign*/
+
+/* =====================================
+   ADMIN LOGIN DESIGN
+===================================== */
+
+#admin-login {
+    min-height: calc(100vh - 100px);
+    padding: 80px 0;
+    background: var(--gren-gray-scale-50);
+    display: flex;
+    align-items: center;
+}
+
+
+/* Main Wrapper */
+
+.admin-login-wrapper{
+
+    width:100%;
+
+    max-width:1050px;
+
+    margin:auto;
+
+    display:flex;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 70px rgba(0,38,3,.12);
+
+}
+
+
+
+/* ===============================
+   LEFT BRAND SECTION
+================================ */
+
+.login-brand {
+
+    width: 45%;
+    background: linear-gradient(
+        145deg,
+        #edf2ee,
+        #ffffff
+    );
+
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.brand-logo {
+
+    width: 170px;
+    margin-bottom: 25px;
+
+}
+
+
+.admin-tag {
+
+    display: inline-block;
+
+    background: rgba(0,178,7,0.12);
+    color: var(--branding-success);
+
+    padding: 7px 18px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.login-brand h1 {
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    color: var(--gren-gray-scale-900);
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.login-brand p {
+
+    color: var(--gray-scale-gray-–-600);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 350px;
+
+}
+
+
+
+/* =====================================
+   ECO DECORATIVE SHAPES (SPACED)
+===================================== */
+
+
+.eco-shape{
+
+    position:absolute;
+
+    z-index:1;
+
+}
+
+
+
+.eco-shape span{
+
+    position:absolute;
+
+    font-size:42px;
+
+    opacity:.6;
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+
+
+/* TOP DECORATION */
+
+.eco-top{
+
+    top:25px;
+
+    left:35px;
+
+    width:300px;
+
+    height:150px;
+
+}
+
+
+
+.eco-top span:nth-child(1){
+
+    top:0;
+
+    left:0;
+
+}
+
+
+
+.eco-top span:nth-child(2){
+
+    top:70px;
+
+    left:120px;
+
+    animation-delay:.8s;
+
+}
+
+
+
+.eco-top span:nth-child(3){
+
+    top:15px;
+
+    right:10px;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+/* BOTTOM DECORATION */
+
+.eco-bottom{
+
+    bottom:25px;
+
+    right:35px;
+
+    width:320px;
+
+    height:170px;
+
+}
+
+
+
+.eco-bottom span:nth-child(1){
+
+    bottom:10px;
+
+    left:0;
+
+}
+
+
+
+.eco-bottom span:nth-child(2){
+
+    bottom:90px;
+
+    left:140px;
+
+    animation-delay:.8s;
+
+}
+
+
+
+.eco-bottom span:nth-child(3){
+
+    bottom:25px;
+
+    right:0;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+
+@keyframes floating{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+
+/* ===============================
+   RIGHT LOGIN CARD
+================================ */
+
+
+.login-card {
+
+    width:55%;
+
+    padding:55px 50px;
+
+}
+
+
+
+.login-header {
+
+    margin-bottom:35px;
+
+}
+
+
+.login-header h2 {
+
+    font-size:32px;
+
+    color:var(--gren-gray-scale-900);
+
+    margin-bottom:8px;
+
+}
+
+
+
+.login-header p {
+
+    color:var(--gray-scale-gray-–-600);
+
+    font-size:14px;
+
+}
+
+
+
+
+/* Input */
+
+.login-input {
+
+    margin-bottom:22px;
+
+    position:relative;
+
+}
+
+
+.login-input label {
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:var(--gren-gray-scale-800);
+
+    margin-bottom:8px;
+
+}
+
+
+
+.login-input input {
+
+    width:100%;
+
+    height:52px;
+
+    border:1px solid var(--gray-scale-gray-–-200);
+
+    border-radius:12px;
+
+    padding:0 18px;
+
+    font-family:var(--font-family);
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+
+.login-input input:focus {
+
+    border-color:var(--branding-success);
+
+    box-shadow:0 0 0 4px rgba(0,178,7,.12);
+
+}
+
+
+
+/* Password Eye */
+
+
+.password-field button {
+
+    position:absolute;
+
+    right:15px;
+
+    bottom:13px;
+
+    border:0;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:var(--gray-scale-gray-–-500);
+
+}
+
+
+
+
+
+/* Options */
+
+
+.login-options {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+
+}
+
+
+
+.login-options label {
+
+    color:var(--gray-scale-gray-–-600);
+
+}
+
+
+.login-options a {
+
+    color:var(--branding-success);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+
+/* Button */
+
+
+.admin-login-btn {
+
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--branding-success);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+.admin-login-btn:hover {
+
+    background:var(--branding-success-dark);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* Secure Text */
+
+
+.secure-text {
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    color:var(--gray-scale-gray-–-500);
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:992px){
+
+
+    .admin-login-wrapper{
+
+        flex-direction:column;
+
+    }
+
+
+    .login-brand,
+    .login-card{
+
+        width:100%;
+
+    }
+
+
+}
+
+
+@media(max-width:576px){
+
+
+    #admin-login{
+
+        padding:30px 15px;
+
+    }
+
+
+    .login-card{
+
+        padding:35px 25px;
+
+    }
+
+
+    .login-brand{
+
+        padding:35px 25px;
+
+    }
+
+
+    .login-brand h1{
+
+        font-size:30px;
+
+    }
+
+
+}
+
+
+/* =====================================
+   FINAL LOGIN UI POLISH
+===================================== */
+
+
+.admin-login-wrapper {
+
+    transition: .35s ease;
+
+}
+
+
+.admin-login-wrapper:hover {
+
+    box-shadow: 
+    0 35px 90px rgba(0,38,3,.16);
+
+}
+
+.brand-logo {
+
+    animation: logoFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes logoFloat {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-6px);
+
+    }
+
+}
+
+.admin-tag {
+
+    transition:.3s ease;
+
+}
+
+
+.admin-tag:hover {
+
+    background:var(--branding-success);
+
+    color:white;
+
+}
+
+.login-input input:hover {
+
+    border-color:var(--branding-success);
+
+}
+
+
+.login-input input::placeholder {
+
+    color:var(--gray-scale-gray-–-400);
+
+}
+
+.password-field button {
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    transition:.3s ease;
+
+}
+
+
+
+.password-field button:hover {
+
+    background:var(--gren-gray-scale-50);
+
+    color:var(--branding-success);
+
+}
+
+.admin-login-btn {
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.admin-login-btn::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+
+    transition:.6s;
+
+}
+
+
+
+.admin-login-btn:hover::before {
+
+    left:100%;
+
+}
+
+.login-brand::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    background:rgba(0,178,7,.08);
+
+    border-radius:50%;
+
+    top:-80px;
+    right:-80px;
+
+}
+
+
+
+.login-brand::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:rgba(0,178,7,.05);
+
+    border-radius:50%;
+
+    bottom:-60px;
+    left:-50px;
+
+}
+
+.login-card {
+
+    animation: cardSlide .7s ease forwards;
+
+}
+
+
+
+@keyframes cardSlide {
+
+    from {
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+
+    .eco-shape{
+
+        display:none;
+
+    }
+
+
+    .brand-logo{
+
+        width:140px;
+
+    }
+
+
+    .login-header h2{
+
+        font-size:26px;
+
+    }
+
+
+}
+
+/* Login Page Css Redesign End*/
