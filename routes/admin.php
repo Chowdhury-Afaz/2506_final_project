@@ -12,6 +12,7 @@ Route::prefix('/products')->name('products.')->controller(ProductController::cla
     Route::get('/', 'getAllProducts')->name('all');
     Route::get('/create', 'create')->name('create');
     Route::post('/store', 'store')->name('store');
+    Route::delete('/{id}', 'destroy')->name('destroy');
 
 });
 

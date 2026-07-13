@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('price');
             $table->float('selling_price')->nullable();
             $table->string('image')->nullable();
-            $table->string('gall_image')->nullable();
+            $table->string('gallery_image')->nullable();
             // SEO
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();

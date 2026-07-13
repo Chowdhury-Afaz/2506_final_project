@@ -164,11 +164,11 @@ TABLE
 
 .action-btn{
 
-    width:38px;
+    width:42px;
 
-    height:38px;
+    height:42px;
 
-    border-radius:10px;
+    border-radius:12px;
 
     display:flex;
 
@@ -178,11 +178,13 @@ TABLE
 
     transition:.25s;
 
+    box-shadow:0 8px 18px rgba(0,0,0,.06);
+
 }
 
 .action-btn:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
@@ -238,5 +240,750 @@ MODEL
     object-fit:cover;
 
     border-radius:14px;
+
+}
+
+
+/* ==========================================
+  Product PAGE HEADER
+========================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--green-900);
+
+}
+
+.page-header p{
+
+    font-size:15px;
+
+    color:#6c757d;
+
+}
+
+.page-header .btn{
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 20px rgba(43,87,46,.15);
+
+}
+
+.page-header .btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   PRODUCT STAT CARDS
+=========================== */
+
+.product-stat-card{
+
+    border:0;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.product-stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.stat-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+}
+
+.bg-primary-soft{
+
+    background:#e7f0ff;
+
+    color:#0d6efd;
+
+}
+
+.bg-success-soft{
+
+    background:#e8fff0;
+
+    color:#00b207;
+
+}
+
+.bg-warning-soft{
+
+    background:#fff5e6;
+
+    color:#ff8a00;
+
+}
+
+.bg-danger-soft{
+
+    background:#ffeaea;
+
+    color:#ea4b48;
+
+}
+
+
+/* ===================================
+   FILTER TOOLBAR
+=================================== */
+
+.filter-card{
+
+    border:0;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    padding: 20px 20px;
+
+}
+
+.search-box{
+
+    position:relative;
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    top:50%;
+
+    left:15px;
+
+    transform:translateY(-50%);
+
+    color:#999;
+
+    transition: color .3s ease;
+
+}
+
+.search-box:focus-within i {
+    color: #04B30B;
+}
+
+.search-box input {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    transition: all .25s ease;
+    padding: 0 40px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #04B30B;
+    box-shadow:
+        0 0 0 3px rgba(4, 179, 11, .15),
+        0 8px 20px rgba(4, 179, 11, .08);
+}
+
+.filter-card .form-control,
+.filter-card .form-select{
+
+    height:48px;
+
+    border-radius:12px;
+
+}
+
+.filter-card .btn{
+
+    height:48px;
+
+    border-radius:12px;
+
+}
+
+/* ===========================
+   PRODUCT TABLE
+=========================== */
+
+.product-table-card{
+
+    border:0;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    width: 100%;
+
+}
+
+.product-table{
+
+    margin-bottom:0;
+
+}
+
+.product-table thead th{
+
+    color:#6c757d;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    padding:18px 20px;
+
+    border-bottom:2px solid #edf2f7;
+
+    text-align: center;
+
+}
+
+.product-table tbody td{
+
+    padding:18px 20px;
+
+    vertical-align:middle;
+
+    border-color:#f1f5f9;
+
+}
+
+.product-table tbody tr{
+
+    transition:.25s;
+
+}
+
+.product-table tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ===========================
+   PRODUCT ROW
+=========================== */
+
+.product-image{
+
+    width:64px;
+    height:64px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    border:1px solid #edf2f7;
+
+    padding:4px;
+
+    background:#fff;
+
+    flex-shrink:0;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.product-title{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#1e293b;
+
+}
+
+.product-meta{
+
+    font-size:13px;
+
+    color:#94a3b8;
+
+}
+
+.category-pill{
+
+    background:#eef9f0;
+
+    color:#00b207;
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+}
+
+.stock-badge{
+
+    background:#eafaf0;
+
+    color:#00b207;
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+}
+
+.stock-badge.in-stock{
+
+    background:#e9f9ef;
+
+    color:#00b207;
+
+}
+
+.stock-badge.low{
+
+    background:#fff4e5;
+
+    color:#ff9800;
+
+}
+
+.stock-badge.out{
+
+    background:#ffeaea;
+
+    color:#ea4b48;
+
+}
+
+.badge-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:#edf9f0;
+
+    color:#00b207;
+
+    font-weight:600;
+
+    font-size:.85rem;
+
+}
+
+.badge-stock{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:#edf9f0;
+
+    color:#00b207;
+
+    font-weight:600;
+
+    font-size:.85rem;
+
+}
+
+/* ============================
+   PRODUCT FORM
+============================ */
+
+.product-form-card{
+
+    border:0;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.page-title{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:var(--green-900);
+
+}
+
+.page-header{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.btn-back{
+    background: #E8F8EE;
+    color: #198754;
+    border: 1px solid #C7EFD5;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.btn-back:hover{
+    background: #00B207;
+    color: #fff;
+    border-color: #00B207;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, .18);
+}
+
+.btn-back i{
+    transition: transform .3s ease;
+}
+
+.btn-back:hover i{
+    transform: translateX(-4px);
+}
+
+.page-header p{
+
+    font-size:15px;
+
+    color:#6c757d;
+
+}
+
+/* ===========================
+   FORM SECTION
+=========================== */
+
+.form-section-card{
+
+    border:0;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.form-section-card .card-header{
+
+    padding:24px 24px 0;
+
+}
+
+.form-section-card .card-body{
+
+    padding:24px;
+
+}
+
+.form-section-card .form-control,
+.form-section-card .form-select{
+
+    height:50px;
+
+    border-radius:12px;
+
+}
+
+.form-section-card textarea{
+
+    min-height:180px;
+
+    border-radius:12px;
+
+}
+
+/* ===========================
+   PRICE CARD
+=========================== */
+
+.input-group-text{
+
+    background:#f8fafc;
+
+    border:1px solid #dee2e6;
+
+    font-weight:700;
+
+    color:#198754;
+
+    border-radius:12px 0 0 12px;
+
+}
+
+.input-group .form-control{
+
+    border-radius:0 12px 12px 0;
+
+}
+
+.input-group{
+
+    box-shadow:none;
+
+}
+
+/* ==========================
+   IMAGE CARD
+========================== */
+
+.image-preview-box{
+
+    height:320px;
+
+    border:2px dashed #d8e2dc;
+
+    border-radius:18px;
+
+    background:#fafdfb;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.image-preview-box img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.upload-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.upload-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 14px;
+
+    border-radius:12px;
+
+    background:#f8fafc;
+
+    font-weight:500;
+
+}
+
+.upload-item i{
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   PRODUCT GALLERY
+=========================== */
+
+.gallery-preview{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border:2px solid #eef2f7;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+.gallery-remove{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    width:32px;
+
+    height:32px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ea4b48;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transition:.25s;
+
+}
+
+.image-preview-box{
+
+    min-height:340px;
+
+    padding:15px;
+
+}
+
+.gallery-item:hover .gallery-remove{
+
+    opacity:1;
+
+}
+
+.gallery-remove:hover{
+
+    background:#d63031;
+
+    transform:scale(1.08);
+
+}
+.gallery-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 14px 30px rgba(0,0,0,.12);
+
+}
+
+.form-section-card{
+
+    border:0;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.form-section-card .card-header{
+
+    padding:24px 24px 0;
+
+}
+
+.form-section-card .card-body{
+
+    padding:24px;
 
 }

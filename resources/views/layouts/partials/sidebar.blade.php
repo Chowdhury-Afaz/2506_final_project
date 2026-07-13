@@ -6,18 +6,7 @@
             <div data-i18n="Analytics">Dashboard</div>
         </a>
     </li>
-    <li class="menu-item {{ request()->routeIs('admin.products') ? 'active' : '' }}">
-        <a href="{{ route('admin.products.all') }}" class="menu-link">
-            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-            <div data-i18n="Analytics">Products</div>
-        </a>
-    </li>
-    <li class="menu-item {{ request()->routeIs('admin.categories.index') ? 'active' : '' }}">
-        <a href="{{ route('admin.categories.index') }}" class="menu-link">
-            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-            <div data-i18n="Analytics">Categories</div>
-        </a>
-    </li>
+    
     <li class="menu-header small text-uppercase">
         <span class="menu-header-text">Pages</span>
     </li>
@@ -56,6 +45,23 @@
             </li>
         </ul>
     </li>
+
+    <!-- Categories -->
+    <li class="menu-item {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}">
+        <a href="{{ route('admin.categories.index') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-category"></i>
+            <div>Categories</div>
+        </a>
+    </li>
+
+    <!-- Products -->
+<li class="menu-item {{ request()->routeIs('admin.products.*') ? 'active' : '' }}">
+    <a href="{{ route('admin.products.all') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-box"></i>
+        <div>Products</div>
+    </a>
+</li>
+
 
   
   
