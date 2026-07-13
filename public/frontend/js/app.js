@@ -378,3 +378,47 @@ $(document).ready(function() {
       wishlistBtn.style.background = '#fff';
     }
   });
+
+
+const togglePassword = document.getElementById("togglePassword");
+
+const password = document.getElementById("password");
+
+const passwordIcon = document.getElementById("passwordIcon");
+
+togglePassword.addEventListener("click", function () {
+
+    if(password.type === "password"){
+
+        password.type = "text";
+
+        passwordIcon.setAttribute("icon","iconoir:eye-off");
+
+    }else{
+
+        password.type = "password";
+
+        passwordIcon.setAttribute("icon","iconoir:eye");
+
+    }
+
+});
+
+
+const form = document.querySelector("form");
+
+const button = document.getElementById("loginBtn");
+
+form.addEventListener("submit",function(){
+
+    button.disabled = true;
+
+    button.innerHTML = `
+
+        <span class="spinner-border spinner-border-sm"></span>
+
+        Signing In...
+
+    `;
+
+});

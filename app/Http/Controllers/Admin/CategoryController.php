@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -24,16 +25,13 @@ class CategoryController extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        $imageName = null;
+$imageName = null;
 
-        if ($request->hasFile('image')) {
+if ($request->hasFile('image')) {
 
-            $image = $request->file('image');
-
-            $imageName = time() . '_' . $image->getClientOriginalName();
-
-            $image->move(public_path('uploads/categories'), $imageName);
-        }
+    $imageName = $request->file('image')
+        ->store('categories', 'public');
+}
 
         Category::create([
             'name'  => $request->name,
@@ -63,20 +61,17 @@ class CategoryController extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        $imageName = $category->image;
+$imageName = $category->image;
 
-        if ($request->hasFile('image')) {
+if ($request->hasFile('image')) {
 
-            if ($category->image && file_exists(public_path('uploads/categories/' . $category->image))) {
-                unlink(public_path('uploads/categories/' . $category->image));
-            }
+    if ($category->image && Storage::disk('public')->exists($category->image)) {
+        Storage::disk('public')->delete($category->image);
+    }
 
-            $image = $request->file('image');
-
-            $imageName = time() . '_' . $image->getClientOriginalName();
-
-            $image->move(public_path('uploads/categories'), $imageName);
-        }
+    $imageName = $request->file('image')
+        ->store('categories', 'public');
+}
 
         $category->update([
             'name' => $request->name,
@@ -93,10 +88,9 @@ return redirect()
     {
         $category = Category::findOrFail($id);
 
-        if ($category->image && file_exists(public_path('uploads/categories/' . $category->image))) {
-            unlink(public_path('uploads/categories/' . $category->image));
-        }
-
+        if ($category->image && Storage::disk('public')->exists($category->image)) {
+    Storage::disk('public')->delete($category->image);
+}
         // Database Delete
         $category->delete();
 
