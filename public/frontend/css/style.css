@@ -43,6 +43,7 @@ ul, li {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 form input, button, select, textarea {
 	font-family: var(--font-family);
@@ -72,126 +73,539 @@ iconify-icon{
 	border: none;
 	font-size: 24px;
 }
+/*=========================
+    Header Top
+==========================*/
+
+/*=========================
+        Header Top
+==========================*/
+
 #headertop{
-margin-bottom: 20px;
-border-bottom: 1px solid var(--gray-scale-gray-–-300);
+    background: #f6fff4;
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
-#headertop  select{
+
+.header-top-wrapper{
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*=========================
+        Left
+==========================*/
+
+.header-top-left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 130%;
-    text-align: center;
-    color: var(--gray-scale-gray-–-600);
+    color: #4B5563;
+}
+
+.header-top-left iconify-icon{
+    font-size: 17px;
+    color: var(--branding-success);
+}
+
+/*=========================
+        Right
+==========================*/
+
+.header-top-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/*=========================
+      Dropdown
+==========================*/
+
+.top-dropdown{
+    position: relative;
+}
+
+.top-dropdown select{
+    background: transparent;
     border: none;
-    background-color: transparent;
-    margin-right: 20px;
-}
-#headertop form a{
-    text-decoration: none;
-    font-family: var(--font-family);
-font-weight: 400;
-font-size: 12px;
-line-height: 130%;
-color: var(--gray-scale-gray-–-600);
-    padding-left: 20px;
-    border-left: 1px solid var(--gray-scale-gray-–-400);
-}
-#headermid form{
-	position: relative;
-	display: flex;
-	width: 100%;
-}
-#headermid form input{
-	padding: 12px 18px 12px 44px;
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-color: var(--gray-scale-gray-–-500);
-border: 1px solid var(--gray-scale-gray-–-300);
-border-radius: 4px 0 0 4px;
-gap: 10px;
-width: 80%;
-}
-#headermid form iconify-icon{
-	position: absolute;
-	top: 50%;
-	left: 20px;
-	transform: translateY(-50%);
-}
-#headermid form  button{
-	border-radius: 0 6px 6px 0;
-padding: 14px 24px;
-background: var(--branding-success);
-font-family: var(--font-family);
-font-weight: 600;
-font-size: 14px;
-line-height: 120%;
-color: var(--gray-scale-white);
-}
-#headermid .iconsLove{
-	font-size: 36px;
-	text-decoration: none;
-	color: var(--gray-scale-gray-–-900);
-	padding-right: 20px;
-	border-right: 1px solid var(--gray-scale-gray-–-300);
-}
-#headermid .iconsCart{
-	font-size: 36px;
-	text-decoration: none;
-	color: var(--gray-scale-gray-–-900);
-	padding-left: 20px;
-	position: relative;
-}
-#headermid .iconsCart p {
-    border: 1px solid var(--gray-scale-white);
-    border-radius: 16px;
-    background: var(--branding-success-dark);
-    font-family: var(--font-family);
+    cursor: pointer;
+
+    font-size: 13px;
     font-weight: 500;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
+    color: #374151;
+
+    transition: .3s;
+}
+
+.top-dropdown select:hover{
+    color: var(--branding-success);
+}
+
+.top-dropdown select:focus{
+    outline: none;
+}
+
+/*=========================
+        Divider
+==========================*/
+
+.top-divider{
+    width: 1px;
+    height: 18px;
+    background: #D1D5DB;
+}
+
+/*=========================
+      Auth Links
+==========================*/
+
+.auth-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-links span{
+    color: #9CA3AF;
+}
+
+.auth-links a{
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.auth-links a:hover{
+    color: var(--branding-success);
+}
+/*=========================
+    Header Main
+==========================*/
+
+#headermid{
+    padding: 28px 0;
+    background: #fff;
+}
+
+.header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/*=========================
+    Logo
+==========================*/
+
+.header-logo{
+    flex: 0 0 auto;
+}
+
+.header-logo img{
+    max-width: 180px;
+    display: block;
+}
+
+/*=========================
+    Search
+==========================*/
+
+.header-search{
+    flex: 1;
+    max-width: 650px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-scale-gray-–-200);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--gray-scale-white);
+}
+
+.search-box iconify-icon{
+    font-size: 22px;
+    color: var(--gray-scale-gray-–-500);
+    margin-left: 18px;
+}
+
+.search-box input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 15px;
+    font-family: var(--font-family);
+}
+
+.search-box button{
+    height: 50px;
+    padding: 0 28px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
     color: var(--gray-scale-white);
+    background: var(--branding-success);
+    transition: .3s;
+}
+
+.search-box button:hover{
+    background: var(--branding-success-dark);
+}
+
+/*=========================
+    Header Action
+==========================*/
+
+.header-action{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-item{
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #1A1A1A;
+
+    transition: all .3s ease;
+}
+
+.action-item iconify-icon{
+    font-size: 22px;
+    transition: all .3s ease;
+}
+
+.action-item:hover{
+    background: rgba(0,178,7,.12);
+}
+
+.action-item:hover iconify-icon{
+    color: var(--branding-success);
+}
+
+.divider{
+    width: 1px;
+    height: 32px;
+    background: var(--gray-scale-gray-–-200);
+}
+
+/*=========================
+        Cart
+==========================*/
+
+.cart{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+.cart:hover{
+    background: rgba(0,178,7,.08);
+}
+
+.cart-icon{
+    position: relative;
+}
+
+.cart-icon iconify-icon{
+    font-size: 24px;
+}
+
+.cart-icon .badge{
     position: absolute;
-    top: 10px;
-    right: 3px;
-    width: 16px;
-    height: 16px;
+
+    top: -6px;
+    right: -8px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #fff;
+    background: var(--branding-success);
+
+    border: 2px solid #fff;
 }
-#headermid .price{
-	display: inline-block;
-	padding-left: 15px;
-	padding-top: 5px;
+
+.cart-info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
 }
+
+.cart-info small{
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.cart-info strong{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.cart:hover strong{
+    color: var(--branding-success);
+}
+
+/* =====================================
+   Main Header End
+===================================== */
+
+/*=========================
+        Navbar
+==========================*/
+
 .headerlast{
-	padding: 16px;
-background: var(--gray-scale-gray-–-800);
-margin-top: 20px;
+    background: #fff;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
 }
-.headerlast .nav a{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 14px;
-line-height: 150%;
-color: var(--gray-scale-gray-–-400);
-transition: 0.3s;
-text-align: start;
-padding: 0 30px 0 0;
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
 }
-.headerlast ul li a:hover{
-	color: var(--gray-scale-white);
+
+/*=========================
+        Menu
+==========================*/
+
+.main-menu ul{
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    margin: 0;
+    padding: 0;
 }
-.headerlast .contact a{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 14px;
-line-height: 150%;
-color: var(--gray-scale-white);
-transition: 0.3s;
-text-align: start;
-padding: 0 30px 0 0;
+
+.main-menu li{
+    list-style: none;
 }
+
+.main-menu a{
+    position: relative;
+    display: inline-block;
+
+    color: #374151;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: all .3s ease;
+}
+
+.main-menu a:hover,
+.main-menu a.active{
+    color: var(--branding-success);
+}
+
+.main-menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--branding-success);
+
+    transition: width .3s ease;
+}
+
+.main-menu a:hover::after,
+.main-menu a.active::after{
+    width: 100%;
+}
+
+/*=========================
+    Contact
+==========================*/
+
+.nav-contact a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #1a1a1a;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.nav-contact a:hover{
+    color: var(--branding-success);
+}
+
+.nav-contact iconify-icon{
+    font-size: 20px;
+    color: var(--branding-success);
+}
+
+/*=========================
+    Contact
+==========================*/
+
+.nav-contact a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #1a1a1a;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.nav-contact a:hover{
+    color: var(--branding-success);
+}
+
+.nav-contact iconify-icon{
+    font-size: 22px;
+    color: var(--branding-success);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(0, 178, 7, 0.08);
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.contact-info small{
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.contact-info span{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.nav-contact a:hover .contact-info span{
+    color: var(--branding-success);
+}
+
+/*=========================
+    Contact
+==========================*/
+
+.nav-contact a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #1a1a1a;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.nav-contact a:hover{
+    color: var(--branding-success);
+}
+
+.nav-contact iconify-icon{
+    font-size: 22px;
+    color: var(--branding-success);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(0, 178, 7, 0.08);
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.contact-info small{
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.contact-info span{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.nav-contact a:hover .contact-info span{
+    color: var(--branding-success);
+}
+
+.nav-contact iconify-icon{
+    transition: .3s;
+}
+
+.nav-contact a:hover iconify-icon{
+    background: var(--branding-success);
+    color: #fff;
+}
+
 #banner{
 	background-color: var(--gray-scale-gray-–-50);
 	position: relative;

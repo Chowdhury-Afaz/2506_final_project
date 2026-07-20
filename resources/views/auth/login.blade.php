@@ -75,14 +75,6 @@
 </div>
 
 
-<!-- <div class="brand-image">
-
-    <div class="eco-placeholder">
-        🥬 🥕 🍅
-    </div>
-
-</div> -->
-
 
             <!-- RIGHT SIDE -->
             <div class="login-card">

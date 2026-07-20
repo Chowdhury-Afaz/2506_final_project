@@ -16,94 +16,204 @@
 
 <body>
     <header>
-        <div id="headertop">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 d-none d-lg-block text-center text-lg-start">
-                        <address>
-                            <iconify-icon icon="tdesign:location"></iconify-icon>Store Location: Lincoln- 344, Illinois,
-                            Chicago, USA
-                        </address>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-end">
-                        <form>
-                            <select>
-                                <option>Eng</option>
-                                <option>Ban</option>
-                            </select>
-                            <select>
-                                <option>USD</option>
-                                <option>BDT</option>
-                            </select>
-                            <a href="./signin.html">Sign In / Sign Up</a>
-                        </form>
-                    </div>
-                </div>
+    
+    <!-- ==========================
+         Header Top start
+    ========================== -->
+
+<div id="headertop">
+    <div class="container">
+
+        <div class="header-top-wrapper">
+
+            <!-- Left -->
+            <div class="header-top-left">
+
+                <iconify-icon icon="tdesign:location"></iconify-icon>
+
+                <span>
+                    Store Location: Lincoln-344, Illinois, Chicago, USA
+                </span>
+
             </div>
-        </div>
-        <div id="headermid">
-            <div class="container d-none d-lg-block">
-                <div class="row align-items-center">
-                    <div class="col-lg-3">
-                        <a href="{{ route('homepage') }}"><img src="{{ asset('frontend/img/Logo.png')}}" alt="Ecobazer"></a>
-                    </div>
-                    <div class="col-lg-6 m-auto">
-                        <form>
-                            <input type="search" placeholder="Search">
-                            <iconify-icon icon="teenyicons:search-outline" width="15" height="15" style="color: #000">
-                            </iconify-icon>
-                            <button class="btnsearch">Search</button>
-                        </form>
-                    </div>
-                    <div class="col-lg-3 d-flex justify-content-end">
-                        <a href="#" class="iconsLove">
-                            <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                        </a>
-                        <a href="#" class="iconsCart">
-                            <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            <p>2</p>
-                        </a>
-                        <div class="price">
-                            <p>Shopping cart:</p>
-                            <h6>$57.00</h6>
-                        </div>
-                    </div>
+
+            <!-- Right -->
+            <div class="header-top-right">
+
+                <div class="top-dropdown">
+                    <select>
+                        <option>ENG</option>
+                        <option>BN</option>
+                    </select>
                 </div>
-            </div>
-        </div>
-        <div class="headerlast d-none d-lg-block">
-            <div class="container">
-                <div class="row">
-                    <div class="nav col-lg-8">
-                        <ul class="d-flex">
-                            <li>
-                                <a href="{{ route('homepage') }}" class="active">Home</a>
-                            </li>
-                            <li>
-                                <a href="./shop.html">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contact col-lg-4 text-end">
-                        <a href="tel:(219) 555-0114" class="callBtn">
-                            <iconify-icon icon="bx:phone-call" width="24" height="24"></iconify-icon> (219) 555-0114
-                        </a>
-                    </div>
+
+                <div class="top-dropdown">
+                    <select>
+                        <option>USD</option>
+                        <option>BDT</option>
+                    </select>
                 </div>
+
+                <div class="top-divider"></div>
+
+                <div class="auth-links">
+
+                    <a href="{{ route('login') }}">
+                        Sign In
+                    </a>
+
+                    <span>/</span>
+
+                    <a href="#">
+                        Sign Up
+                    </a>
+
+                </div>
+
             </div>
+
         </div>
+
+    </div>
+</div>
+        
+<!-- ==========================
+     Header Top end
+========================== -->     
+
+<div id="headermid">
+    <div class="container">
+
+        <div class="header-main">
+
+            <!-- Logo -->
+            <div class="header-logo">
+                <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('frontend/img/Logo.png') }}" alt="EcoBazar">
+                </a>
+            </div>
+
+            <!-- Search -->
+            <div class="header-search">
+
+                <form>
+
+                    <div class="search-box">
+
+                        <iconify-icon
+                            icon="teenyicons:search-outline">
+                        </iconify-icon>
+
+                        <input
+                            type="search"
+                            placeholder="Search for products...">
+
+                        <button type="submit">
+                            Search
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Right -->
+            <div class="header-action">
+
+                <a href="#" class="action-item">
+
+                    <iconify-icon
+                        icon="simple-line-icons:heart">
+                    </iconify-icon>
+
+                </a>
+
+                <div class="divider"></div>
+
+                <a href="#" class="action-item cart">
+
+                    <span class="cart-icon">
+
+                        <iconify-icon
+                            icon="clarity:shopping-bag-line">
+                        </iconify-icon>
+
+                        <span class="badge">2</span>
+
+                    </span>
+
+                    <div class="cart-info">
+                        <small>Shopping Cart</small>
+                        <strong>$57.00</strong>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- ==========================
+     Main Header End
+========================== -->     
+
+<div class="headerlast d-none d-lg-block">
+
+    <div class="container">
+
+<div class="header-navbar">
+
+    <!-- Navigation -->
+    <nav class="main-menu">
+        <ul>
+
+            <li>
+                <a href="{{ route('homepage') }}" class="active">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Shop</a>
+            </li>
+
+            <li>
+                <a href="#">Categories</a>
+            </li>
+
+            <li>
+                <a href="#">Blog</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="{{ route('contact') }}">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Support -->
+    <div class="nav-contact">
+        <a href="tel:+12195550114">
+            <iconify-icon icon="bx:phone-call"></iconify-icon>
+            <span>(219) 555-0114</span>
+        </a>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+<!-- ==========================
+     Header last End
+========================== -->
+
         <div class="mblnavbar d-lg-none d-flex">
             <div class="container">
                 <div class="row align-items-center">
