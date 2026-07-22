@@ -10,12 +10,12 @@ class FrontendController extends Controller
         return view('frontend.index');
     }
 
+    function shop(){
+        return view('frontend.shop');
+    }
 
     function contact(){
         return view('frontend.contact');
     }
 
-    function shop(){
-        return view('frontend.shop');
-    }
 }
