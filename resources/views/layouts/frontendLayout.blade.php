@@ -171,11 +171,11 @@
         <ul>
 
             <li>
-                <a href="{{ route('homepage') }}" class="active">Home</a>
+                <a href="{{ route('homepage') }}" class="{{ request()->routeIs('homepage') ? 'active' : '' }}">Home</a>
             </li>
 
             <li>
-                <a href="#">Shop</a>
+                <a href="{{ route('shop') }}" class="{{ request()->routeIs('shop') ? 'active' : '' }}">Shop</a>
             </li>
 
             <li>
@@ -191,7 +191,7 @@
             </li>
 
             <li>
-                <a href="{{ route('contact') }}">Contact</a>
+                 <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
             </li>
 
         </ul>

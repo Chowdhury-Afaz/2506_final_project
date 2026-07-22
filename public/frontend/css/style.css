@@ -3325,3 +3325,901 @@ z-index: 2;
 }
 
 /* Login Page Css Redesign End*/
+
+/*=====================================
+    CONTACT HERO START
+======================================*/
+
+#contactHero{
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    text-align: center;
+    background: linear-gradient(180deg,#F7FFF8 0%,#FFFFFF 100%);
+    z-index: 1;
+}
+
+#contactHero .container{
+    position: relative;
+    z-index: 2;
+}
+
+.contact-subtitle{
+    display: inline-block;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-title{
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--green-900);
+    margin-bottom: 20px;
+}
+
+.contact-title span{
+    color: var(--primary);
+}
+
+.contact-description{
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--gray-600);
+}
+
+/*=====================================
+    HERO SHAPES
+======================================*/
+
+.hero-shape{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: .35;
+    animation: floatShape 8s ease-in-out infinite;
+}
+
+.hero-shape-1{
+    width: 260px;
+    height: 260px;
+    background:#00B207;
+    top: -80px;
+    left: -80px;
+}
+
+.hero-shape-2{
+    width: 320px;
+    height: 320px;
+    background:#00B207;
+    right: -100px;
+    bottom: -120px;
+    animation-delay: 2s;
+}
+
+@keyframes floatShape{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+/*=====================================
+    CONTACT SECTION START
+======================================*/
+
+#contactInfo{
+    padding: 50px 0;
+}
+
+.contact-info-card{
+    position: relative;
+    height: 100%;
+    padding: 40px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.6);
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+    overflow: hidden;
+}
+
+/* Green Accent Line */
+
+.contact-info-card::after{
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(0,178,7,.05);
+}
+
+/*=====================================
+    CARD HEADER
+======================================*/
+
+.card-tag{
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-info-card h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--green-900);
+    margin-bottom: 15px;
+}
+
+.contact-info-card > p{
+    color: var(--gray-600);
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+/*=====================================
+    INFO ITEM
+======================================*/
+
+.info-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: .35s ease;
+}
+
+.info-item:last-of-type{
+    border-bottom: none;
+}
+
+.info-item:hover{
+    transform: translateX(8px);
+}
+
+/*=====================================
+    ICON
+======================================*/
+
+.info-icon{
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(0,178,7,.10);
+
+    transition: .35s ease;
+}
+
+.info-icon iconify-icon{
+    font-size: 24px;
+    color: var(--primary);
+    transition: .35s ease;
+}
+
+.info-item:hover .info-icon{
+    background: rgba(0,178,7,.12);
+    transform: rotate(8deg) scale(1.08);
+}
+
+.info-item:hover .info-icon iconify-icon{
+    color: var(--primary);
+}
+
+/*=====================================
+    TEXT
+======================================*/
+
+.info-content span{
+    display: block;
+    margin-bottom: 6px;
+    color: var(--gray-500);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info-content h6{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--green-900);
+}
+
+/*=====================================
+    SOCIAL
+======================================*/
+
+.contact-social{
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.contact-social a{
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: var(--gray-50);
+
+    color: var(--gray-700);
+    font-size: 20px;
+
+    transition: .35s ease;
+    border: 1px solid transparent;
+}
+
+.contact-social a:hover{
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+/*=====================================
+    RESPONSIVE
+======================================*/
+
+@media (max-width:991px){
+
+    #contactInfo{
+        padding: 70px 0;
+    }
+
+    .contact-info-card{
+        padding: 30px;
+    }
+
+}
+
+@media (max-width:575px){
+
+    .contact-info-card{
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .contact-info-card h3{
+        font-size: 26px;
+    }
+
+    .info-item{
+        gap: 14px;
+    }
+
+    .info-icon{
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+
+}
+
+/*=====================================
+    CONTACT FORM CARD
+======================================*/
+
+.contact-form-card{
+    position: relative;
+    height: 100%;
+    padding: 40px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.6);
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+    overflow: hidden;
+}
+
+.contact-form-card .card-tag{
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form-card h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--green-900);
+    margin-bottom: 15px;
+}
+
+.contact-form-card > p{
+    color: var(--gray-600);
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+/*=====================================
+    FORM
+======================================*/
+
+.contact-form-card form{
+    margin-top: 10px;
+    background: rgba(255,255,255,.72);
+}
+
+.contact-form-card input,
+.contact-form-card textarea{
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 14px;
+    background: rgba(255,255,255,.85);
+
+    color: var(--green-900);
+
+    transition: .3s ease;
+}
+
+.contact-form-card input{
+    height: 58px;
+    padding: 0 18px;
+}
+
+.contact-form-card textarea{
+    min-height: 180px;
+    resize: none;
+    padding: 18px;
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder{
+    color: var(--gray-scale-gray-–-300);
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus{
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(0,178,7,.08);
+
+}
+
+.contact-form-card::after{
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(0,178,7,.05);
+}
+.contact-form-card::before{
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: -70px;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background: rgba(132,209,135,.08);
+
+    z-index: 0;
+}
+
+/*=====================================
+    BUTTON
+======================================*/
+
+.contact-btn{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 34px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: var(--primary);
+
+    color: var(--branding-success-bright);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s ease;
+
+}
+
+.contact-btn iconify-icon{
+
+    font-size: 20px;
+
+    transition: .35s ease;
+
+}
+
+.contact-btn:hover{
+
+    background: var(--branding-success-bright);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(0,178,7,.25);
+
+    color: #fff;
+
+}
+
+.contact-btn:hover iconify-icon{
+
+    transform: translateX(6px);
+
+}
+
+/* =====================================
+   Responsive
+===================================== */
+@media (max-width:991px){
+
+    .contact-form-card{
+
+        padding:30px;
+
+    }
+
+}
+
+@media (max-width:575px){
+
+    .contact-form-card{
+
+        padding:25px;
+
+        border-radius:18px;
+
+    }
+
+    .contact-form-card h3{
+
+        font-size:26px;
+
+    }
+
+    .contact-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*=====================================
+    CONTACT MAP
+======================================*/
+
+#contactMap{
+    padding: 50px 0;
+}
+
+.section-heading{
+    max-width: 650px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2{
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--green-900);
+    margin: 15px 0;
+}
+
+.section-heading p{
+    color: var(--gray-600);
+    line-height: 28px;
+}
+
+.map-card{
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: rgba(255,255,255,.75);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+.map-card iframe{
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+/*=====================================
+    ERROR PAGE START
+======================================*/
+
+#errorPage{
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background: linear-gradient(180deg, #F7FFF8 0%, #FFFFFF 100%);
+}
+
+.error-content{
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/*=====================================
+    IMAGE
+======================================*/
+
+.error-image{
+    margin-bottom: 40px;
+}
+
+.error-image img{
+    max-width: 100%;
+    width: 520px;
+    height: auto;
+    user-select: none;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/*=====================================
+    TEXT
+======================================*/
+
+.error-subtitle{
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--branding-error);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.error-text h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gren-gray-scale-900);
+    margin-bottom: 18px;
+}
+
+.error-text p{
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--gray-scale-gray-–-600);
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/*=====================================
+    BUTTONS
+======================================*/
+
+.error-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.error-btn a{
+    min-width: 190px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .35s;
+}
+
+/* Primary */
+
+.error-btn .primary-btn{
+    background: var(--branding-success);
+    color: #fff;
+}
+
+.error-btn .primary-btn:hover{
+    background: var(--branding-success-dark);
+    transform: translateY(-4px);
+}
+
+.primary-btn{
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.25);
+    transform:skewX(-25deg);
+    transition:.6s;
+}
+
+.primary-btn:hover::before{
+    left:120%;
+}
+
+/* Secondary */
+
+.error-btn .secondary-btn{
+    color: var(--branding-success);
+    border: 2px solid var(--branding-success);
+    background: transparent;
+}
+
+.error-btn .secondary-btn:hover{
+    background: var(--branding-success);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+/*=====================================
+    DECORATION
+======================================*/
+
+#errorPage::before{
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(0,178,7,.06);
+    top: -120px;
+    left: -120px;
+    filter: blur(60px);
+}
+
+#errorPage::after{
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(132,209,135,.08);
+    bottom: -100px;
+    right: -100px;
+    filter: blur(60px);
+}
+
+.error-image img:hover{
+    transform: scale(1.02);
+}
+
+/*=====================================
+    ANIMATION
+======================================*/
+
+@keyframes floatImage{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+}
+
+/*=====================================
+    RESPONSIVE
+======================================*/
+
+@media(max-width:991px){
+
+    #errorPage{
+        padding: 80px 0;
+    }
+
+    .error-image img{
+        width: 430px;
+    }
+
+    .error-text h1{
+        font-size: 40px;
+    }
+
+}
+
+@media(max-width:575px){
+
+    #errorPage{
+        padding: 60px 0;
+    }
+
+    .error-image{
+        margin-bottom: 30px;
+    }
+
+    .error-image img{
+        width: 100%;
+    }
+
+    .error-text h1{
+        font-size: 32px;
+    }
+
+    .error-text p{
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .error-btn{
+        flex-direction: column;
+    }
+
+    .error-btn a{
+        width: 100%;
+    }
+
+}
+
+/* =====================================
+   Floating Leaves
+===================================== */
+
+.floating-leaves{
+
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+
+}
+
+.leaf{
+
+    position:absolute;
+    color:rgba(0,178,7,.35);
+    font-size:28px;
+
+    animation:leafFloat linear infinite;
+
+}
+
+.leaf-1{
+
+    top:12%;
+    left:8%;
+
+    animation-duration:10s;
+
+}
+
+.leaf-2{
+
+    top:20%;
+    right:12%;
+
+    animation-duration:14s;
+    animation-delay:2s;
+
+}
+
+.leaf-3{
+
+    bottom:25%;
+    left:15%;
+
+    animation-duration:12s;
+    animation-delay:1s;
+
+}
+
+.leaf-4{
+
+    bottom:12%;
+    right:8%;
+
+    animation-duration:15s;
+
+}
+
+.leaf-5{
+
+    top:45%;
+    left:50%;
+
+    animation-duration:18s;
+    animation-delay:3s;
+
+}
+
+@keyframes leafFloat{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-18px)
+        rotate(18deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+}
+
+/* =====================================
+   Floating Leaves
+===================================== */
