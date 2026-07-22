@@ -11,7 +11,7 @@
                 <div class="swiper-slide">
                     <div class="row align-items-center">
                         <div class="bsOne col-lg-6 order-lg-1 order-2">
-                            <h5>Welcome to shopery</h5>
+                            <h5>Welcome to Eco-Bazar</h5>
                             <h1>Fresh & Healthy Organic Food</h1>
                             <p>Sale up to <b>30% off</b></p>
                             <span class="d-lg-flex d-none">Free shipping on all your order. we deliver, you enjoy
@@ -68,6 +68,7 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+        
         <div class="bannerBottom">
             <div class="row">
                 <div class="col-lg-3 d-flex">

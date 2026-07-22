@@ -2,135 +2,266 @@
 @section('title', 'Contact Us')
 
 @section('content')
-<section class="d-lg-none d-flex">
+
+<!--============================
+    CONTACT HERO START
+=============================-->
+<section id="contactHero">
+
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+
     <div class="container">
-        <div class="contactCardMb">
-            <div class="row align-item-center">
-                <div class="col-4">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="tdesign:location"></iconify-icon>
-                    </a>
-                </div>
-                <div class="col-8">
-                    <a href="#">
-                        2715 Ash Dr. San Jose, <br> South Dakota 83475
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="contactCardMb">
-            <div class="row align-item-center">
-                <div class="col-4">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="streamline-cyber:email-2"></iconify-icon>
-                    </a>
-                </div>
-                <div class="col-8">
-                    <a href="#">
-                        Proxy@gmail.com <br> Help.proxy@gmail.com
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="contactCardMb">
-            <div class="row align-item-center">
-                <div class="col-4">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="mingcute:phone-call-line"></iconify-icon>
-                    </a>
-                </div>
-                <div class="col-8">
-                    <a href="#">
-                        (219) 555-0114 <br>(164) 333-0487
-                    </a>
-                </div>
-            </div>
-        </div>
+
+        <span class="contact-subtitle">Contact Us</span>
+
+        <h1 class="contact-title">
+            Get in <span>Touch</span>
+        </h1>
+
+        <p class="contact-description">
+            Have questions, feedback, or need assistance? Our dedicated team is
+            here to help. Reach out to us, and we'll get back to you as soon as possible.
+        </p>
+
     </div>
+
 </section>
-<section id="contact">
+<!--============================
+    CONTACT HERO END
+=============================-->
+
+<!--=================================
+    CONTACT SECTION START
+==================================-->
+<section id="contactInfo">
+
     <div class="container">
-        <div class="row align-item-center">
-            <div class="contactCardFull col-lg-4 d-none d-lg-block">
-                <div class="contactCard">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="tdesign:location"></iconify-icon>
-                        <p>2715 Ash Dr. San Jose, <br> South Dakota 83475</p>
-                    </a>
+
+        <div class="row g-4">
+
+            <!-- Contact Info -->
+            <div class="col-lg-4">
+
+                <div class="contact-info-card">
+
+                    <span class="card-tag">
+                        Contact Information
+                    </span>
+
+                    <h3>
+                       We're Here to Help
+                    </h3>
+
+                    <p>
+                        Feel free to reach out through any of the following
+                        channels. We're always happy to assist you.
+                    </p>
+
+                    <!-- Address -->
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <iconify-icon icon="tdesign:location"></iconify-icon>
+                        </div>
+
+                        <div class="info-content">
+                            <span>Address</span>
+
+                            <h6>
+                                2715 Ash Dr. San Jose,<br>
+                                South Dakota 83475
+                            </h6>
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <iconify-icon icon="streamline-cyber:email-2"></iconify-icon>
+                        </div>
+
+                        <div class="info-content">
+                            <span>Email</span>
+
+                            <h6>
+                                proxy@gmail.com<br>
+                                help.proxy@gmail.com
+                            </h6>
+                        </div>
+
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <iconify-icon icon="mingcute:phone-call-line"></iconify-icon>
+                        </div>
+
+                        <div class="info-content">
+                            <span>Phone</span>
+
+                            <h6>
+                                +1 (219) 555-0114<br>
+                                +1 (164) 333-0487
+                            </h6>
+                        </div>
+
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <iconify-icon icon="mdi:clock-outline"></iconify-icon>
+                        </div>
+
+                        <div class="info-content">
+                            <span>Office Hours</span>
+
+                            <h6>
+                                Monday - Saturday<br>
+                                09:00 AM - 08:00 PM
+                            </h6>
+                        </div>
+
+                    </div>
+
+                    <!-- Social -->
+                    <div class="contact-social">
+
+                        <a href="#">
+                            <iconify-icon icon="ri:facebook-fill"></iconify-icon>
+                        </a>
+
+                        <a href="#">
+                            <iconify-icon icon="ri:instagram-line"></iconify-icon>
+                        </a>
+
+                        <a href="#">
+                            <iconify-icon icon="ri:twitter-x-line"></iconify-icon>
+                        </a>
+
+                        <a href="#">
+                            <iconify-icon icon="ri:linkedin-fill"></iconify-icon>
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="contactCard">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="streamline-cyber:email-2"></iconify-icon>
-                        <p>Proxy@gmail.com <br> Help.proxy@gmail.com</p>
-                    </a>
-                </div>
-                <div class="contactCard">
-                    <a href="#">
-                        <iconify-icon class="text-center" icon="mingcute:phone-call-line"></iconify-icon>
-                        <p>(219) 555-0114 <br>(164) 333-0487</p>
-                    </a>
-                </div>
+
             </div>
+
+            <!-- Contact Form -->
             <div class="col-lg-8">
-                <div class="cardHello">
-                    <div class="container">
-                        <h2>Just Say Hello!</h2>
-                        <p>Do you fancy saying hi to me or you want to get started with your <br> project and you need
-                            my help? Feel free to contact me.</p>
-                    </div>
-                    <div class="row align-item-center">
-                        <form>
-                            <input class="one col" type="text" placeholder="Template Cookie">
-                            <input class="one col" type="email" placeholder="zakirsoft@gmail.com">
-                        </form>
-                    </div>
-                    <input id="two" type="text" placeholder="Hello">
-                    <textarea placeholder="Subject"></textarea>
-                    <button class="massage"> Send Massage </button>
-                </div>
+
+<div class="contact-form-card">
+
+    <span class="card-tag">
+        Contact Form
+    </span>
+
+    <h3>
+        Send Us a Message
+    </h3>
+
+    <p>
+        Complete the form below and our team will get back to you as soon as possible.
+    </p>
+
+    <form action="">
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <input type="text" placeholder="First Name">
             </div>
+
+            <div class="col-md-6">
+                <input type="text" placeholder="Last Name">
+            </div>
+
+            <div class="col-md-6">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" placeholder="Phone Number">
+            </div>
+
+            <div class="col-12">
+                <input type="text" placeholder="Subject">
+            </div>
+
+            <div class="col-12">
+                <textarea rows="6" placeholder="Write your message..."></textarea>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="contact-btn">
+                    Send Message
+
+                    <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+                </button>
+            </div>
+
         </div>
+
+    </form>
+
+</div>
+<!-- ==========================
+     Form End
+========================== -->
+
+            </div>
+
+        </div>
+
     </div>
-    </div>
+
 </section>
-<section id="map">
+
+
+<!--=================================
+    MAP SECTION START
+==================================-->
+<section id="contactMap">
+
     <div class="container">
-        <div class="embed-map-responsive">
-            <div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="https://maps.google.com/maps?width=626&height=400&hl=en&q=bangladesh&t=p&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a
-                    href="https://funclicker.org"
-                    style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Fun
-                    Clicker</a></div>
-            <style>
-                .embed-map-responsive {
-                    position: relative;
-                    text-align: right;
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 63.897763578274756%;
-                }
 
-                .embed-map-container {
-                    overflow: hidden;
-                    background: none !important;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
+        <div class="section-heading">
 
-                .embed-map-frame {
-                    width: 100% !important;
-                    height: 100% !important;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            </style>
+            <span class="card-tag">
+                Find Us
+            </span>
+
+            <h2>
+                Visit Our Office
+            </h2>
+
+            <p>
+                Stop by our office or use the map below to find us quickly and easily.
+            </p>
+
         </div>
+
+        <div class="map-card">
+
+            <iframe
+                src="https://maps.google.com/maps?width=626&height=400&hl=en&q=bangladesh&t=p&z=14&ie=UTF8&iwloc=B&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
     </div>
+
 </section>
 
 @endsection
