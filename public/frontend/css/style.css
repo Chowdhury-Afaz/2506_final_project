@@ -1030,6 +1030,7 @@ color: var(--gray-scale-white);
         transform .35s ease,
         box-shadow .35s ease,
         border-color .35s ease;
+        margin-bottom: 20px;
 }
 
 #product .productCard .productImg{

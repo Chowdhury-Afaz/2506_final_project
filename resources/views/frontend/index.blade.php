@@ -267,266 +267,105 @@
                     <h2>Popular Products</h2>
                     <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
                 </div>
-                <div class="row">
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <div class="discount">
-                                    <p>Sale 50%</p>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/apple.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Green Apple</a>
-                                <p>$14.99 <del>$20.99</del></p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
+<div class="row">
+
+    @forelse($products as $product)
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="productCard">
+
+                <div class="productImg">
+
+                    <div class="hoverIcon">
+                        <a href="#">
+                            <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
+                        </a>
+
+                        <a href="#">
+                            <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
+                        </a>
                     </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/malta.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Fresh Indian Malta</a>
-                                <p>$19.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
+
+                    @if($product->price > $product->selling_price)
+
+                        <div class="discount">
+
+                            <p>
+                                Sale
+                                {{ round((($product->price - $product->selling_price) / $product->price) * 100) }}%
+                            </p>
+
                         </div>
-                    </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/cabbage.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Chinese cabbage</a>
-                                <p>$11.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/lettuce.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Green Lettuce</a>
-                                <p>$10.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/eggplant.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Eggplant</a>
-                                <p>$33.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    @endif
+
+                    <a href="#">
+
+                        <img
+                            src="{{ asset('storage/'.$product->image) }}"
+                            alt="{{ $product->title }}"
+                            class="img-fluid">
+
+                    </a>
+
                 </div>
-                <div class="row">
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/potateos.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Big Potatoes</a>
-                                <p>$19.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
+
+                <div class="productCnt">
+
+                    <a href="#">
+                        {{ $product->title }}
+                    </a>
+
+                    <p>
+
+                        ${{ number_format($product->selling_price,2) }}
+
+                        @if($product->price > $product->selling_price)
+
+                            <del>
+
+                                ${{ number_format($product->price,2) }}
+
+                            </del>
+
+                        @endif
+
+                    </p>
+
+                    <div class="rating">
+
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
+
                     </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/cron.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Corn</a>
-                                <p>$19.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="addToCart">
+
+                        <iconify-icon icon="ph:handbag"></iconify-icon>
+
                     </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/cauliflower.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Fresh Cauliflower</a>
-                                <p>$11.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <div class="discount">
-                                    <p>Sale 50%</p>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/capsicum.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Green Capsicum</a>
-                                <p>$10.99 <del>$20.99</del></p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg px-lg-0 col-6">
-                        <div class="productCard">
-                            <div class="productImg">
-                                <div class="hoverIcon">
-                                    <a href="#"><iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon></a>
-                                    <a href="#"><iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon></a>
-                                </div>
-                                <a href="#"><img src="{{ asset('frontend/img/green-chili.png')}}" alt="" class="img-fluid"></a>
-                            </div>
-                            <div class="productCnt">
-                                <a href="#">Green Chili</a>
-                                <p>$10.99</p>
-                                <div class="rating">
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                    <iconify-icon class="mutedStar" icon="ic:round-star" width="16" height="16"></iconify-icon>
-                                </div>
-                                <div class="addToCart">
-                                    <iconify-icon icon="ph:handbag" width="24" height="24"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+
+            </div>
+
+        </div>
+
+@empty
+
+    <div class="col-12 text-center py-5">
+        <h5>No Products Available</h5>
+    </div>
+
+@endforelse
+
+</div>
+
+
             </div>
         </section>
 
