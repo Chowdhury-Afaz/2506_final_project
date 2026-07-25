@@ -35,6 +35,7 @@ class ProductController extends Controller
 
     public function store(StoreProduct $request)
     {
+
         // Featured Image Upload
         $featureImage = $this->uploadImage($request->image, 'products');
         $gallery_images = $this->uploadImage($request->gallery, 'products');
