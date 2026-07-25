@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/shop-redesign.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
 </head>
 

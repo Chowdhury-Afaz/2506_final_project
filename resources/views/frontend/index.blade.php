@@ -164,91 +164,16 @@
                     <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
                 </div>
                 <div class="row">
+                    @foreach ($categories as $category)
                     <div class="col-lg-2 col-3">
                         <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/fresh-fruit.png')}}" alt="" class="img-fluid">
-                            <h5>Fresh Fruit</h5>
+                            <a href="{{ route('shop') }}?category={{ $category->slug }}"><img width="60px" src="{{ getImage($category->image) }}" alt="{{ $category->name }}" class="img-fluid">
+                            <h5>{{ $category->name }}</h5>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#">
-                                <img src="{{ asset('frontend/img/vegetables.png')}}" alt="" class="img-fluid">
-                            <h5>Vegetables</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/meat-fish.png')}}" alt="" class="img-fluid">
-                            <h5>Meat & Fish</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/snacks.png')}}" alt="" class="img-fluid">
-                            <h5>Snacks</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/beverages.png')}}" alt="" class="img-fluid">
-                            <h5>Beverages</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/beauty-health.png')}}" alt="" class="img-fluid">
-                            <h5>Beauty</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/bread-bakery.png')}}" alt="" class="img-fluid">
-                            <h5>Bread & Bakery</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/baking.png')}}" alt="" class="img-fluid">
-                            <h5>Baking Needs</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/cooking.png')}}" alt="" class="img-fluid">
-                            <h5>Cooking</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/daibetic.png')}}" alt="" class="img-fluid">
-                            <h5>Diabetic Food</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/detergents.png')}}" alt="" class="img-fluid">
-                            <h5>Dish Detergents</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="#"><img src="{{ asset('frontend/img/oil.png')}}" alt="" class="img-fluid">
-                            <h5>Oil</h5>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
+                   
                 </div>
             </div>
         </section>
@@ -278,11 +203,11 @@
                 <div class="productImg">
 
                     <div class="hoverIcon">
-                        <a href="#">
+                        <a href="{{ route('shop.product', $product->slug) }}">
                             <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
                         </a>
 
-                        <a href="#">
+                        <a href="{{ route('shop.product', $product->slug) }}">
                             <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
                         </a>
                     </div>
@@ -300,10 +225,10 @@
 
                     @endif
 
-                    <a href="#">
+                    <a href="{{ route('shop.product', $product->slug) }}">
 
                         <img
-                            src="{{ asset('storage/'.$product->image) }}"
+                            src="{{ getImage($product->image) }}"
                             alt="{{ $product->title }}"
                             class="img-fluid">
 
@@ -313,19 +238,19 @@
 
                 <div class="productCnt">
 
-                    <a href="#">
+                    <a href="{{ route('shop.product', $product->slug) }}">
                         {{ $product->title }}
                     </a>
 
                     <p>
 
-                        ${{ number_format($product->selling_price,2) }}
+                        {{ formatPrice($product->selling_price) }}
 
                         @if($product->price > $product->selling_price)
 
                             <del>
 
-                                ${{ number_format($product->price,2) }}
+                                {{ formatPrice($product->price) }}
 
                             </del>
 

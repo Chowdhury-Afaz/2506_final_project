@@ -1,556 +1,309 @@
 @extends('layouts.frontendLayout')
-@section('title', 'Contact Us')
+@section('title', 'Shop')
 
 @section('content')
 
-<section id="shopBanner" class="d-none d-lg-flex">
-    <div class="container">
-        <div class="row align-item-center">
-            <ul class="d-flex">
-                <li><a href="./index.html"><iconify-icon icon="material-symbols:home-outline"width="24" height="24"></iconify-icon> > </a></li>
-                <li><a href="#"> Catagory > </a></li>
-                <li><a href="#"> Vagetable</a></li>
-            </ul>
-            <div class="shopBannertxt">
-            <a href="#"><img src="./img/Discount Bannar.png" class="img-fluid" alt="">
-            <p>Best Deals</p>
-            <h2>Sale of the Month</h2>
-            <div class="cot_sale_timer" id="cot_sale_timer">
-                            
-            </div>
-            <button>Shop Now <iconify-icon icon="si:arrow-right-duotone"></iconify-icon> </button>
-            <div class="circle">
-                <h5>56%</h5>
-                <span>off</span>
-            </div>
-            </div>
-            </a>
-        </div>
-    </div>
-</section>
-<section id="filter" class="d-none d-lg-flex">
-    <div class="container">
-        <div class="row align-item-center">
-            <div class="leftFilter col-lg-6 d-flex">
-                <div class="dropdown">
-  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Select Category
-  </a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Vagetables</a></li>
-    <li><a class="dropdown-item" href="#">Fruits</a></li>
-    <li><a class="dropdown-item" href="#">Meat</a></li>
-  </ul>
-</div>
-<div class="dropdown">
-  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Select Price
-  </a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">0$ - 10$</a></li>
-    <li><a class="dropdown-item" href="#">10$ - 20$</a></li>
-    <li><a class="dropdown-item" href="#">20$ - 30$</a></li>
-    <li><a class="dropdown-item" href="#">30$ - 40$</a></li>
-    <li><a class="dropdown-item" href="#">40$ - 50$</a></li>
-    <li><a class="dropdown-item" href="#">50$ - 60$</a></li>
-    <li><a class="dropdown-item" href="#">60$ - 70$</a></li>
-    <li><a class="dropdown-item" href="#">70$ - 80$</a></li>
-    <li><a class="dropdown-item" href="#">80$ - 90$</a></li>
-    <li><a class="dropdown-item" href="#">90$ - 100$</a></li>
-  </ul>
-</div>
-<div class="dropdown">
-  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Select Rating
-  </a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">
-        <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-    </a></li>
-    <li><a class="dropdown-item" href="#">
-        <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-    </a></li>
-    <li><a class="dropdown-item" href="#">
-        <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-    </a></li>
-    <li><a class="dropdown-item" href="#">
-        <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-    </a></li>
-    <li><a class="dropdown-item" href="#">
-                        <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-    </a></li>
-  </ul>
-</div>
-            </div>
-            <div class="rightFilter col-lg-6 d-flex">
-                <div class="dropdown ms-auto">
-  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Sort by: Latest
-  </a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Vagetables</a></li>
-    <li><a class="dropdown-item" href="#">Fruits</a></li>
-    <li><a class="dropdown-item" href="#">Meat</a></li>
-  </ul>
-</div>
-<div class="dropdown">
-  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Show: 16
-  </a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Vagetables</a></li>
-    <li><a class="dropdown-item" href="#">Fruits</a></li>
-    <li><a class="dropdown-item" href="#">Meat</a></li>
-  </ul>
-</div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="activeFilter" class="d-none d-lg-flex">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-start">
-            <p> Active Filters: <b>Wing Chair</b> <iconify-icon icon="hugeicons:cancel-01"></iconify-icon> <b>Min $300 - Max 500</b> <iconify-icon icon="hugeicons:cancel-01"></iconify-icon> </p>
-            </div>
-            <div class="col-lg-6 text-end">
-                <p><b>2,547</b> Results found.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="activeFilterMbl" class="d-lg-none">
+<!-- Shop Hero Banner -->
+<section id="shopHero">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12">
-                <div class="mblFilterHeader">
-                    <button class="filterBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
-                        <iconify-icon icon="mdi:filter-variant"></iconify-icon>
-                        Filter
-                    </button>
+                <div class="shopBreadcrumb">
+                    <a href="{{ route('homepage') }}">
+                        <iconify-icon icon="material-symbols:home-outline" width="20" height="20"></iconify-icon>
+                    </a>
+                    <iconify-icon icon="mdi:chevron-right" width="18" height="18"></iconify-icon>
+                    <span>Shop</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="shopBannerContent">
+                    <p class="shopBannerLabel">Fresh & Organic</p>
+                    <h1>Explore Our Shop</h1>
+                    <p class="shopBannerDesc">Discover the freshest groceries, handpicked from local farms and delivered to your doorstep.</p>
+                    <div class="shopBannerActions">
+                        <a href="#shopProducts" class="shopBtnPrimary">
+                            Shop Now
+                            <iconify-icon icon="si:arrow-right-duotone" width="18" height="18"></iconify-icon>
+                        </a>
+                        <a href="{{ route('homepage') }}" class="shopBtnOutline">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
+                <div class="shopBannerImage">
+                    <img src="{{ asset('frontend/img/Feature Image.png') }}" alt="Shop" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Filter Offcanvas -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+<!-- Mobile Filter Bar -->
+<section id="shopMobileFilter" class="d-lg-none">
+    <div class="container">
+        <div class="mblFilterRow">
+            <button class="mblFilterBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+                <iconify-icon icon="mdi:tune-variant" width="20" height="20"></iconify-icon>
+                Filters
+            </button>
+            <div class="mblSortBtn">
+                <select class="form-select" onchange="window.location.href='{{ route('shop') }}?sort='+this.value">
+                    <option value="">Sort by: Latest</option>
+                    <option value="price_low" {{ request('sort') == 'price_low' ? 'selected' : '' }}>Price: Low to High</option>
+                    <option value="price_high" {{ request('sort') == 'price_high' ? 'selected' : '' }}>Price: High to Low</option>
+                    <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>Oldest First</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Filter Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter Products</h5>
+            <h5 class="offcanvas-title">Filter Products</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="filterSection">
-                <h6 class="filterTitle">Category</h6>
-                <div class="filterOptions">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="vegetables" id="categoryVegetables">
-                        <label class="form-check-label" for="categoryVegetables">Vegetables</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="fruits" id="categoryFruits">
-                        <label class="form-check-label" for="categoryFruits">Fruits</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="meat" id="categoryMeat">
-                        <label class="form-check-label" for="categoryMeat">Meat</label>
+            <form action="{{ route('shop') }}" method="GET">
+                <div class="filterGroup">
+                    <h6 class="filterGroupTitle">Category</h6>
+                    <div class="filterCheckList">
+                        @foreach($categories as $category)
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="category" value="{{ $category->id }}" id="mblCat{{ $category->id }}" {{ request('category') == $category->id ? 'checked' : '' }}>
+                            <label class="form-check-label" for="mblCat{{ $category->id }}">{{ $category->name }}</label>
+                        </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
 
-            <div class="filterSection">
-                <h6 class="filterTitle">Price Range</h6>
-                <div class="priceRange">
-                    <div class="priceInputs">
-                        <input type="number" class="form-control" id="minPrice" placeholder="Min" min="0">
-                        <span class="priceSeparator">-</span>
-                        <input type="number" class="form-control" id="maxPrice" placeholder="Max" min="0">
-                    </div>
-                    <div class="priceSlider">
-                        <input type="range" class="form-range" id="priceRange" min="0" max="100" value="50">
+                <div class="filterGroup">
+                    <h6 class="filterGroupTitle">Price Range</h6>
+                    <div class="priceRangeInputs">
+                        <input type="number" class="form-control" name="min_price" placeholder="Min" value="{{ request('min_price') }}" min="0">
+                        <span class="priceSep">-</span>
+                        <input type="number" class="form-control" name="max_price" placeholder="Max" value="{{ request('max_price') }}" min="0">
                     </div>
                 </div>
-            </div>
 
-            <div class="filterSection">
-                <h6 class="filterTitle">Rating</h6>
-                <div class="ratingOptions">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="5" id="rating5">
-                        <label class="form-check-label" for="rating5">
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="4" id="rating4">
-                        <label class="form-check-label" for="rating4">
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="3" id="rating3">
-                        <label class="form-check-label" for="rating3">
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="2" id="rating2">
-                        <label class="form-check-label" for="rating2">
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" id="rating1">
-                        <label class="form-check-label" for="rating1">
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                        </label>
+                <div class="filterGroup">
+                    <h6 class="filterGroupTitle">Sort By</h6>
+                    <div class="filterCheckList">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sort" value="" id="mblSortLatest" {{ request('sort', '') == '' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="mblSortLatest">Latest</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sort" value="price_low" id="mblSortLow" {{ request('sort') == 'price_low' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="mblSortLow">Price: Low to High</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sort" value="price_high" id="mblSortHigh" {{ request('sort') == 'price_high' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="mblSortHigh">Price: High to Low</label>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="filterActions">
-                <button class="btn btn-primary applyFilters">Apply Filters</button>
-                <button class="btn btn-outline-secondary clearFilters">Clear All</button>
-            </div>
+                <div class="filterActions">
+                    <button type="submit" class="filterApplyBtn">Apply Filters</button>
+                    <a href="{{ route('shop') }}" class="filterClearBtn">Clear All</a>
+                </div>
+            </form>
         </div>
     </div>
 </section>
-<section id="shopAreaOne">
+
+<!-- Desktop Sidebar + Products -->
+<section id="shopProducts">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
+        <div class="row">
+
+            <!-- Desktop Sidebar -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="shopSidebar">
+
+                    <!-- Search -->
+                    <div class="sidebarWidget">
+                        <h5 class="widgetTitle">Search</h5>
+                        <form action="{{ route('shop') }}" method="GET" class="sidebarSearch">
+                            <input type="text" name="search" class="form-control" placeholder="Search products..." value="{{ request('search') }}">
+                            <button type="submit">
+                                <iconify-icon icon="ic:round-search" width="20" height="20"></iconify-icon>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="sidebarWidget">
+                        <h5 class="widgetTitle">Categories</h5>
+                        <ul class="sidebarCategoryList">
+                            <li>
+                                <a href="{{ route('shop') }}" class="{{ !request('category') ? 'active' : '' }}">
+                                    All Products
+                                </a>
+                            </li>
+                            @foreach($categories as $category)
+                            <li>
+                                <a href="{{ route('shop', ['category' => $category->slug]) }}" class="{{ request('category') == $category->slug ? 'active' : '' }}">
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="sidebarWidget">
+                        <h5 class="widgetTitle">Price Range</h5>
+                        <form action="{{ route('shop') }}" method="GET" class="sidebarPriceFilter">
+                            @if(request('category'))
+                            <input type="hidden" name="category" value="{{ request('category') }}">
+                            @endif
+                            @if(request('sort'))
+                            <input type="hidden" name="sort" value="{{ request('sort') }}">
+                            @endif
+                            <div class="priceRangeInputs">
+                                <input type="number" name="min_price" class="form-control" placeholder="Min" value="{{ request('min_price') }}" min="0">
+                                <span class="priceSep">-</span>
+                                <input type="number" name="max_price" class="form-control" placeholder="Max" value="{{ request('max_price') }}" min="0">
+                            </div>
+                            <button type="submit" class="priceFilterBtn">Apply</button>
+                        </form>
+                    </div>
+
+                    <!-- Promo Banner -->
+                    <div class="sidebarPromo">
+                        <div class="promoIcon">
+                            <iconify-icon icon="mdi:truck-delivery-outline" width="40" height="40"></iconify-icon>
                         </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+                        <h6>Free Delivery</h6>
+                        <p>On orders over {{ formatPrice(500) }}</p>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+            <!-- Products Grid -->
+            <div class="col-lg-9">
+                <!-- Sort Bar (Desktop) -->
+                <div class="shopSortBar d-none d-lg-flex">
+                    <div class="sortLeft">
+                        <p>Showing <b>{{ $products->total() }}</b> results</p>
+                    </div>
+                    <div class="sortRight">
+                        <label>Sort by:</label>
+                        <select class="form-select" onchange="window.location.href='{{ route('shop', request()->except('sort', 'page')) }}&sort='+this.value">
+                            <option value="" {{ request('sort', '') == '' ? 'selected' : '' }}>Latest</option>
+                            <option value="price_low" {{ request('sort') == 'price_low' ? 'selected' : '' }}>Price: Low to High</option>
+                            <option value="price_high" {{ request('sort') == 'price_high' ? 'selected' : '' }}>Price: High to Low</option>
+                            <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>Oldest First</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+                <!-- Active Filters -->
+                @if(request()->hasAny(['category', 'search', 'min_price', 'max_price']))
+                <div class="activeFilters">
+                    <span class="activeFilterLabel">Active Filters:</span>
+                    @if(request('category'))
+                        @php $cat = $categories->where('id', request('category'))->first(); @endphp
+                        @if($cat)
+                        <span class="filterTag">
+                            {{ $cat->name }}
+                            <a href="{{ route('shop', request()->except('category', 'page')) }}">
+                                <iconify-icon icon="hugeicons:cancel-01" width="14" height="14"></iconify-icon>
+                            </a>
+                        </span>
+                        @endif
+                    @endif
+                    @if(request('search'))
+                        <span class="filterTag">
+                            "{{ request('search') }}"
+                            <a href="{{ route('shop', request()->except('search', 'page')) }}">
+                                <iconify-icon icon="hugeicons:cancel-01" width="14" height="14"></iconify-icon>
+                            </a>
+                        </span>
+                    @endif
+                    @if(request('min_price') || request('max_price'))
+                        <span class="filterTag">
+                            {{ formatPrice(request('min_price', 0)) }} - {{ formatPrice(request('max_price', '∞')) }}
+                            <a href="{{ route('shop', request()->except('min_price', 'max_price', 'page')) }}">
+                                <iconify-icon icon="hugeicons:cancel-01" width="14" height="14"></iconify-icon>
+                            </a>
+                        </span>
+                    @endif
+                    <a href="{{ route('shop') }}" class="clearAllFilters">Clear All</a>
                 </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
+                @endif
+
+                <!-- Product Grid -->
+                <div class="row shopProductGrid">
+                    @forelse($products as $product)
+                    <div class="col-6 col-md-4">
+                        <div class="shopProductCard">
+                            <div class="shopProductImg">
+                                @if($product->price > $product->selling_price)
+                                <div class="shopDiscountBadge">
+                                    -{{ round((($product->price - $product->selling_price) / $product->price) * 100) }}%
+                                </div>
+                                @endif
+
+                                <a href="#">
+                                    <img src="{{ getImage($product->image) }}" alt="{{ $product->title }}" class="img-fluid">
+                                </a>
+
+                                <div class="shopProductHover">
+                                    <a href="#" class="shopHoverIcon" title="Add to Wishlist">
+                                        <iconify-icon icon="solar:heart-linear" width="20" height="20"></iconify-icon>
+                                    </a>
+                                    <a href="#" class="shopHoverIcon" title="Quick View">
+                                        <iconify-icon icon="solar:eye-outline" width="20" height="20"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="shopProductInfo">
+                                <a href="#" class="shopProductTitle">{{ $product->title }}</a>
+                                <div class="shopProductPrice">
+                                    <span class="shopCurrentPrice">{{ formatPrice($product->selling_price) }}</span>
+                                    @if($product->price > $product->selling_price)
+                                    <del class="shopOldPrice">{{ formatPrice($product->price) }}</del>
+                                    @endif
+                                </div>
+                                <div class="shopProductRating">
+                                    <iconify-icon icon="ic:round-star"></iconify-icon>
+                                    <iconify-icon icon="ic:round-star"></iconify-icon>
+                                    <iconify-icon icon="ic:round-star"></iconify-icon>
+                                    <iconify-icon icon="ic:round-star"></iconify-icon>
+                                    <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
+                                </div>
+                            </div>
                         </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
+                    </div>
+                    @empty
+                    <div class="col-12">
+                        <div class="shopEmptyState">
+                            <iconify-icon icon="mdi:package-variant" width="64" height="64"></iconify-icon>
+                            <h4>No Products Found</h4>
+                            <p>Try adjusting your filters or search terms.</p>
+                            <a href="{{ route('shop') }}" class="shopBtnPrimary">Clear Filters</a>
                         </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+                    </div>
+                    @endforelse
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="shopAreaTwo">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+                <!-- Pagination -->
+                @if($products->hasPages())
+                <div class="shopPagination">
+                    {{ $products->withQueryString()->links() }}
                 </div>
+                @endif
+
             </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="shopAreaThree">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="./iteminfo.html"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="./iteminfo.html">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
