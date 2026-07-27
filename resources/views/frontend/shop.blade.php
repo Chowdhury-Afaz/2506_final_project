@@ -4,42 +4,7 @@
 @section('content')
 
 <!-- Shop Hero Banner -->
-<section id="shopHero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <div class="shopBreadcrumb">
-                    <a href="{{ route('homepage') }}">
-                        <iconify-icon icon="material-symbols:home-outline" width="20" height="20"></iconify-icon>
-                    </a>
-                    <iconify-icon icon="mdi:chevron-right" width="18" height="18"></iconify-icon>
-                    <span>Shop</span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="shopBannerContent">
-                    <p class="shopBannerLabel">Fresh & Organic</p>
-                    <h1>Explore Our Shop</h1>
-                    <p class="shopBannerDesc">Discover the freshest groceries, handpicked from local farms and delivered to your doorstep.</p>
-                    <div class="shopBannerActions">
-                        <a href="#shopProducts" class="shopBtnPrimary">
-                            Shop Now
-                            <iconify-icon icon="si:arrow-right-duotone" width="18" height="18"></iconify-icon>
-                        </a>
-                        <a href="{{ route('homepage') }}" class="shopBtnOutline">Back to Home</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
-                <div class="shopBannerImage">
-                    <img src="{{ asset('frontend/img/Feature Image.png') }}" alt="Shop" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Mobile Filter Bar -->
 <section id="shopMobileFilter" class="d-lg-none">

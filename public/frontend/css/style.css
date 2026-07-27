@@ -4861,5 +4861,21 @@ z-index: 2;
     color: var(--gray-scale-gray-–-900);
 }
 
-.sortRight {
-    dis
+.searchResult{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #eee;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.searchResult li {
+    padding: 5px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.searchResult li a:hover{
+    color: var(--branding-success);
+}

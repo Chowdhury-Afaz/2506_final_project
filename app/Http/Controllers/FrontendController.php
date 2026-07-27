@@ -22,10 +22,16 @@ class FrontendController extends Controller
         $categories = Category::where('status', 1)->get();
         // has Category
         $query = Product::query();
+
         if($request->category){
             $query->whereHas('category', function($q) use ($request){
                 $q->where('slug', $request->category);
             });
+        }
+
+        // search
+        if($request->search){
+            $query->whereLike('title', "%$request->search%");
         }
 
 
@@ -43,6 +49,24 @@ class FrontendController extends Controller
         $product = Product::with('category')->where('slug', $slug)->first();
         
         return view('frontend.iteminfo', compact('product'));
+    }
+
+    function liveSearch(Request $request){
+        // return dd($request->userInput);
+        try {
+            $products = Product::whereLike('title', "%$request->userInput%")->select('id','title', 'slug', 'image')->take(8)->latest()->get();
+            return response()->json([
+                'status' => true,
+                'products' => $products,
+                'message' => 'Products has been fetched'
+            ]);
+        } catch (\Throwable $th) {
+             return response()->json([
+                'status' => false,
+                'products' => [],
+                'message' => 'Something went wrong in the server, try again later!'
+            ]);
+        }
     }
 
 }

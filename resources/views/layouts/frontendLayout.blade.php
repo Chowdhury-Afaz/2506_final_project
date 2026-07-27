@@ -97,7 +97,7 @@
             <!-- Search -->
             <div class="header-search">
 
-                <form>
+                <form action="{{ route('shop') }}" method="GET" class="position-relative">
 
                     <div class="search-box">
 
@@ -106,15 +106,24 @@
                         </iconify-icon>
 
                         <input
+                            id="searchInput"
+                            value="{{ request()->search }}"
+                            name="search"
                             type="search"
-                            placeholder="Search for products...">
+                            placeholder="Search for products..."
+                            autocomplete="off"
+                            >
 
                         <button type="submit">
                             Search
                         </button>
 
                     </div>
-
+                    <div class="searchResult">
+                        <ul>
+                            <li><a href=""><img src="{{ getImage(null) }}" width="50px" alt=""> Corn</a></li>
+                        </ul>
+                    </div>
                 </form>
 
             </div>
@@ -485,6 +494,56 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/jQuery.countdown-master/jQuery.countdown-master/dist/jquery.countdown.min.js') }}">
+    </script>
+    <script>
+        $('#searchInput').focus(function(){
+            $('.searchResult').fadeIn()
+        })
+
+        $('#searchInput').keyup(function(){
+            let value = $(this).val();
+
+            if(value.length <= 2){
+                return false;
+            }
+
+            setTimeout(()=>{
+                // Live Searching AJAX
+                $.ajax({
+                    url:`{{ route('shop.product.live') }}`,
+                    method: `GET`,
+                    data: {
+                        userInput:  value
+                    },
+                    success: function(res){
+                        let {products} = res
+                        let htmlSearchResult = [];
+                        let productImg = `{{ getImage('PLACEHOLDER_IMAGE') }}`
+                        let url = `{{ route('shop.product', "PLACEHOLDER_URL") }}`
+                        products.forEach(product => {
+                            let isProductImg = product.image && product.image.length > 0 ? true : false;
+
+                            let htmlProductLi=  `<li><a href="${url.replace('PLACEHOLDER_URL', product.slug)}"><img src="${isProductImg ? productImg.replace('PLACEHOLDER_IMAGE', product.image) : productImg.replace('storage/PLACEHOLDER_IMAGE', `images/placeholder.webp`)}" width="50px" alt=""> ${product.title}</a></li>`
+                            htmlSearchResult.push(htmlProductLi)
+                        });
+
+                        $('.searchResult ul').html(htmlSearchResult)
+
+                    },
+                    error: function(err){
+                        console.log(err)
+                    },
+                })
+
+
+
+                return;
+            }, 250)
+
+
+        })
+
+        
     </script>
     <script src="{{ asset('frontend/js/app.js') }}"></script>
 </body>

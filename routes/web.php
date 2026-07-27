@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
 Route::get('/shop', [FrontendController::class,'shop'])->name('shop');
 Route::get('/product/{slug}', [FrontendController::class, 'singleProduct'])->name('shop.product');
+Route::get('/product-search', [FrontendController::class, 'liveSearch'])->name('shop.product.live');
 Route::get('/contact-us', [FrontendController::class,'contact'])->name('contact');
 
 Auth::routes();
