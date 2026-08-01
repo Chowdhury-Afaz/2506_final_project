@@ -18,143 +18,321 @@
         </div>
     </div>
 </section>
+
+<!-- ==========================
+     Item Details start here
+========================== -->
+
 <section id="itemDetails">
+
     <div class="container">
-            <div class="product-card">
-  <div class="row g-0">
- 
-    <!-- LEFT: Images -->
-    <div class="col-12 col-md-5">
-      <div class="image-col">
-        <!-- Thumbnails -->
-        @if ($product->gallery_image)
-        <div class="thumbnail-strip">
-            @foreach (json_decode($product->gallery_image) as $gallImage)
-                <div class="thumbnail active">
-                    <img src="{{ getImage($gallImage) }}" class="img-fluid" alt="">
-                </div>
-            @endforeach
-          
-         
-        </div>
-        @endif
- 
-        <!-- Main Image Box (blank) -->
-        <div class="main-image-box">
-        <img src="{{ getImage($product->image) }}" class="img-fluid" alt="{{ $product->title }}">  
-        </div>
-      </div>
-    </div>
- 
-    <!-- Divider -->
-    <div class="col-auto d-none d-md-block">
-      <div class="divider-col h-100"></div>
-    </div>
- 
-    <!-- RIGHT: Info -->
-    <div class="col-12 col-md-6">
-      <div class="info-col">
- 
-        <!-- Title + Stock -->
-        <div class="product-title-row">
-          <h1 class="product-title">{{ $product->title }}</h1>
-          <span class="stock-badge">In Stock</span>
-        </div>
- 
-        <!-- Rating + SKU -->
-        <div class="rating-row">
-          <div class="stars">
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-          </div>
-          <span>4 Review</span>
-          <span class="rating-sep"></span>
-          <span class="sku">SKU: 2,51,594</span>
-        </div>
- 
-        <!-- Price -->
-        <div class="price-row">
-          <span class="price-original">$48.00</span>
-          <span class="price-current">$17.28</span>
-          <span class="discount-badge">64% Off</span>
-        </div>
- 
-        <div class="h-divider"></div>
- 
-        <!-- Brand + Share -->
-        <div class="brand-share-row">
-          <div class="d-flex align-items-center">
-            <span class="brand-label">Brand:</span>
-            <img src="./img/Group 19.png" class="img-fluid" alt="">
-          </div>
-          <div class="d-none d-lg-flex align-items-center">
-            <span class="share-label">Share item</span>
-            <div class="socialMedia">
-                    <ul class="d-flex">
-                        <li><a href="#"><iconify-icon icon="ri:facebook-fill"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mynaui:twitter"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mingcute:pinterest-line"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mdi:instagram"></iconify-icon></a></li>
-                    </ul>
-                </div>
-          </div>
-        </div>
- 
-        <!-- Description -->
-        <p class="product-desc">
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla
-          varius magna a consequat pulvinar.
-        </p>
- 
-        <!-- Cart Row -->
-        <div class="cart-row">
-          <!-- Quantity -->
-          <div class="qty-control">
-            <button class="qty-btn" onclick="changeQty(-1)">−</button>
-            <input class="qty-value" id="qty" type="text" value="5" readonly />
-            <button class="qty-btn" onclick="changeQty(1)">+</button>
-          </div>
-          
-          <!-- Add to Cart -->
-          <button class="add-to-cart-btn d-block d-lg-flex">
-            <iconify-icon icon="ph:shopping-cart-simple-bold" width="18"></iconify-icon>
-            Add to Cart
-          </button>
- 
-          <!-- Wishlist -->
-          <button class="wishlist-btn" title="Add to Wishlist">
-            <iconify-icon icon="ph:heart-bold" width="20"></iconify-icon>
-          </button>
-        </div>
- 
-        <div class="h-divider"></div>
- 
-        <!-- Category + Tags -->
-        <div class="meta-row">
-          <span class="meta-key">Category:</span>
-          &nbsp;<span class="meta-tag"><a href="#">Vegetables</a></span>
-        </div>
-        <div class="meta-row">
-          <span class="meta-key">Tag:</span>
-          &nbsp;
-          <span class="meta-tag"><a href="#">Vegetables</a></span>
-          <span class="meta-tag"><a href="#">Healthy</a></span>
-          <span class="meta-tag"><a href="#" style="text-decoration:underline;">Chinese</a></span>
-          <span class="meta-tag"><a href="#">Cabbage</a></span>
-          <span class="meta-tag"><a href="#">Green Cabbage</a></span>
-        </div>
- 
-      </div>
-    </div>
- 
-  </div>
+
+        <div class="product-layout">
+
+            <div class="product-gallery">
+                <div class="gallery-thumbnails">
+
+    @if ($product->gallery_image)
+        @foreach (json_decode($product->gallery_image, true) ?? [] as $image)
+
+<div class="thumb active"
+     data-image="{{ getImage($image) }}">
+
+    <img src="{{ getImage($image) }}" alt="">
+
 </div>
+
+        @endforeach
+    @endif
+
+</div>
+
+<div class="gallery-preview">
+
+    <img
+        src="{{ getImage($product->image) }}"
+        alt="{{ $product->title }}"
+        id="mainProductImage">
+
+</div>
+            </div>
+
+            <div class="product-content">
+                <div class="product-header">
+
+    <span class="product-category">
+        {{ $product->category->name }}
+    </span>
+
+    <h1 class="product-title">
+        {{ $product->title }}
+    </h1>
+
+</div>
+
+
+<div class="product-rating">
+
+    <div class="stars">
+
+        <iconify-icon icon="ph:star-fill"></iconify-icon>
+        <iconify-icon icon="ph:star-fill"></iconify-icon>
+        <iconify-icon icon="ph:star-fill"></iconify-icon>
+        <iconify-icon icon="ph:star-fill"></iconify-icon>
+        <iconify-icon icon="ph:star-fill"></iconify-icon>
+
+    </div>
+
+    <span>(126 Reviews)</span>
+
+</div>
+
+
+<div class="product-status">
+
+    <span class="stock">
+
+        In Stock
+
+    </span>
+
+    <span class="sku">
+
+        SKU : 251594
+
+    </span>
+
+</div>
+
+
+<div class="product-price">
+
+    <h2>$17.28</h2>
+
+    <del>$48.00</del>
+
+    <span class="discount">
+
+        64% OFF
+
+    </span>
+
+</div>
+
+
+<p class="product-description">
+
+    {{ $product->short_description ?? 'Fresh organic product collected directly from local farms.' }}
+
+</p>
+
+
+<div class="product-meta">
+
+    <div>
+
+        <strong>Brand</strong>
+
+        <span>Organic Farm</span>
+
+    </div>
+
+    <div>
+
+        <strong>Category</strong>
+
+        <span>{{ $product->category->name }}</span>
+
+    </div>
+
+</div>
+
+<div class="purchase-card">
+
+    <div class="quantity-box">
+
+        <span>Quantity</span>
+
+        <div class="quantity-controller">
+
+            <button id="minusBtn">-</button>
+
+            <input type="text" id="quantity" value="1" readonly>
+
+            <button id="plusBtn">+</button>
+
         </div>
+
+    </div>
+
+
+    <div class="purchase-buttons">
+
+        <button class="cart-btn">
+
+            <iconify-icon icon="solar:cart-large-2-bold"></iconify-icon>
+
+            Add To Cart
+
+        </button>
+
+        <button class="buy-btn">
+
+            <iconify-icon icon="solar:flash-bold"></iconify-icon>
+
+            Buy Now
+
+        </button>
+
+    </div>
+
+
+    <div class="extra-actions">
+
+        <button>
+
+            <iconify-icon icon="solar:heart-bold"></iconify-icon>
+
+            Wishlist
+
+        </button>
+
+        <button>
+
+            <iconify-icon icon="solar:sort-horizontal-bold"></iconify-icon>
+
+            Compare
+
+        </button>
+
+    </div>
+
+<div class="delivery-info">
+
+    <div class="delivery-item">
+
+        <div class="delivery-icon">
+            <iconify-icon icon="solar:delivery-bold"></iconify-icon>
+        </div>
+
+        <div class="delivery-content">
+            <h6>Free Delivery</h6>
+            <p>Delivery within 2–4 business days</p>
+        </div>
+
+    </div>
+
+
+    <div class="delivery-item">
+
+        <div class="delivery-icon">
+            <iconify-icon icon="solar:refresh-bold"></iconify-icon>
+        </div>
+
+        <div class="delivery-content">
+            <h6>30 Days Return</h6>
+            <p>Money Back Guarantee</p>
+        </div>
+
+    </div>
+
+
+    <div class="delivery-item">
+
+        <div class="delivery-icon">
+            <iconify-icon icon="solar:shield-check-bold"></iconify-icon>
+        </div>
+
+        <div class="delivery-content">
+            <h6>Secure Payment</h6>
+            <p>100% Secure SSL Checkout</p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+<!-- ==========================
+     Item Details End here
+========================== -->
+
+<section id="productTabs">
+
+    <div class="container">
+
+        <div class="tabs-card">
+
+            <div class="tabs-nav">
+
+                <button class="tab-btn active"
+                        data-tab="description">
+                    Description
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="specification">
+                    Specification
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="reviews">
+                    Reviews (124)
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="faq">
+                    FAQ
+                </button>
+
+            </div>
+
+            <div class="tabs-content">
+
+                <div class="tab-panel active"
+                     id="description">
+
+                    Description Here
+
+                </div>
+
+                <div class="tab-panel"
+                     id="specification">
+
+                    Specification Here
+
+                </div>
+
+                <div class="tab-panel"
+                     id="reviews">
+
+                    Reviews Here
+
+                </div>
+
+                <div class="tab-panel"
+                     id="faq">
+
+                    FAQ Here
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section id="desAddReview">
     <div class="reviewNav">
         <div class="container">
@@ -389,4 +567,64 @@
         </div>
     </div>
 </section>
+
+
+<Script>
+  const tabs = document.querySelectorAll(".tab-btn");
+const panels = document.querySelectorAll(".tab-panel");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        panels.forEach(panel => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.tab)
+            .classList.add("active");
+
+    });
+
+});
+
+
+const quantityInput = document.getElementById("quantity");
+const plusBtn = document.getElementById("plusBtn");
+const minusBtn = document.getElementById("minusBtn");
+
+let quantity = 1;
+
+plusBtn.addEventListener("click", () => {
+    quantity++;
+    quantityInput.value = quantity;
+});
+
+minusBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+        quantity--;
+        quantityInput.value = quantity;
+    }
+});
+
+const thumbnails = document.querySelectorAll(".thumb");
+const mainImage = document.getElementById("mainProductImage");
+
+thumbnails.forEach((thumb) => {
+
+    thumb.addEventListener("click", () => {
+
+        thumbnails.forEach(item => item.classList.remove("active"));
+
+        thumb.classList.add("active");
+
+        mainImage.src = thumb.dataset.image;
+
+    });
+
+});
+</Script>
+
 @endsection
