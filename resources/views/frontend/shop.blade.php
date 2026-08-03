@@ -216,7 +216,7 @@
                                 </div>
                                 @endif
 
-                                <a href="#">
+                                <a href="{{ route('shop.product', $product->slug) }}">
                                     <img src="{{ getImage($product->image) }}" alt="{{ $product->title }}" class="img-fluid">
                                 </a>
 
@@ -224,7 +224,7 @@
                                     <a href="#" class="shopHoverIcon" title="Add to Wishlist">
                                         <iconify-icon icon="solar:heart-linear" width="20" height="20"></iconify-icon>
                                     </a>
-                                    <a href="#" class="shopHoverIcon" title="Quick View">
+                                    <a href="{{ route('shop.product', $product->slug) }}" class="shopProductTitle" {{ $product->title }} class="shopHoverIcon" title="Quick View">
                                         <iconify-icon icon="solar:eye-outline" width="20" height="20"></iconify-icon>
                                     </a>
                                 </div>

@@ -4998,3 +4998,21 @@ z-index: 2;
     }
 
 }
+
+
+    .review-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        width: 100%;
+        display: block;
+    }
+    .review-body {
+        width: 100%;
+        clear: both;
+    }
+    .review-text {
+        word-break: break-word;
+        line-height: 1.6;
+        color: #4f4f4f;
+    }

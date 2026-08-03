@@ -45,11 +45,26 @@ class FrontendController extends Controller
         return view('frontend.contact');
     }
 
-    function singleProduct ($slug){
-        $product = Product::with('category')->where('slug', $slug)->first();
-        
-        return view('frontend.iteminfo', compact('product'));
-    }
+    public function singleProduct($slug)
+{
+    $product = Product::where('slug', $slug)->firstOrFail();
+
+    $reviews = $product->reviews()
+        ->where('status', 'approved')
+        ->latest()
+        ->get();
+
+    $averageRating = round($reviews->avg('rating'), 1);
+
+    $totalReviews = $reviews->count();
+
+    return view('frontend.iteminfo', compact(
+        'product',
+        'reviews',
+        'averageRating',
+        'totalReviews'
+    ));
+}
 
     function liveSearch(Request $request){
         // return dd($request->userInput);

@@ -403,6 +403,12 @@
 
     </th>
 
+        <th>
+
+        Reviews
+
+    </th>
+
 </tr>
 
 </thead>
@@ -513,6 +519,12 @@
 
         </div>
 
+    </td>
+
+    <td>
+    <a href="{{ route('admin.reviews') }}" class="btn btn-info btn-sm">
+        <i class="bi bi-star-fill"></i> Reviews
+    </a>
     </td>
 
 
