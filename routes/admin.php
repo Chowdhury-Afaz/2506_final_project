@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,18 @@ Route::prefix('categories')
         Route::put('/{id}', 'update')->name('update');
 
         Route::delete('/{id}', 'destroy')->name('destroy');
+
+    });
+
+ Route::prefix('/reviews')
+    ->name('reviews.')
+    ->controller(ReviewController::class)
+    ->group(function () {
+
+        Route::get('/', 'index')->name('index');
+
+        Route::get('/{id}/approve', 'approve')->name('approve');
+
+        Route::get('/{id}/delete', 'destroy')->name('delete');
 
     });

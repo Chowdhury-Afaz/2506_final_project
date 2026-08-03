@@ -708,3 +708,80 @@ display: none;
 }
 
 
+
+/* Shop Page Responsive */
+@media (max-width: 991px) {
+    #shopHero {
+        padding: 30px 0 35px;
+    }
+
+    .shopBannerContent h1 {
+        font-size: 30px;
+    }
+
+    .shopBannerDesc {
+        font-size: 14px;
+    }
+
+    .shopBannerActions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shopBtnPrimary,
+    .shopBtnOutline {
+        justify-content: center;
+    }
+
+    .shopProductImg img {
+        max-height: 140px;
+    }
+
+    .shopSortBar .sortRight label {
+        display: none;
+    }
+
+    .shopSortBar .sortRight .form-select {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 575px) {
+    .shopBannerContent h1 {
+        font-size: 26px;
+    }
+
+    .shopProductInfo {
+        padding: 12px;
+    }
+
+    .shopProductTitle {
+        font-size: 13px;
+    }
+
+    .shopCurrentPrice {
+        font-size: 14px;
+    }
+
+    .shopOldPrice {
+        font-size: 12px;
+    }
+
+    .shopProductRating iconify-icon {
+        font-size: 14px;
+    }
+
+    .shopPagination .page-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .activeFilters {
+        padding: 10px 14px;
+    }
+
+    .filterTag {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}

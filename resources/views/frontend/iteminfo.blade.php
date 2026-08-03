@@ -1,720 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoBazar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="shortcut icon" href="./img/plant 1.png">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-</head>
-<body>
-<header>
-    <div id="headertop">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 d-none d-lg-block text-center text-lg-start">
-            <address>
-                <iconify-icon icon="tdesign:location"></iconify-icon>Store Location: Lincoln- 344, Illinois, Chicago, USA
-            </address>
-            </div>
-            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-end">
-                <form>
-                    <select>
-                        <option>Eng</option>
-                        <option>Ban</option>
-                    </select>
-                    <select>
-                        <option>USD</option>
-                        <option>BDT</option>
-                    </select>
-                    <a href="./signin.html">Sign In / Sign Up</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="headermid">
-        <div class="container d-none d-lg-block">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <a href="#"><img src="./img/Logo.png" alt=""></a>
-                </div>
-                <div class="col-lg-6 m-auto">
-                    <form>
-                        <input type="search" placeholder="Search">
-                        <iconify-icon icon="teenyicons:search-outline" width="15" height="15"  style="color: #000"></iconify-icon>
-                        <button class="btnsearch">Search</button>
-                    </form>
-                </div>
-                <div class="col-lg-3 d-flex justify-content-end">
-                    <a href="#" class="iconsLove">
-                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                    </a>
-                    <a href="#" class="iconsCart">
-                        <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                        <p>2</p>
-                    </a>
-                    <div class="price">
-                    <p>Shopping cart:</p>
-                    <h6>$57.00</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="headerlast d-none d-lg-block">
-            <div class="container">
-                <div class="row">
-                    <div class="nav col-lg-8">
-                        <ul class="d-flex">
-                            <li>
-                                <a href="./index.html" class="active">Home</a>
-                            </li>
-                            <li>
-                                <a href="./shop.html">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="./contact.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contact col-lg-4 text-end">
-                        <a href="tel:(219) 555-0114" class="callBtn"><iconify-icon icon="bx:phone-call" width="24" height="24"></iconify-icon> (219) 555-0114</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="mblnavbar d-lg-none d-flex">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-1">
-                  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
-                    <iconify-icon icon="heroicons-solid:menu-alt-1" style="color: #000"></iconify-icon>
-                  </button> 
-                </div>
-                <div class="col-8 text-center">
-                    <a href="#">
-                        <img src="./img/Logo.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                  <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                     <iconify-icon icon="teenyicons:search-outline"></iconify-icon>
-                  </a>
-                  <a href="#" class="iconsCart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                     <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                     <p>2</p>
-                  </a>   
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="offCanvas d-lg-none d-flex">
-        <div class="mblNavBtn">
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft"></button>
+@extends('layouts.frontendLayout')
 
-<div class="offcanvas offcanvas-start" tabindex="1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-  <div class="offcanvas-header">
-    <a href="#"><img src="./img/Logo.png" class="offcanvas-title img-fluid" id="offcanvasLeftLabel" alt=""></a>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="nav flex-column">
-        <a href="#" class="active">Home</a>
-        <a href="./shop.html">Shop</a>
-        <a href="#">Pages</a>
-        <a href="#">Blog</a>
-        <a href="#">About Us</a>
-        <a href="./contact.html">Contact Us</a>
-    </div>
-  </div>
-</div></div>
-<div class="mblSearchBtn">
-    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"></button>
+@section('title', $product->title ?? 'Shop Page')
 
-<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <form>
-        <input type="search" placeholder="Search">
-        <iconify-icon icon="teenyicons:search-outline"></iconify-icon>
-        <button class="btnsearch">Search</button>
-    </form>
-  </div>
-</div>
-</div>
-<div class="mblCartBtn">
-    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>
-
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Purchase item <img src="./img/plant 1.png" class="img-fluid"></h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="buyItem">
-        <div class="container">
-            <div class="row">    
-        <div class="carditem col-5">
-            <a href="#">
-                <img src="./img/Apple.png" alt="">
-                <h5>Green Apple</h5>
-                <p>2 Kg  <b>15$</b></p>
-            </a>
-        </div>
-        <div class="carditem col-5">
-            <a href="#">
-                <img src="./img/Malta.png" alt="">
-                <h5>Indian Malta</h5>
-                <p>2 Kg  <b>15$</b></p>
-            </a>
-        </div>
-    </div>
-    </div>
-        </div>
-  </div>
-</div>
-</div>
-    </div>
-    <div class="mblFooterMenu d-lg-none">
-        <div class="container">
-            <div class="row align-items-center">
-                <ul>
-                    <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                    <li><a href="./shop.html"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a></li>
-                    <li><a href="#"><iconify-icon icon="cil:home"></iconify-icon></a></li>
-                    <li><a href="#"><iconify-icon icon="teenyicons:discount-outline"></iconify-icon></a></li>
-                    <li><a href="./signin.html"><iconify-icon icon="gg:profile"></iconify-icon></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<main>
+@section('content')
+<!-- Breadcrumb Navigation -->
 <section>
     <div class="smallNav">
         <div class="container">
             <div class="row">
-            <ul class="d-flex">
-            <li><a href="./index.html"><iconify-icon icon="material-symbols-light:home-outline" width="24" height="24"></iconify-icon></a></li>
-            <li><a href="#">Category</a></li>
-            <li><a href="#">Vagetables</a></li>
-            <li><a href="#" class="active">Chinese Cabbage</a></li>
-            </ul>
+                <ul class="d-flex">
+                    <li><a href="{{ url('/') }}"><iconify-icon icon="material-symbols-light:home-outline" width="24" height="24"></iconify-icon></a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">{{ $product->category->name ?? 'N/A' }}</a></li>
+                    <li><a href="#" class="active">{{ $product->title }}</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
+
+<!-- ==========================
+     Item Details Start
+========================== -->
 <section id="itemDetails">
     <div class="container">
-            <div class="product-card">
-  <div class="row g-0">
- 
-    <!-- LEFT: Images -->
-    <div class="col-12 col-md-5">
-      <div class="image-col">
-        <!-- Thumbnails -->
-        <div class="thumbnail-strip">
-          <div class="thumbnail active">
-            <img src="./img/Product Image.png" class="img-fluid" alt="">
-          </div>
-          <div class="thumbnail">
-            <img src="./img/Product Image (1).png" class="img-fluid" alt="">
-          </div>
-          <div class="thumbnail">
-            <img src="./img/Product Image (2).png" class="img-fluid" alt="">
-          </div>
-          <div class="thumbnail">
-            <img src="./img/Product Image (3).png" class="img-fluid" alt="">
-          </div>
-        </div>
- 
-        <!-- Main Image Box (blank) -->
-        <div class="main-image-box">
-        <img src="./img/Product Image (4).png" class="img-fluid" alt="">  
-        </div>
-      </div>
-    </div>
- 
-    <!-- Divider -->
-    <div class="col-auto d-none d-md-block">
-      <div class="divider-col h-100"></div>
-    </div>
- 
-    <!-- RIGHT: Info -->
-    <div class="col-12 col-md-6">
-      <div class="info-col">
- 
-        <!-- Title + Stock -->
-        <div class="product-title-row">
-          <h1 class="product-title">Chinese Cabbage</h1>
-          <span class="stock-badge">In Stock</span>
-        </div>
- 
-        <!-- Rating + SKU -->
-        <div class="rating-row">
-          <div class="stars">
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-            <iconify-icon icon="ph:star-fill" width="16"></iconify-icon>
-          </div>
-          <span>4 Review</span>
-          <span class="rating-sep"></span>
-          <span class="sku">SKU: 2,51,594</span>
-        </div>
- 
-        <!-- Price -->
-        <div class="price-row">
-          <span class="price-original">$48.00</span>
-          <span class="price-current">$17.28</span>
-          <span class="discount-badge">64% Off</span>
-        </div>
- 
-        <div class="h-divider"></div>
- 
-        <!-- Brand + Share -->
-        <div class="brand-share-row">
-          <div class="d-flex align-items-center">
-            <span class="brand-label">Brand:</span>
-            <img src="./img/Group 19.png" class="img-fluid" alt="">
-          </div>
-          <div class="d-none d-lg-flex align-items-center">
-            <span class="share-label">Share item</span>
-            <div class="socialMedia">
-                    <ul class="d-flex">
-                        <li><a href="#"><iconify-icon icon="ri:facebook-fill"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mynaui:twitter"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mingcute:pinterest-line"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mdi:instagram"></iconify-icon></a></li>
-                    </ul>
-                </div>
-          </div>
-        </div>
- 
-        <!-- Description -->
-        <p class="product-desc">
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla
-          varius magna a consequat pulvinar.
-        </p>
- 
-        <!-- Cart Row -->
-        <div class="cart-row">
-          <!-- Quantity -->
-          <div class="qty-control">
-            <button class="qty-btn" onclick="changeQty(-1)">−</button>
-            <input class="qty-value" id="qty" type="text" value="5" readonly />
-            <button class="qty-btn" onclick="changeQty(1)">+</button>
-          </div>
-          
-          <!-- Add to Cart -->
-          <button class="add-to-cart-btn d-block d-lg-flex">
-            <iconify-icon icon="ph:shopping-cart-simple-bold" width="18"></iconify-icon>
-            Add to Cart
-          </button>
- 
-          <!-- Wishlist -->
-          <button class="wishlist-btn" title="Add to Wishlist">
-            <iconify-icon icon="ph:heart-bold" width="20"></iconify-icon>
-          </button>
-        </div>
- 
-        <div class="h-divider"></div>
- 
-        <!-- Category + Tags -->
-        <div class="meta-row">
-          <span class="meta-key">Category:</span>
-          &nbsp;<span class="meta-tag"><a href="#">Vegetables</a></span>
-        </div>
-        <div class="meta-row">
-          <span class="meta-key">Tag:</span>
-          &nbsp;
-          <span class="meta-tag"><a href="#">Vegetables</a></span>
-          <span class="meta-tag"><a href="#">Healthy</a></span>
-          <span class="meta-tag"><a href="#" style="text-decoration:underline;">Chinese</a></span>
-          <span class="meta-tag"><a href="#">Cabbage</a></span>
-          <span class="meta-tag"><a href="#">Green Cabbage</a></span>
-        </div>
- 
-      </div>
-    </div>
- 
-  </div>
-</div>
-        </div>
-</section>
-<section id="desAddReview">
-    <div class="reviewNav">
-        <div class="container">
-            <div class="row">
-                <ul class="d-flex justify-content-center">
-                    <li><a href="#">Description</a></li>
-                    <li><a href="#">Additional Information</a></li>
-                    <li><a href="#" class="active">Customer feedback</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
+        <div class="product-layout">
 
-        
-    <div class="reviews-wrapper">
- 
-  <!-- Review 1 -->
-  <div class="review-item">
-    <div class="avatar">
-      <img src="./img/Image.png" alt="Kristin Watson"/>
-    </div>
-    <div class="review-body">
-      <div class="review-header">
-        <p class="reviewer-name">Kristin Watson</p>
-        <span class="review-time">2 min ago</span>
-      </div>
-      <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="gallery-thumbnails">
+                    @if ($product->gallery_image)
+                        @foreach (json_decode($product->gallery_image, true) ?? [] as $image)
+                            <div class="thumb {{ $loop->first ? 'active' : '' }}" data-image="{{ getImage($image) }}">
+                                <img src="{{ getImage($image) }}" alt="{{ $product->title }}">
                             </div>
-      <p class="review-text">Duis ut ullamcorper nulla, eu dictum eros.</p>
-    </div>
-  </div>
- 
-  <!-- Review 2 -->
-  <div class="review-item">
-    <div class="avatar">
-      <img src="./img/Image (1).png" alt="Jane Cooper"/>
-    </div>
-    <div class="review-body">
-      <div class="review-header">
-        <p class="reviewer-name">Jane Cooper</p>
-        <span class="review-time">30 Apr, 2021</span>
-      </div>
-      <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-      <p class="review-text">Keep the soil evenly moist for the healthiest growth. If the sun gets too hot, Chinese cabbage tends to 'bolt' or go to seed; in long periods of heat, some kind of shade may be helpful. Watch out for snails, as they will harm the plants.</p>
-    </div>
-  </div>
- 
-  <!-- Review 3 -->
-  <div class="review-item">
-    <div class="avatar">
-      <img src="./img/Image (2).png" alt="Jacob Jones"/>
-    </div>
-    <div class="review-body">
-      <div class="review-header">
-        <p class="reviewer-name">Jacob Jones</p>
-        <span class="review-time">2 min ago</span>
-      </div>
-      <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-      <p class="review-text">Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia lacus.</p>
-    </div>
-  </div>
- 
-  <!-- Review 4 -->
-  <div class="review-item">
-    <div class="avatar">
-      <img src="./img/User 1.png" alt="Ralph Edwards"/>
-    </div>
-    <div class="review-body">
-      <div class="review-header">
-        <p class="reviewer-name">Ralph Edwards</p>
-        <span class="review-time">2 min ago</span>
-      </div>
-      <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-      <p class="review-text">200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO Productive Brassica rapa VAR. chinensis, a.k.a. Canton's Choice, Bok Choi, from USA</p>
-    </div>
-  </div>
- 
-  <a href="#"class="load-more-btn"><button>Load More</button></a>
- 
-</div>
-</div>
-    </div>
- 
-</section>
-<section id="relatedProduct">
-    <div class="container">
-        <h2>Related Products</h2>
-        <div class="row align-items-center">
-            <div class="col-6 col-lg">
-                <div class="featureCard">
-                    <div class="offer">
-                        <span>20% OFF</span>
+                        @endforeach
+                    @endif
+                </div>
+
+                <div class="gallery-preview">
+                    <img src="{{ getImage($product->image) }}" alt="{{ $product->title }}" id="mainProductImage">
+                </div>
+            </div>
+
+            <!-- Product Content -->
+            <div class="product-content">
+                <div class="product-header">
+                    <span class="product-category">{{ $product->category->name ?? 'Uncategorized' }}</span>
+                    <h1 class="product-title">{{ $product->title }}</h1>
+
+                    <!-- Dynamic Rating & Reviews Summary -->
+                    <div class="product-rating d-flex align-items-center mb-3">
+                        <div class="stars text-warning me-2">
+                            @for($i = 1; $i <= 5; $i++)
+                                @if($i <= round($averageRating ?? 0))
+                                    <iconify-icon icon="ph:star-fill"></iconify-icon>
+                                @else
+                                    <iconify-icon icon="ph:star-bold"></iconify-icon>
+                                @endif
+                            @endfor
+                        </div>
+                        <span class="fw-bold me-1">{{ number_format($averageRating ?? 0, 1) }}</span>
+                        <span class="text-muted">({{ $totalReviews ?? 0 }} Reviews)</span>
                     </div>
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
                 </div>
-            </div>
-            <div class="col-6 col-lg">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+                <div class="product-status">
+                    <span class="stock">In Stock</span>
+                    <span class="sku">SKU : {{ $product->sku ?? 'N/A' }}</span>
                 </div>
-            </div>
-            <div class="col-6 col-lg">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+                <div class="product-price">
+                    <h2>${{ $product->price ?? '0.00' }}</h2>
+                    @if(isset($product->old_price))
+                        <del>${{ $product->old_price }}</del>
+                    @endif
                 </div>
-            </div>
-            <div class="col-6 col-lg">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+                <p class="product-description">
+                    {{ $product->short_description ?? 'Fresh organic product collected directly from local farms.' }}
+                </p>
+
+                <div class="product-meta">
+                    <div>
+                        <strong>Brand</strong>
+                        <span>{{ $product->brand->name ?? 'Organic Farm' }}</span>
+                    </div>
+                    <div>
+                        <strong>Category</strong>
+                        <span>{{ $product->category->name ?? 'N/A' }}</span>
+                    </div>
                 </div>
+
+                <!-- Purchase Card -->
+                <div class="purchase-card">
+                    <div class="quantity-box">
+                        <span>Quantity</span>
+                        <div class="quantity-controller">
+                            <button type="button" id="minusBtn">-</button>
+                            <input type="text" id="quantity" value="1" readonly>
+                            <button type="button" id="plusBtn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="purchase-buttons">
+                        <button type="button" class="cart-btn">
+                            <iconify-icon icon="solar:cart-large-2-bold"></iconify-icon> Add To Cart
+                        </button>
+                        <button type="button" class="buy-btn">
+                            <iconify-icon icon="solar:flash-bold"></iconify-icon> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="extra-actions">
+                        <button type="button">
+                            <iconify-icon icon="solar:heart-bold"></iconify-icon> Wishlist
+                        </button>
+                        <button type="button">
+                            <iconify-icon icon="solar:sort-horizontal-bold"></iconify-icon> Compare
+                        </button>
+                    </div>
+
+                    <div class="delivery-info">
+                        <div class="delivery-item">
+                            <div class="delivery-icon">
+                                <iconify-icon icon="solar:delivery-bold"></iconify-icon>
+                            </div>
+                            <div class="delivery-content">
+                                <h6>Free Delivery</h6>
+                                <p>Delivery within 2–4 business days</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-item">
+                            <div class="delivery-icon">
+                                <iconify-icon icon="solar:refresh-bold"></iconify-icon>
+                            </div>
+                            <div class="delivery-content">
+                                <h6>30 Days Return</h6>
+                                <p>Money Back Guarantee</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-item">
+                            <div class="delivery-icon">
+                                <iconify-icon icon="solar:shield-check-bold"></iconify-icon>
+                            </div>
+                            <div class="delivery-content">
+                                <h6>Secure Payment</h6>
+                                <p>100% Secure SSL Checkout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /product-content -->
+        </div> <!-- /product-layout -->
+    </div>
+</section>
+
+<!-- ==========================
+     Product Tabs Start
+========================== -->
+<section id="productTabs">
+    <div class="container">
+        <div class="tabs-card">
+            <div class="tabs-nav">
+                <button type="button" class="tab-btn active" data-tab="description">Description</button>
+                <button type="button" class="tab-btn" data-tab="specification">Specification</button>
+                <button type="button" class="tab-btn" data-tab="reviews">Reviews ({{ $totalReviews ?? 0 }})</button>
+                <button type="button" class="tab-btn" data-tab="faq">FAQ</button>
             </div>
-            <div class="col-6 col-lg">
-                <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="./img/AppleBig.png" alt=""></a>
-                            <ul class="featureIcons">
-                            <li><a href="#"><iconify-icon icon="simple-line-icons:heart"></iconify-icon></a></li>
-                            <li><a href="#" class="quickViewBtn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-img="./img/AppleBig.png" data-title="Green Apple" data-price="$14.99" data-sku="FRT-001" data-category="Fruits"><iconify-icon icon="bx:show"></iconify-icon></a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                        </div>
-                        <a href="#" class="cartBtn"><iconify-icon icon="clarity:shopping-bag-line"></iconify-icon></a>
-                        </div>                  
+
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    {!! $product->description ?? 'No description available.' !!}
+                </div>
+                <div class="tab-panel" id="specification">
+                    {!! $product->specification ?? 'No specifications available.' !!}
+                </div>
+                <div class="tab-panel" id="reviews">
+                    <p>See customer reviews below.</p>
+                </div>
+                <div class="tab-panel" id="faq">
+                    <p>frequently asked questions section.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</main>
-<footer>
-    <div class="container">
-        <div class="row pb-lg-5">
-            <div class="col-lg-3">
-                <div class="about d-none d-lg-block">
-                    <h5>About Shopery</h5>
-                    <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
-                    <a class="contact" href="callto:(219) 555-0114">(219) 555-0114</a>
-                    <span>or</span>
-                    <a class="contact" href="mailto:proxy@gmail.com">proxy@gmail.com</a>
-                </div>
-            </div>
-            <div class="col-lg-2">
-                    <h5>My Account</h5>
-                    <ul>
-                        <li><a href="./signin.html">My Account</a></li>
-                        <li><a href="#">Order History</a></li>
-                        <li><a href="#">Shopping Cart</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Setting</a></li>
-                    </ul>
-            </div>
-            <div class="col-lg-2">
-                    <h5>Help</h5>
-                    <ul>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-            </div>
-            <div class="col-lg-2">
-                    <h5>Proxy</h5>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Products Details</a></li>
-                        <li><a href="#">Track Order</a></li>
-                    </ul>
-            </div>
-            <div class="col-lg-3">
-                <div class="apps">
-                    <h5>Download Our Mobile App</h5>
-                    <div class="row justify-content-between">
-                        <div class="col-lg-6 col-6">
-                            <div class="appStore">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-3 col-3">
-                                        <span class="appsLogo"><iconify-icon icon="ic:baseline-apple"></iconify-icon></span>
-                                    </div>
-                                    <div class="col-lg-9 col-9">
-                                        <a href="#">
-                                            Download on the <span>App Store</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+<!-- ==========================
+     Reviews & Feedback Section
+========================== -->
+<section id="desAddReview">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+               <div class="reviews-wrapper">
+    <h3 class="mb-4">Customer Reviews</h3>
+
+    @if(isset($product->reviews) && $product->reviews->count() > 0)
+        @foreach($product->reviews as $review)
+            <div class="review-card mb-3 p-3 border rounded">
+                
+                <!-- Top Row: Avatar, Name & Time -->
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar">
+                            <img src="https://ui-avatars.com/api/?name={{ urlencode($review->user->name ?? 'User') }}&background=28a745&color=fff" 
+                                 alt="{{ $review->user->name ?? 'User' }}" 
+                                 class="rounded-circle" width="48" height="48">
                         </div>
-                        <div class="col-lg-6 col-6">
-                            <div class="playStore">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-3 col-3">
-                                        <span class="apps_logo"><iconify-icon icon="mage:playstore"></iconify-icon></span>
-                                    </div>
-                                    <div class="col-lg-9 col-9">
-                                         <a href="#">
-                                            Download on the <span>Play Store</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div>
+                            <h6 class="reviewer-name mb-0 fw-bold">{{ $review->user->name ?? 'Anonymous' }}</h6>
+                            <span class="review-time text-muted small">{{ $review->created_at ? $review->created_at->diffForHumans() : '' }}</span>
                         </div>
                     </div>
+
+                    <!-- Rating Stars -->
+                    <div class="stars text-warning fs-5">
+                        @for($i = 1; $i <= 5; $i++)
+                            @if($i <= $review->rating)
+                                ★
+                            @else
+                                ☆
+                            @endif
+                        @endfor
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row align-items-center justify-content-lg-between copyright">
-            <div class="col-lg-3">
-                <div class="socialMedia">
-                    <ul>
-                        <li><a href="#"><iconify-icon icon="ri:facebook-fill"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mynaui:twitter"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mingcute:pinterest-line"></iconify-icon></a></li>
-                        <li><a href="#"><iconify-icon icon="mdi:instagram"></iconify-icon></a></li>
-                    </ul>
+
+                <!-- Review Content Row -->
+                <div class="review-body mt-2">
+                    @if($review->title)
+                        <h6 class="fw-bold mb-1">{{ $review->title }}</h6>
+                    @endif
+                    <p class="review-text text-secondary mb-0">
+                        {{ $review->comment }}
+                    </p>
                 </div>
+
             </div>
-            <div class="copyright col-lg-4 d-lg-flex justify-content-lg-center">
-                <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
-            </div>
-            <div class="col-lg-4 d-lg-flex justify-content-lg-end">
-                <ul class="payment d-flex">
-                    <li>
-                        <a href="#"><img src="./img/pay1.png" class="img-fluid" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/pay2.png" class="img-fluid" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/pay3.png" class="img-fluid" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/pay4.png" class="img-fluid" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/pay5.png" class="img-fluid" alt=""></a>
-                    </li>
-                </ul>
+        @endforeach
+    @else
+        <p class="text-muted">No reviews yet for this product.</p>
+    @endif
+</div>
+                <hr class="my-5">
+
+                <!-- Write Review Form -->
+                <h3>Write a Review</h3>
+
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                @auth
+                    <form action="{{ route('review.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <select name="rating" class="form-select" required>
+                                <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                                <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                                <option value="3">⭐⭐⭐ (3/5)</option>
+                                <option value="2">⭐⭐ (2/5)</option>
+                                <option value="1">⭐ (1/5)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Review Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Summarize your review">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comment</label>
+                            <textarea name="comment" rows="4" class="form-control" placeholder="Write your feedback..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit Review</button>
+                    </form>
+                @else
+                    <div class="alert alert-warning">
+                        Please <a href="{{ route('login') }}" class="fw-bold">login</a> to write a review.
+                    </div>
+                @endauth
             </div>
         </div>
     </div>
- </footer>
-    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./jQuery.countdown-master/jQuery.countdown-master/dist/jquery.countdown.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/app.js"></script>
-</body>
-</html>
+</section>
+
+<!-- JavaScript Functions -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Tab Functionality
+        const tabs = document.querySelectorAll(".tab-btn");
+        const panels = document.querySelectorAll(".tab-panel");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(btn => btn.classList.remove("active"));
+                panels.forEach(panel => panel.classList.remove("active"));
+
+                tab.classList.add("active");
+                const activePanel = document.getElementById(tab.dataset.tab);
+                if (activePanel) activePanel.classList.add("active");
+            });
+        });
+
+        // Quantity Controller
+        const quantityInput = document.getElementById("quantity");
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+
+        if (quantityInput && plusBtn && minusBtn) {
+            let quantity = parseInt(quantityInput.value) || 1;
+
+            plusBtn.addEventListener("click", () => {
+                quantity++;
+                quantityInput.value = quantity;
+            });
+
+            minusBtn.addEventListener("click", () => {
+                if (quantity > 1) {
+                    quantity--;
+                    quantityInput.value = quantity;
+                }
+            });
+        }
+
+        // Image Gallery Thumbnails Switching
+        const thumbnails = document.querySelectorAll(".thumb");
+        const mainImage = document.getElementById("mainProductImage");
+
+        thumbnails.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                thumbnails.forEach(item => item.classList.remove("active"));
+                thumb.classList.add("active");
+                if (mainImage && thumb.dataset.image) {
+                    mainImage.src = thumb.dataset.image;
+                }
+            });
+        });
+    });
+</script>
+@endsection

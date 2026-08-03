@@ -17,11 +17,30 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-
-        User::create([
+        $users = [
+            [
             'name' => 'Shourab',
             'email' => 'shourab.cit.bd@gmail.com',
             'password' => Hash::make('password')
+            ],
+                [
+            'name' => 'Fahim',
+            'email' => 'cst.fahim@gmail.com',
+            'password' => Hash::make('123456')
+        ]
+        ];
+
+        foreach($users as $user){
+            User::create($user);
+        }
+
+
+        // Seeder Run
+        $this->call([
+            CategorySeeder::class,
+            ProductSeeder::class,
         ]);
+
+
     }
 }

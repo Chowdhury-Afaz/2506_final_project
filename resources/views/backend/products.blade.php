@@ -403,6 +403,12 @@
 
     </th>
 
+        <th>
+
+        Reviews
+
+    </th>
+
 </tr>
 
 </thead>
@@ -493,9 +499,10 @@
                 <i class="bi bi-eye"></i>
             </button>
 
-            <button class="btn btn-warning action-btn">
+            <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-warning action-btn">
                 <i class="bi bi-pencil"></i>
-            </button>
+            </a>
+
 
 <form action="{{ route('admin.products.destroy', $product->id) }}"
       method="POST"
@@ -512,6 +519,12 @@
 
         </div>
 
+    </td>
+
+    <td>
+    <a href="{{ route('admin.reviews') }}" class="btn btn-info btn-sm">
+        <i class="bi bi-star-fill"></i> Reviews
+    </a>
     </td>
 
 
