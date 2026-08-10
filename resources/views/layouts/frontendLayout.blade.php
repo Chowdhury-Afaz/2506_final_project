@@ -59,13 +59,13 @@
 
                 <div class="auth-links">
 
-                    <a href="{{ route('login') }}">
+                    <a href="{{ route('customer.login') }}">
                         Sign In
                     </a>
 
                     <span>/</span>
 
-                    <a href="#">
+                    <a href="{{ route('customer.register') }}">
                         Sign Up
                     </a>
 

@@ -45,7 +45,7 @@
          class="brand-logo">
 
 
-    
+   
 
 
     <h1>
@@ -78,20 +78,7 @@
             <div class="login-card">
 
 
-                <div class="login-header">
-
-                    <h2>
-                        Admin Sign In
-                    </h2>
-
-                    <p>
-                        Login to access your dashboard
-                    </p>
-
-                </div>
-
-
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('customer.login.store') }}" method="POST">
 
                     @csrf
 
