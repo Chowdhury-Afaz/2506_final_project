@@ -164,6 +164,10 @@
                         Sign In
                     </button>
 
+                    <a href="{{ route('google.redirect') }}">
+                        <img src="https://i.sstatic.net/4LSMF.png" alt="" width="200px">
+                    </a>
+
 
                     <div class="secure-text">
 

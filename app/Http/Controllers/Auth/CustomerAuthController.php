@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Socialite\Socialite;
 
 class CustomerAuthController extends Controller
 {
@@ -19,7 +20,7 @@ class CustomerAuthController extends Controller
     // where to redirect users after login / registration.
     protected $redirectTo = '/my-dashboard';
 
-    
+
     function showLoginForm()
     {
         return view('auth.customer.login');
@@ -61,5 +62,33 @@ class CustomerAuthController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+
+    function googleRedirect()
+    {
+
+        return Socialite::driver('google')->redirect();
+    }
+
+    function googleCallback()
+    {
+
+        $user = Socialite::driver('google')->user();
+
+        // Customer Craete
+        $customer = Customer::updateOrCreate([
+            'email' => $user->email,
+        ],[
+            'name' => $user->name,
+            'email' => $user->email,
+            'image' => $user->avatar,
+            'password' => Hash::make(uniqid())
+        ]);
+        
+        // Customer Login Session
+        Auth::guard('customer')->login($customer); // -> admin => guard -> customer
+        return to_route('user.dashboard');
+
     }
 }

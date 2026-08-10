@@ -9,19 +9,19 @@
         <div class="customer-dashboard__layout">
 
 
-        @include('frontend.customer_dashboard.partials.sidebar')
+            @include('frontend.customer_dashboard.partials.sidebar')
 
 
 
             {{-- =========================================
-                CUSTOMER DASHBOARD CONTENT
+            CUSTOMER DASHBOARD CONTENT
             ========================================== --}}
 
             <div class="customer-dashboard__content">
 
 
                 {{-- =====================================
-                    DASHBOARD HEADER
+                DASHBOARD HEADER
                 ====================================== --}}
 
                 <div class="customer-dashboard__header">
@@ -45,7 +45,7 @@
 
 
                 {{-- =====================================
-                    DASHBOARD STATISTICS
+                DASHBOARD STATISTICS
                 ====================================== --}}
 
                 <div class="customer-dashboard__stats">
@@ -56,8 +56,7 @@
 
                         <div class="customer-stat-card__icon">
 
-                            <iconify-icon
-                                icon="solar:bag-4-linear">
+                            <iconify-icon icon="solar:bag-4-linear">
                             </iconify-icon>
 
                         </div>
@@ -78,8 +77,7 @@
 
                         <div class="customer-stat-card__icon">
 
-                            <iconify-icon
-                                icon="solar:clock-circle-linear">
+                            <iconify-icon icon="solar:clock-circle-linear">
                             </iconify-icon>
 
                         </div>
@@ -100,8 +98,7 @@
 
                         <div class="customer-stat-card__icon">
 
-                            <iconify-icon
-                                icon="solar:check-circle-linear">
+                            <iconify-icon icon="solar:check-circle-linear">
                             </iconify-icon>
 
                         </div>
@@ -122,8 +119,7 @@
 
                         <div class="customer-stat-card__icon">
 
-                            <iconify-icon
-                                icon="solar:wallet-money-linear">
+                            <iconify-icon icon="solar:wallet-money-linear">
                             </iconify-icon>
 
                         </div>
@@ -143,7 +139,7 @@
 
 
                 {{-- =====================================
-                    RECENT ORDERS
+                RECENT ORDERS
                 ====================================== --}}
 
                 <div class="customer-orders">
@@ -171,8 +167,7 @@
 
                             View All
 
-                            <iconify-icon
-                                icon="solar:arrow-right-linear">
+                            <iconify-icon icon="solar:arrow-right-linear">
                             </iconify-icon>
 
                         </a>
@@ -245,8 +240,7 @@
 
                                             View
 
-                                            <iconify-icon
-                                                icon="solar:arrow-right-up-linear">
+                                            <iconify-icon icon="solar:arrow-right-up-linear">
                                             </iconify-icon>
 
                                         </a>
@@ -294,8 +288,7 @@
 
                                             View
 
-                                            <iconify-icon
-                                                icon="solar:arrow-right-up-linear">
+                                            <iconify-icon icon="solar:arrow-right-up-linear">
                                             </iconify-icon>
 
                                         </a>
@@ -343,8 +336,7 @@
 
                                             View
 
-                                            <iconify-icon
-                                                icon="solar:arrow-right-up-linear">
+                                            <iconify-icon icon="solar:arrow-right-up-linear">
                                             </iconify-icon>
 
                                         </a>
@@ -392,8 +384,7 @@
 
                                             View
 
-                                            <iconify-icon
-                                                icon="solar:arrow-right-up-linear">
+                                            <iconify-icon icon="solar:arrow-right-up-linear">
                                             </iconify-icon>
 
                                         </a>
@@ -414,14 +405,14 @@
 
 
                 {{-- =====================================
-                    QUICK ACTIONS + ACCOUNT OVERVIEW
+                QUICK ACTIONS + ACCOUNT OVERVIEW
                 ====================================== --}}
 
                 <div class="customer-dashboard__bottom">
 
 
                     {{-- =================================
-                        QUICK ACTIONS
+                    QUICK ACTIONS
                     ================================== --}}
 
                     <div class="customer-quick-actions">
@@ -455,8 +446,7 @@
 
                                 <span class="customer-action-card__icon">
 
-                                    <iconify-icon
-                                        icon="solar:bag-4-linear">
+                                    <iconify-icon icon="solar:bag-4-linear">
                                     </iconify-icon>
 
                                 </span>
@@ -471,9 +461,7 @@
 
                                 </span>
 
-                                <iconify-icon
-                                    class="customer-action-card__arrow"
-                                    icon="solar:arrow-right-linear">
+                                <iconify-icon class="customer-action-card__arrow" icon="solar:arrow-right-linear">
                                 </iconify-icon>
 
                             </a>
@@ -485,8 +473,7 @@
 
                                 <span class="customer-action-card__icon">
 
-                                    <iconify-icon
-                                        icon="solar:heart-linear">
+                                    <iconify-icon icon="solar:heart-linear">
                                     </iconify-icon>
 
                                 </span>
@@ -501,9 +488,7 @@
 
                                 </span>
 
-                                <iconify-icon
-                                    class="customer-action-card__arrow"
-                                    icon="solar:arrow-right-linear">
+                                <iconify-icon class="customer-action-card__arrow" icon="solar:arrow-right-linear">
                                 </iconify-icon>
 
                             </a>
@@ -515,8 +500,7 @@
 
                                 <span class="customer-action-card__icon">
 
-                                    <iconify-icon
-                                        icon="solar:map-point-linear">
+                                    <iconify-icon icon="solar:map-point-linear">
                                     </iconify-icon>
 
                                 </span>
@@ -531,9 +515,7 @@
 
                                 </span>
 
-                                <iconify-icon
-                                    class="customer-action-card__arrow"
-                                    icon="solar:arrow-right-linear">
+                                <iconify-icon class="customer-action-card__arrow" icon="solar:arrow-right-linear">
                                 </iconify-icon>
 
                             </a>
@@ -545,8 +527,7 @@
 
                                 <span class="customer-action-card__icon">
 
-                                    <iconify-icon
-                                        icon="solar:user-linear">
+                                    <iconify-icon icon="solar:user-linear">
                                     </iconify-icon>
 
                                 </span>
@@ -561,9 +542,7 @@
 
                                 </span>
 
-                                <iconify-icon
-                                    class="customer-action-card__arrow"
-                                    icon="solar:arrow-right-linear">
+                                <iconify-icon class="customer-action-card__arrow" icon="solar:arrow-right-linear">
                                 </iconify-icon>
 
                             </a>
@@ -574,21 +553,18 @@
 
 
                         {{-- Continue Shopping --}}
-                        <a href="{{ route('shop') }}"
-                           class="customer-browse-products">
+                        <a href="{{ route('shop') }}" class="customer-browse-products">
 
                             <span>
 
-                                <iconify-icon
-                                    icon="solar:shop-linear">
+                                <iconify-icon icon="solar:shop-linear">
                                 </iconify-icon>
 
                                 Continue Shopping
 
                             </span>
 
-                            <iconify-icon
-                                icon="solar:arrow-right-linear">
+                            <iconify-icon icon="solar:arrow-right-linear">
                             </iconify-icon>
 
                         </a>
@@ -598,7 +574,7 @@
 
 
                     {{-- =================================
-                        ACCOUNT OVERVIEW
+                    ACCOUNT OVERVIEW
                     ================================== --}}
 
                     <div class="customer-account-overview">
@@ -632,9 +608,13 @@
 
                                 <div class="customer-account-card__avatar">
 
-                                    <iconify-icon
-                                        icon="solar:user-bold">
+                                    @if (auth('customer')->user()->image)
+                                    <img src="{{ auth('customer')->user()->image }}" alt="{{ auth('customer')->user()->name }}" />
+                                    @else
+                                    <iconify-icon icon="solar:user-bold">
                                     </iconify-icon>
+                                    @endif
+
 
                                 </div>
 
@@ -642,11 +622,11 @@
                                 <div>
 
                                     <h3>
-                                        Shahraj Khan
+                                        {{ auth('customer')->user()->name }}
                                     </h3>
 
                                     <p>
-                                        shahraj@example.com
+                                        {{ auth('customer')->user()->email }}
                                     </p>
 
                                 </div>
@@ -664,8 +644,7 @@
 
                                     <span class="customer-account-detail__icon">
 
-                                        <iconify-icon
-                                            icon="solar:calendar-linear">
+                                        <iconify-icon icon="solar:calendar-linear">
                                         </iconify-icon>
 
                                     </span>
@@ -678,7 +657,7 @@
                                         </span>
 
                                         <strong>
-                                            August 2026
+                                            {{ auth('customer')->user()->created_at->format('M, Y') }}
                                         </strong>
 
                                     </div>
@@ -692,8 +671,7 @@
 
                                     <span class="customer-account-detail__icon">
 
-                                        <iconify-icon
-                                            icon="solar:map-point-linear">
+                                        <iconify-icon icon="solar:map-point-linear">
                                         </iconify-icon>
 
                                     </span>
@@ -706,7 +684,7 @@
                                         </span>
 
                                         <strong>
-                                            Not added yet
+                                            {{ auth('customer')->user()->addr ?? 'Not set yet!' }}
                                         </strong>
 
                                     </div>
@@ -719,15 +697,13 @@
 
 
                             {{-- Edit Profile --}}
-                            <a href="#"
-                               class="customer-account-card__button">
+                            <a href="#" class="customer-account-card__button">
 
                                 <span>
                                     Edit Profile
                                 </span>
 
-                                <iconify-icon
-                                    icon="solar:arrow-right-linear">
+                                <iconify-icon icon="solar:arrow-right-linear">
                                 </iconify-icon>
 
                             </a>

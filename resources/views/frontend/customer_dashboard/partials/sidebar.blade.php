@@ -4,12 +4,22 @@
     <div class="customer-sidebar__user">
 
         <div class="customer-sidebar__avatar">
-            <iconify-icon icon="solar:user-bold"></iconify-icon>
+            @if (auth('customer')->user()->image)
+            <img src="{{ auth('customer')->user()->image }}" alt="{{ auth('customer')->user()->name }}" />
+            @else
+            <iconify-icon icon="solar:user-bold">
+            </iconify-icon>
+            @endif
         </div>
 
         <div class="customer-sidebar__user-info">
-            <h3>Shahraj Khan</h3>
-            <p>My Account</p>
+            <h3>
+                {{ auth('customer')->user()->name }}
+            </h3>
+
+            <p>
+                {{ auth('customer')->user()->email }}
+            </p>
         </div>
 
     </div>
@@ -20,7 +30,7 @@
 
         {{-- Dashboard --}}
         <a href="{{ route('user.dashboard') }}"
-           class="customer-sidebar__link {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
+            class="customer-sidebar__link {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
 
             <iconify-icon icon="solar:widget-2-linear"></iconify-icon>
 
@@ -31,7 +41,7 @@
 
         {{-- My Orders --}}
         <a href="{{ route('user.orders') }}"
-           class="customer-sidebar__link {{ request()->routeIs('user.orders') ? 'active' : '' }}">
+            class="customer-sidebar__link {{ request()->routeIs('user.orders') ? 'active' : '' }}">
 
             <iconify-icon icon="solar:bag-4-linear"></iconify-icon>
 
@@ -41,8 +51,7 @@
 
 
         {{-- Wishlist --}}
-        <a href="#"
-           class="customer-sidebar__link">
+        <a href="#" class="customer-sidebar__link">
 
             <iconify-icon icon="solar:heart-linear"></iconify-icon>
 
@@ -52,8 +61,7 @@
 
 
         {{-- Addresses --}}
-        <a href="#"
-           class="customer-sidebar__link">
+        <a href="#" class="customer-sidebar__link">
 
             <iconify-icon icon="solar:map-point-linear"></iconify-icon>
 
@@ -63,8 +71,7 @@
 
 
         {{-- Reviews --}}
-        <a href="#"
-           class="customer-sidebar__link">
+        <a href="#" class="customer-sidebar__link">
 
             <iconify-icon icon="solar:star-linear"></iconify-icon>
 
@@ -74,8 +81,7 @@
 
 
         {{-- Profile --}}
-        <a href="#"
-           class="customer-sidebar__link">
+        <a href="#" class="customer-sidebar__link">
 
             <iconify-icon icon="solar:user-linear"></iconify-icon>
 
@@ -89,8 +95,7 @@
 
 
         {{-- Settings --}}
-        <a href="#"
-           class="customer-sidebar__link">
+        <a href="#" class="customer-sidebar__link">
 
             <iconify-icon icon="solar:settings-linear"></iconify-icon>
 
@@ -103,16 +108,14 @@
 
     {{-- Logout --}}
     <div class="customer-sidebar__logout">
-
-        <a href="#"
-           class="customer-sidebar__link customer-sidebar__logout-link">
-
-            <iconify-icon icon="solar:logout-2-linear"></iconify-icon>
-
-            <span>Logout</span>
-
-        </a>
-
+        <form action="{{ route('customer.signout') }}" method="POST"
+            class="customer-sidebar__link customer-sidebar__logout-link">
+            @csrf
+            <button class="btn">
+                <iconify-icon icon="solar:logout-2-linear"></iconify-icon>
+                <span>Logout</span>
+            </button>
+        </form>
     </div>
 
 </aside>

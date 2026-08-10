@@ -10,9 +10,11 @@ use App\Http\Controllers\User\UserDashboardController;
 Route::get('/sign-in', [CustomerAuthController::class, 'showLoginForm'])->name('customer.login');
 Route::post('/sign-in', [CustomerAuthController::class, 'login'])->name('customer.login.store');
 Route::get('/sign-up', [CustomerAuthController::class, 'showRegistrationForm'])->name('customer.register');
+Route::post('/sign-out', [CustomerAuthController::class, 'logout'])->name('customer.signout');
 Route::post('/sign-up', [CustomerAuthController::class, 'register'])->name('customer.register.store');
 
-
+Route::get('/google/redirect', [CustomerAuthController::class, 'googleRedirect'])->name('google.redirect');
+Route::get('/google/callback', [CustomerAuthController::class, 'googleCallback'])->name('google.callback');
 
 
 /*
@@ -27,6 +29,7 @@ Route::post('/sign-up', [CustomerAuthController::class, 'register'])->name('cust
 
 Route::prefix('user')
     ->name('user.')
+    ->middleware('isCustomer')
     ->group(function () {
 
         /*
@@ -45,8 +48,5 @@ Route::prefix('user')
         */
 
         Route::get('/orders', [UserDashboardController::class, 'orders'])
-            ->name('orders');    
-
+            ->name('orders');
     });
-
-    
