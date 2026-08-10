@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="{{ asset('frontend/img/plant 1.png')}}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/customer_dashbaord.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/shop-redesign.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">

@@ -522,7 +522,7 @@
     </td>
 
     <td>
-    <a href="{{ route('admin.reviews') }}" class="btn btn-info btn-sm">
+    <a href="{{ route('admin.reviews.index') }}" class="btn btn-info btn-sm">
         <i class="bi bi-star-fill"></i> Reviews
     </a>
     </td>

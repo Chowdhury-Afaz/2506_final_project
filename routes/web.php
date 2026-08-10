@@ -26,3 +26,6 @@ Route::put('/admin/products/update/{id}', [ProductController::class, 'update'])-
 Route::post('/review/store', [ReviewController::class, 'store'])
     ->middleware('auth')
     ->name('review.store');
+
+
+require __DIR__.'/User.php';
