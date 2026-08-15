@@ -100,25 +100,41 @@
 
                 </div>
 
-                <div class="pd-price-row">
+<div class="pd-price-row">
 
-                    <div class="pd-price">
-                        ${{ $product->price ?? '0.00' }}
-                    </div>
+    <!-- Discount -->
+    @if(
+        isset($product->selling_price) &&
+        $product->selling_price > 0 &&
+        $product->price > $product->selling_price
+    )
+        <div class="pd-discount">
+            {{ round((($product->price - $product->selling_price) / $product->price) * 100) }}% OFF
+        </div>
+    @endif
 
-                    @if(isset($product->old_price))
-                        <div class="pd-old-price">
-                            ${{ $product->old_price }}
-                        </div>
-                    @endif
+    <!-- Prices -->
+    <div class="pd-price-line">
 
-                    @if(isset($product->old_price) && $product->old_price > $product->price)
-                        <div class="pd-discount">
-                            {{ round((($product->old_price - $product->price) / $product->old_price) * 100) }}% OFF
-                        </div>
-                    @endif
+        <!-- Selling price -->
+        <div class="pd-price">
+            {{ formatPrice($product->selling_price ?? $product->price ?? 0) }}
+        </div>
 
-                </div>
+        <!-- Regular price -->
+        @if(
+            isset($product->selling_price) &&
+            $product->selling_price > 0 &&
+            $product->price > $product->selling_price
+        )
+            <div class="pd-old-price">
+                {{ formatPrice($product->price) }}
+            </div>
+        @endif
+
+    </div>
+
+</div>
 
                 <p class="pd-desc">
                     {{ $product->short_description ?? 'Fresh organic product collected directly from local farms.' }}

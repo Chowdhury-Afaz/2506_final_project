@@ -47,13 +47,13 @@
 
 
                     <h1>
-                        Welcome Back!
+                        Create Your Account
                     </h1>
 
 
                     <p>
-                        Manage your products, categories,
-                        orders and customers from one secure dashboard.
+                        Join Eco Bazar and enjoy a simple, fresh and
+                        convenient shopping experience.
                     </p>
 
                 </div>
@@ -181,8 +181,31 @@
 
 
                     <button class="admin-login-btn">
-                        Sign In
+                        Sign Up
                     </button>
+
+                    <!-- OR Divider -->
+
+<div class="login-divider">
+
+    <span></span>
+
+    <p>OR</p>
+
+    <span></span>
+
+</div>
+
+
+<!-- Google Login -->
+
+<a href="{{ route('google.redirect') }}" class="google-login-btn">
+
+    <iconify-icon icon="logos:google-icon"></iconify-icon>
+
+    <span>Continue with Google</span>
+
+</a>
 
 
                     <div class="secure-text">
@@ -203,33 +226,6 @@
 
     </div>
 </section>
-
-
-<section id="newsletter">
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-2 col-md-2">
-                <div class="newsletterLogo">
-                    <img src="./img/Logo.png" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 d-lg-flex justify-content-lg-end">
-                <div class="newsletterTypo">
-                    <h5>Subscribe to our Newsletter</h5>
-                    <p>Pellentesque eu nibh eget mauris congue mattis matti</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 d-lg-flex justify-content-end">
-                <div class="mailSubmit">
-                    <input type="mail" placeholder="Your Email Address">
-                    <a href="#">Subscribe</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 
 
 <script>
