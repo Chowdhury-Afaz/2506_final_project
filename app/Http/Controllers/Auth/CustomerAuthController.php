@@ -18,7 +18,7 @@ class CustomerAuthController extends Controller
     use AuthenticatesUsers, RegistersUsers;
 
     // where to redirect users after login / registration.
-    protected $redirectTo = '/my-dashboard';
+    protected $redirectTo = '/user/dashboard';
 
 
     function showLoginForm()

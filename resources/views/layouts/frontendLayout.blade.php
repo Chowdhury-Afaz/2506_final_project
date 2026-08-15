@@ -58,19 +58,89 @@
 
                 <div class="top-divider"></div>
 
-                <div class="auth-links">
+<!-- ==========================
+     User login
+========================== -->
 
-                    <a href="{{ route('customer.login') }}">
-                        Sign In
-                    </a>
+<div class="auth-links">
 
-                    <span>/</span>
+@auth('customer')
 
-                    <a href="{{ route('customer.register') }}">
-                        Sign Up
-                    </a>
+    <div class="user-menu">
+        <button class="user-menu-btn" type="button">
 
-                </div>
+            <div class="user-avatar">
+                {{ strtoupper(substr(Auth::guard('customer')->user()->name, 0, 1)) }}
+            </div>
+
+            <span class="user-name">
+                {{ Auth::guard('customer')->user()->name }}
+            </span>
+
+            <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+
+        </button>
+
+        <div class="user-dropdown">
+
+            <a href="{{ route('user.dashboard') }}">
+                <iconify-icon icon="mdi:view-dashboard-outline"></iconify-icon>
+                Dashboard
+            </a>
+
+            <a href="{{ route('user.orders') }}">
+                <iconify-icon icon="mdi:package-variant-closed"></iconify-icon>
+                My Orders
+            </a>
+
+            <a href="#" class="#">
+
+            <iconify-icon icon="solar:user-linear"></iconify-icon>
+            Profile
+
+            </a>
+
+                    <a href="#" class="#">
+
+            <iconify-icon icon="solar:settings-linear"></iconify-icon>
+
+            Settings
+
+        </a>
+
+            <div class="dropdown-divider"></div>
+
+            <form action="{{ route('customer.signout') }}" method="POST">
+                @csrf
+
+                <button type="submit">
+                    <iconify-icon icon="mdi:logout"></iconify-icon>
+                    Logout
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+@else
+
+    <a href="{{ route('customer.login') }}">
+        Sign In
+    </a>
+
+    <span>/</span>
+
+    <a href="{{ route('customer.register') }}">
+        Sign Up
+    </a>
+
+@endauth
+
+</div>
+
+<!-- ==========================
+     User login
+========================== -->
 
             </div>
 
@@ -362,6 +432,30 @@
         @yield('content')
     </main>
     {{-- Main Content end --}}
+
+<section id="newsletter">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-2 col-md-2">
+                <div class="newsletterLogo">
+                    <img src="{{ asset('frontend/img/Logo.png')}}" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-lg-flex justify-content-lg-end">
+                <div class="newsletterTypo">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <p>Pellentesque eu nibh eget mauris congue mattis matti</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 d-lg-flex justify-content-end">
+                <div class="mailSubmit">
+                    <input type="mail" placeholder="Your Email Address">
+                    <a href="#">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
 
     <footer>
         <div class="container">

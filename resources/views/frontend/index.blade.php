@@ -328,441 +328,832 @@
         </div>
     </div>
 </section>
-<section id="newestProducts">
+
+<!-- ==========================
+     Hot Deal Start Here
+========================== -->
+
+<section id="hotdeals">
     <div class="container">
-        <div class="row">
-            <h2 class="col-6">Newest Products</h2>
-            <p class="col-6">view all <iconify-icon icon="si:arrow-right-duotone"></iconify-icon>
-            </p>
+ 
+    <div class="heading d-flex justify-content-between align-items-center">
+        <h2>Hot Deals</h2>
+        <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
+    </div>
+ 
+        <div class="hotdealTop">
+ 
+            <!-- Featured card -->
+            <div class="hotdealFeatured">
+ 
+                <div class="hotdealBadges">
+                    <span class="badge-sale">Sale 50%</span>
+                    <span class="badge-best">Best Sale</span>
+                </div>
+ 
+                <div class="hotdealImgPlaceholder">
+                    <img class="img-fluid" src="{{ asset('frontend/img/big-apple.png')}}" alt="" width="300px" >
+                </div>
+ 
+                <div class="hotdealActions">
+                    <button type="button" class="iconCircle" aria-label="Wishlist">&#9825;</button>
+                    <button type="button" class="addToCartBtn">Add to Cart</button>
+                    <a href="#" class="iconCircle" aria-label="Quick view">&#128065;</a>
+                </div>
+ 
+                <div class="hotdealInfo">
+                    <a href="#" class="hotdealTitle">Chinese cabbage</a>
+ 
+                    <p class="hotdealPrice">
+                        $12.00 <del>$24.00</del>
+                    </p>
+ 
+                    <div class="rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star muted">★</span>
+                        <span class="feedbackCount">(524 Feedback)</span>
+                    </div>
+ 
+                    <div class="hotdealCountdown">
+                        <p class="offerLabel">Hurry up! Offer ends in:</p>
+                        <div class="countdownTimer" data-end="__SET_END_TIME_MS__">
+                            <div class="timeBlock"><span class="days">01</span><small>Days</small></div>
+                            <div class="timeBlock"><span class="hours">23</span><small>Hours</small></div>
+                            <div class="timeBlock"><span class="mins">34</span><small>Mins</small></div>
+                            <div class="timeBlock"><span class="secs">57</span><small>Secs</small></div>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+ 
+ 
         </div>
-        <img src="{{ asset('frontend/img/Line.png')}}" alt="">
-        <div class="swiperFeature swiper ">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/AppleBig.png')}}" alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
+ 
+    </div>
+</section>
+
+<!-- ==========================
+     Hot Deal End Here
+========================== -->
+
+<!-- ==========================
+     Discount Banner start here
+========================== -->
+
+<section id="discount-banner">
+
+<div class="container">
+            
+<div class="sale-banner">
+
+    <div class="sale-banner__content">
+        <span class="sale-banner__subtitle">SUMMER SALE</span>
+
+        <h2 class="sale-banner__title">
+            <strong>37%</strong> OFF
+        </h2>
+
+        <p class="sale-banner__description">
+            Free on all your order, Free Shipping and 30 days
+            money-back guarantee
+        </p>
+
+        <a href="#" class="sale-banner__button">
+            Shop Now
+            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+    </div>
+
+</div>
+    
+</div>
+</section>
+<!-- ==========================
+     Discount Banner start here
+========================== -->
+
+<!-- ==================================
+     Feature product start here
+================================= -->
+        <section id="product">
+            <div class="container">
+                <div class="heading d-flex justify-content-between align-items-center mt-5 mt-lg-0">
+                    <h2>Featured Categories</h2>
+                    <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
                 </div>
-                <div class="swiper-slide">
-                    <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/Cabbage.png')}}" alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Cabbage</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
+<div class="row">
+
+    @forelse($products as $product)
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+            <div class="productCard">
+
+                <div class="productImg">
+
+                    <div class="hoverIcon">
+                        <a href="{{ route('shop.product', $product->slug) }}">
+                            <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
+                        </a>
+
+                        <a href="{{ route('shop.product', $product->slug) }}">
+                            <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
+                        </a>
                     </div>
+
+                    @if($product->price > $product->selling_price)
+
+                        <div class="discount">
+
+                            <p>
+                                Sale
+                                {{ round((($product->price - $product->selling_price) / $product->price) * 100) }}%
+                            </p>
+
+                        </div>
+
+                    @endif
+
+                    <a href="{{ route('shop.product', $product->slug) }}">
+
+                        <img
+                            src="{{ getImage($product->image) }}"
+                            alt="{{ $product->title }}"
+                            class="img-fluid">
+
+                    </a>
+
                 </div>
-                <div class="swiper-slide">
-                    <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/Green Lettuce.png')}}"
-                                    alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Lettuce</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
+
+                <div class="productCnt">
+
+                    <a href="{{ route('shop.product', $product->slug) }}">
+                        {{ $product->title }}
+                    </a>
+
+                    <p>
+
+                        {{ formatPrice($product->selling_price) }}
+
+                        @if($product->price > $product->selling_price)
+
+                            <del>
+
+                                {{ formatPrice($product->price) }}
+
+                            </del>
+
+                        @endif
+
+                    </p>
+
+                    <div class="rating">
+
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon icon="ic:round-star"></iconify-icon>
+                        <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
+
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="featureCard col-lg">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/Green Chili.png')}}"
-                                    alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Chili</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
+
+                    <div class="addToCart">
+
+                        <iconify-icon icon="ph:handbag"></iconify-icon>
+
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/Corn.png')}}" alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Corn</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="featureCard">
-                        <div class="featureImg">
-                            <a href="#"><img class="img-fluid" src="{{ asset('frontend/img/AppleBig.png')}}" alt=""></a>
-                            <ul class="featureIcons">
-                                <li><a href="#">
-                                        <iconify-icon icon="simple-line-icons:heart"></iconify-icon>
-                                    </a></li>
-                                <li><a href="#">
-                                        <iconify-icon icon="bx:show"></iconify-icon>
-                                    </a></li>
-                            </ul>
-                        </div>
-                        <div class="featureCnt">
-                            <a href="#">Green Apple</a>
-                            <p>$14.99</p>
-                            <div class="stars">
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                            </div>
-                            <a href="#" class="cartBtn">
-                                <iconify-icon icon="clarity:shopping-bag-line"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
 
         </div>
+
+@empty
+
+    <div class="col-12 text-center py-5">
+        <h5>No Products Available</h5>
+    </div>
+
+@endforelse
+
+</div>
+
+            </div>
+        </section>
+
+<!-- ==================================
+     Feature product End here
+================================= -->
+
+<!-- ==============================
+     Latest News Start
+============================== -->
+
+<section id="news">
+    <div class="container d-lg-block d-none">
+
+        <h2>Latest News</h2>
+
+        <div class="row">
+
+            <!-- News Card 01 -->
+            <div class="col-lg-4">
+                <div class="newsCard">
+
+                    <div class="newsCardImg">
+                        <div class="newsDate">
+                            <h6>18</h6>
+                            <p>Nov</p>
+                        </div>
+
+                        <a href="#">
+                            <img
+                                src="{{ asset('frontend/img/news-malta.png') }}"
+                                class="img-fluid"
+                                alt=""
+                            >
+                        </a>
+                    </div>
+
+                    <div class="newsCardCnt">
+                        <div class="newsInfo">
+
+                            <div class="icon">
+                                <a href="#">
+                                    <iconify-icon icon="solar:chef-hat-linear"></iconify-icon>
+                                    Food
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="solar:user-linear"></iconify-icon>
+                                    By Admin
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="mdi-light:comment"></iconify-icon>
+                                    65 Comments
+                                </a>
+                            </div>
+
+                            <h4>
+                                Curabitur porttitor orci eget neque accumsan venenatis.
+                                Nunc fermentum.
+                            </h4>
+
+                            <a href="#">
+                                Read More
+                                <iconify-icon icon="si:arrow-right-line"></iconify-icon>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- News Card 02 -->
+            <div class="col-lg-4">
+                <div class="newsCard">
+
+                    <div class="newsCardImg">
+                        <div class="newsDate">
+                            <h6>29</h6>
+                            <p>Jan</p>
+                        </div>
+
+                        <a href="#">
+                            <img
+                                src="{{ asset('frontend/img/news-egg.png') }}"
+                                class="img-fluid"
+                                alt=""
+                            >
+                        </a>
+                    </div>
+
+                    <div class="newsCardCnt">
+                        <div class="newsInfo">
+
+                            <div class="icon">
+                                <a href="#">
+                                    <iconify-icon icon="solar:chef-hat-linear"></iconify-icon>
+                                    Food
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="solar:user-linear"></iconify-icon>
+                                    By Admin
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="mdi-light:comment"></iconify-icon>
+                                    65 Comments
+                                </a>
+                            </div>
+
+                            <h4>
+                                Eget lobortis lorem lacinia. Vivamus pharetra semper.
+                            </h4>
+
+                            <a href="#">
+                                Read More
+                                <iconify-icon icon="si:arrow-right-line"></iconify-icon>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- News Card 03 -->
+            <div class="col-lg-4">
+                <div class="newsCard">
+
+                    <div class="newsCardImg">
+                        <div class="newsDate">
+                            <h6>21</h6>
+                            <p>Feb</p>
+                        </div>
+
+                        <a href="#">
+                            <img
+                                src="{{ asset('frontend/img/news-salad.png') }}"
+                                class="img-fluid"
+                                alt=""
+                            >
+                        </a>
+                    </div>
+
+                    <div class="newsCardCnt">
+                        <div class="newsInfo">
+
+                            <div class="icon">
+                                <a href="#">
+                                    <iconify-icon icon="solar:chef-hat-linear"></iconify-icon>
+                                    Food
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="solar:user-linear"></iconify-icon>
+                                    By Admin
+                                </a>
+
+                                <a href="#">
+                                    <iconify-icon icon="mdi-light:comment"></iconify-icon>
+                                    65 Comments
+                                </a>
+                            </div>
+
+                            <h4>
+                                Maecenas blandit risus elementum mauris malesuada.
+                            </h4>
+
+                            <a href="#">
+                                Read More
+                                <iconify-icon icon="si:arrow-right-line"></iconify-icon>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+
+<!-- ==============================
+     Latest News End
+============================== -->
+
+<!-- =====================================
+     Testimonial Start
+===================================== -->
+
 <section id="testimonial">
     <div class="container">
-        <h2>Client Testimonial</h2>
-        <img src="{{ asset('frontend/img/Line.png')}}" alt="">
-        <div class="swiper swiperReview ">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="person">
-                        <img src="{{ asset('frontend/img/coma.png')}}" alt="">
-                        <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-                            magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                        <div class="row clientsMain">
-                            <div class="col-lg-8">
-                                <div class="personName">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-3 col-3">
-                                            <img src="{{ asset('frontend/img/man1.png')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-7">
-                                            <h6>Dianne Russell</h6>
-                                            <p>Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="stars">
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="person">
-                        <img src="{{ asset('frontend/img/coma.png')}}" alt="">
-                        <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-                            magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                        <div class="row clientsMain">
-                            <div class="col-lg-8">
-                                <div class="personName">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-3 col-3">
-                                            <img src="{{ asset('frontend/img/man1.png')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-7">
-                                            <h6>Dianne Russell</h6>
-                                            <p>Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="stars">
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="person">
-                        <img src="{{ asset('frontend/img/coma.png')}}" alt="">
-                        <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-                            magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                        <div class="row clientsMain">
-                            <div class="col-lg-8">
-                                <div class="personName">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-3 col-3">
-                                            <img src="{{ asset('frontend/img/man1.png')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-7">
-                                            <h6>Dianne Russell</h6>
-                                            <p>Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="stars">
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="person">
-                        <img src="{{ asset('frontend/img/coma.png')}}" alt="">
-                        <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-                            magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                        <div class="row clientsMain">
-                            <div class="col-lg-8">
-                                <div class="personName">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-3 col-3">
-                                            <img src="{{ asset('frontend/img/man1.png')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-7">
-                                            <h6>Dianne Russell</h6>
-                                            <p>Customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="stars">
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                    <iconify-icon icon="material-symbols-light:star"></iconify-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- Testimonial Heading -->
+        <div class="testimonialHeading d-flex align-items-center justify-content-between">
+            <h2>Client Testimonial</h2>
+
+            <div class="arrowIcon">
+                <iconify-icon
+                    icon="si:arrow-left-line"
+                    width="24"
+                    height="24"
+                ></iconify-icon>
+
+                <iconify-icon
+                    icon="si:arrow-right-line"
+                    width="24"
+                    height="24"
+                ></iconify-icon>
             </div>
         </div>
-        <div class="next">
-            <iconify-icon icon="basil:arrow-right-solid"></iconify-icon>
-        </div>
-        <div class="prev">
-            <iconify-icon icon="basil:arrow-left-solid"></iconify-icon>
-        </div>
-        <div class="dots"></div>
-    </div>
-</section>
-<section id="ig">
-    <div class="container">
-        <div class="heading">
-            <h4>Follow Us On Instagram</h4>
-        </div>
+
+
+        <!-- Testimonial Cards -->
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig1.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
+
+            <!-- Testimonial Card 01 -->
+            <div class="col-lg-4">
+                <div class="testimonialCard">
+
+                    <div class="testimonialCnt">
+                        <iconify-icon
+                            icon="mdi:format-quote-close"
+                            width="40"
+                            height="40"
+                        ></iconify-icon>
+
+                        <p>
+                            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+                            Phasellus imperdiet elit eu magna dictum, bibendum cursus velit
+                            sodales. Donec sed neque eget
+                        </p>
                     </div>
+
+                    <div class="testimonialPerson d-flex align-items-center justify-content-between">
+
+                        <div class="personInfo d-flex align-items-center">
+
+                            <div class="personImg">
+                                <img
+                                    src="{{ asset('frontend/img/robert.png') }}"
+                                    class="img-fluid"
+                                    alt="Robert Fox"
+                                >
+                            </div>
+
+                            <div class="personName">
+                                <h6>Robert Fox</h6>
+                                <p>Customer</p>
+                            </div>
+
+                        </div>
+
+                        <div class="rating">
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig2.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
+
+
+            <!-- Testimonial Card 02 -->
+            <div class="col-lg-4">
+                <div class="testimonialCard">
+
+                    <div class="testimonialCnt">
+                        <iconify-icon
+                            icon="mdi:format-quote-close"
+                            width="40"
+                            height="40"
+                        ></iconify-icon>
+
+                        <p>
+                            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+                            Phasellus imperdiet elit eu magna dictum, bibendum cursus velit
+                            sodales. Donec sed neque eget
+                        </p>
                     </div>
+
+                    <div class="testimonialPerson d-flex align-items-center justify-content-between">
+
+                        <div class="personInfo d-flex align-items-center">
+
+                            <div class="personImg">
+                                <img
+                                    src="{{ asset('frontend/img/dianne.png') }}"
+                                    class="img-fluid"
+                                    alt="Dianne Russell"
+                                >
+                            </div>
+
+                            <div class="personName">
+                                <h6>Dianne Russell</h6>
+                                <p>Customer</p>
+                            </div>
+
+                        </div>
+
+                        <div class="rating">
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig3.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
+
+
+            <!-- Testimonial Card 03 -->
+            <div class="col-lg-4">
+                <div class="testimonialCard">
+
+                    <div class="testimonialCnt">
+                        <iconify-icon
+                            icon="mdi:format-quote-close"
+                            width="40"
+                            height="40"
+                        ></iconify-icon>
+
+                        <p>
+                            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+                            Phasellus imperdiet elit eu magna dictum, bibendum cursus velit
+                            sodales. Donec sed neque eget
+                        </p>
                     </div>
+
+                    <div class="testimonialPerson d-flex align-items-center justify-content-between">
+
+                        <div class="personInfo d-flex align-items-center">
+
+                            <div class="personImg">
+                                <img
+                                    src="{{ asset('frontend/img/eleanor.png') }}"
+                                    class="img-fluid"
+                                    alt="Eleanor Pena"
+                                >
+                            </div>
+
+                            <div class="personName">
+                                <h6>Eleanor Pena</h6>
+                                <p>Customer</p>
+                            </div>
+
+                        </div>
+
+                        <div class="rating">
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                            <iconify-icon icon="ic:round-star" width="16" height="16"></iconify-icon>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig4.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig5.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-6 mb-3 mb-lg-0">
-                <div class="igImage">
-                    <img src="{{ asset('frontend/img/ig6.png')}}" class="img-fluid" alt="">
-                    <div class="overlayIg">
-                        <div class="overlayIgInfo">
-                            <a href="#">
-                                <iconify-icon icon="qlementine-icons:instagram-16"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
-<section id="newsletter">
+
+<!-- =====================================
+     Testimonial End
+===================================== -->
+
+<!-- =====================================
+     Advertisement Start
+===================================== -->
+
+<section id="advertisement">
     <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-2 col-md-2">
-                <div class="newsletterLogo">
-                    <img src="{{ asset('frontend/img/Logo.png')}}" class="img-fluid" alt="">
-                </div>
+
+        <div class="row align-items-center">
+
+            <!-- Advertisement Logo 01 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/step.png') }}"
+                    class="img-fluid"
+                    alt="Steps"
+                >
             </div>
-            <div class="col-lg-4 col-md-6 d-lg-flex justify-content-lg-end">
-                <div class="newsletterTypo">
-                    <h5>Subscribe to our Newsletter</h5>
-                    <p>Pellentesque eu nibh eget mauris congue mattis matti</p>
-                </div>
+
+            <!-- Advertisement Logo 02 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/mango-company.png') }}"
+                    class="img-fluid"
+                    alt="Mango"
+                >
             </div>
-            <div class="col-lg-4 col-md-4 d-lg-flex justify-content-end">
-                <div class="mailSubmit">
-                    <input type="mail" placeholder="Your Email Address">
-                    <a href="#">Subscribe</a>
-                </div>
+
+            <!-- Advertisement Logo 03 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/food.png') }}"
+                    class="img-fluid"
+                    alt="Food"
+                >
             </div>
+
+            <!-- Advertisement Logo 04 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/food-2.png') }}"
+                    class="img-fluid"
+                    alt="Food"
+                >
+            </div>
+
+            <!-- Advertisement Logo 05 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/bookoff.png') }}"
+                    class="img-fluid"
+                    alt="BookOff"
+                >
+            </div>
+
+            <!-- Advertisement Logo 06 -->
+            <div class="col-lg-2 col-2">
+                <img
+                    src="{{ asset('frontend/img/g-seris.png') }}"
+                    class="img-fluid"
+                    alt="G-Series"
+                >
+            </div>
+
         </div>
     </div>
 </section>
+
+<!-- =====================================
+     Advertisement End
+===================================== -->
+
+<!-- ==========================
+     Instagram Start
+========================== -->
+
+<section id="instaPost">
+    <div class="container">
+
+        <h2>Follow Us On Instagram</h2>
+
+        <div class="row">
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4 mb-lg-0 mb-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-tomatto.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4 mb-lg-0 mb-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-leaf.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4 mb-lg-0 mb-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-waterleaf.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-salad.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-lotleaf.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+            <!-- Instagram Item -->
+            <div class="instaImg col-lg-2 col-4">
+                <div class="instaIcon">
+                    <a href="#">
+                        <iconify-icon icon="mdi:instagram" width="32" height="32"></iconify-icon>
+                    </a>
+                </div>
+
+                <a href="#">
+                    <img
+                        src="{{ asset('frontend/img/instra-malta.png') }}"
+                        class="img-fluid"
+                        alt="Instagram Post"
+                    >
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==========================
+     Instagram End
+========================== -->
+
+
+
+ 
+<script>
+document.querySelectorAll('.countdownTimer').forEach(function (timer) {
+    // Default: 1 day 23h 34m 57s from page load, since there's no backend end-time yet.
+    // Once the backend is ready, set data-end to a real timestamp (ms) and this will pick it up automatically.
+    var endAttr = timer.dataset.end;
+    var end = (endAttr && endAttr !== '__SET_END_TIME_MS__')
+        ? parseInt(endAttr, 10)
+        : Date.now() + ((1 * 24 * 60 * 60) + (23 * 60 * 60) + (34 * 60) + 57) * 1000;
+ 
+    var dayEl = timer.querySelector('.days');
+    var hourEl = timer.querySelector('.hours');
+    var minEl = timer.querySelector('.mins');
+    var secEl = timer.querySelector('.secs');
+ 
+    function pad(n) { return n.toString().padStart(2, '0'); }
+ 
+    function tick() {
+        var distance = end - Date.now();
+        if (distance <= 0) {
+            dayEl.textContent = hourEl.textContent = minEl.textContent = secEl.textContent = '00';
+            clearInterval(interval);
+            return;
+        }
+        var days = Math.floor(distance / 86400000);
+        var hours = Math.floor((distance % 86400000) / 3600000);
+        var mins = Math.floor((distance % 3600000) / 60000);
+        var secs = Math.floor((distance % 60000) / 1000);
+        dayEl.textContent = pad(days);
+        hourEl.textContent = pad(hours);
+        minEl.textContent = pad(mins);
+        secEl.textContent = pad(secs);
+    }
+ 
+    tick();
+    var interval = setInterval(tick, 1000);
+});
+</script>
+
+
+
+
 @endsection

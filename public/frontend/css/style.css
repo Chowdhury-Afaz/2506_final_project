@@ -160,32 +160,345 @@ iconify-icon{
     background: #D1D5DB;
 }
 
-/*=========================
-      Auth Links
-==========================*/
+/* =========================
+   Auth Links
+========================= */
 
-.auth-links{
+.auth-links {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
+
+    font-family: var(--font-family);
 }
 
-.auth-links span{
+.auth-links > span {
     color: #9CA3AF;
+    font-size: 13px;
 }
 
-.auth-links a{
+.auth-links > a {
     color: #374151;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
 
-    transition: .3s;
+    transition: color 0.3s ease;
 }
 
-.auth-links a:hover{
+.auth-links > a:hover {
     color: var(--branding-success);
 }
+
+
+/* =========================
+   User Menu
+========================= */
+
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   User Menu Button
+========================= */
+
+.user-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 3px 5px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: var(--gray-scale-gray-–-800);
+
+    font-family: var(--font-family);
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+.user-menu-btn:hover {
+    color: var(--branding-success);
+}
+
+
+/* =========================
+   User Avatar
+========================= */
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--branding-success);
+    color: var(--gray-scale-white);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   User Name
+========================= */
+
+.user-name {
+    max-width: 120px;
+
+    color: var(--gray-scale-gray-–-800);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: color 0.3s ease;
+}
+
+.user-menu-btn:hover .user-name {
+    color: var(--branding-success);
+}
+
+
+/* =========================
+   Dropdown Arrow
+========================= */
+
+.user-menu-btn > iconify-icon {
+    font-size: 17px;
+    color: var(--gray-scale-gray-–-500);
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.user-menu-btn:hover > iconify-icon {
+    color: var(--branding-success);
+}
+
+
+/* =========================
+   User Dropdown
+========================= */
+
+.user-dropdown {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: 200px;
+
+    padding: 7px;
+
+    background: var(--gray-scale-white);
+
+    border: 1px solid var(--gray-scale-gray-–-100);
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   Dropdown Show
+========================= */
+
+.user-menu:hover .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Arrow Animation
+========================= */
+
+.user-menu:hover .user-menu-btn > iconify-icon {
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   Dropdown Links
+========================= */
+
+.user-dropdown a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 11px;
+
+    box-sizing: border-box;
+
+    border-radius: 7px;
+
+    color: var(--gray-scale-gray-–-800);
+
+    font-family: var(--font-family);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Dropdown Link Hover */
+
+.user-dropdown a:hover {
+    background: var(--gren-gray-scale-50);
+    color: var(--branding-success);
+}
+
+
+/* =========================
+   Dropdown Icons
+========================= */
+
+.user-dropdown a iconify-icon,
+.user-dropdown form button iconify-icon {
+    width: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   Divider
+========================= */
+
+.dropdown-divider {
+    height: 1px;
+
+    margin: 5px 4px;
+
+    background: var(--gray-scale-gray-–-100);
+}
+
+
+/* =========================
+   Logout Form
+========================= */
+
+.user-dropdown form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   Logout Button
+========================= */
+
+.user-dropdown form button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 11px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--gray-scale-gray-–-800);
+
+    font-family: var(--font-family);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Logout Hover */
+
+.user-dropdown form button:hover {
+    background: #fff1f1;
+    color: var(--branding-error);
+}
+
+
+/* =========================
+   Hover Bridge
+========================= */
+
+.user-dropdown::before {
+    content: "";
+
+    position: absolute;
+
+    top: -11px;
+    right: 0;
+
+    width: 100%;
+    height: 11px;
+}
+
 /*=========================
     Header Main
 ==========================*/
@@ -964,14 +1277,14 @@ color: var(--gray-scale-white);
 }
 
 /* =====================================
-   Category start 
+   Category End 
 ===================================== */
 /* =====================================
    Product Start Here
 ===================================== */
 
 #product{
-    margin-bottom: 100px;
+    padding: 50px 0;
 }
 
 #product .heading{
@@ -1340,158 +1653,1090 @@ color: var(--gray-scale-white);
     display: flex;
     align-items: center;
     font-size: 25px;
-}#newestProducts{
-	padding-bottom: 100px;
-}
-#newestProducts h2{
-	font-family: var(--font-family);
-font-weight: 600;
-font-size: 40px;
-line-height: 120%;
-color: var(--gray-scale-gray-–-900);
-}
-#newestProducts p{
-	font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-text-align: end;
-color: var(--branding-success);
-}
-#newestProducts .featureCnt p{
-	font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-color: var(--gray-scale-gray-–-900);
-}
-#testimonial{
-	padding: 0 0 50px 0;
-	background: var(--gren-gray-scale-50); 
-    position: relative;
-}
-#testimonial .person{
-box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
-background: var(--gray-scale-white);
-padding: 24px;
-border-radius: 8px;
-}
-#testimonial .person p{
-	font-family: var(--font-family);
-font-weight: 400;
-font-size: 14px;
-line-height: 150%;
-color: var(--gray-scale-gray-–-700);
-}
-#testimonial .person img{
-	padding: 16px 6px 16px 0;
-}
-#testimonial .person .personName h6{
-	font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-text-align: left;
-color: var(--gray-scale-gray-–-900);
-}
-#testimonial .person .personName p{
-	font-family: var(--font-family);
-font-weight: 400;
-font-size: 14px;
-line-height: 150%;
-text-align: left;
-color: var(--gray-scale-gray-–-400);
-}
-#testimonial .person .personName{
-	padding: 20px 6px;
-}
-#testimonial .person .stars{
-display: flex;
-justify-content: end;
-    align-items: center;
-    height: 100%;
-    color: var(--branding-warning);
 }
 
-.prev iconify-icon{
-    position: absolute;
-    text-align: center;
-    transform: translateZ(0);
-    transition: 0.3s;
-    z-index: 10;
-    top: 15px;
-    font-size: 30px;
-    right: 200px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    line-height: 23px;
+/* =====================================
+   Hot Deals Start here
+===================================== */
+
+#hotdeals{
+    padding: 50px 0;
+    background-color: #F7F7F7;
+}
+
+#hotdeals .heading{
+    margin-bottom: 50px;
+}
+
+#hotdeals .heading h2{
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--gray-scale-gray-–-700);
+    margin: 0;
+    line-height: 1.2;
+}
+
+#hotdeals .heading a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--branding-success);
+
+    text-decoration: none;
+
+    transition: all .35s ease;
+}
+
+#hotdeals .heading a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform .35s ease;
+}
+
+#hotdeals .heading a:hover{
+    color: var(--branding-success-dark);
+}
+
+#hotdeals .heading a:hover span{
+    transform: translateX(6px);
+}
+ 
+.hotdealTop {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+ 
+/* ---------- Featured card ---------- */
+ 
+.hotdealFeatured {
+    position: relative;
+    flex: 0 0 32%;
+    border: 1px solid var(--branding-success);
+    border-radius: 12px;
+    padding: 20px;
     background: var(--gray-scale-white);
-    cursor: pointer;
 }
-.prev:hover iconify-icon{
-    background: var(--branding-success-dark);
-    color: var(--gray-scale-gray-–-100);
-}
-.next iconify-icon{
+ 
+.hotdealBadges {
     position: absolute;
-    text-align: center;
-    transform: translateZ(0);
-    transition: 0.3s;
-    top: 15px;
-    font-size: 30px;
-    right: 160px;
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    line-height: 23px;
-    background: var(--gray-scale-white);
-    cursor: pointer;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 2;
 }
-.next:hover iconify-icon{
-    background: var(--branding-success-dark);
-    color: var(--gray-scale-gray-–-100);
+ 
+.badge-sale {
+    background: var(--branding-error);
+    color: var(--gray-scale-white);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
 }
-#testimonial .dots{
-    position: absolute;
-    text-align: center;
-    transform: translateZ(0);
-    transition: opacity .3s;
-    z-index: 10;
+ 
+.badge-best {
+    background: #2f6fed;
+    color: var(--gray-scale-white);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
 }
-#ig{
-    padding: 80px 0;
+ 
+.hotdealImgPlaceholder {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--gren-gray-scale-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
 }
-#ig .heading h4{
-    text-align: center;
+ 
+.hotdealActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
-#ig .igImage{
-    position: relative;
-}
-#ig .overlayIg{
-    background: var(--gren-gray-scale-700);
-    position: absolute;
-    inset: 0 0 0 0;
+ 
+.iconCircle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: var(--gren-gray-scale-50);
+    border: none;
     display: flex;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
+    justify-content: center;
+    color: var(--gray-scale-gray-–-700);
     cursor: pointer;
-    transition: .3s;
-    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
 }
-#ig .igImage:hover .overlayIg{
-    opacity: .6;
-    visibility: visible;
+ 
+.addToCartBtn {
+    flex: 1;
+    background: var(--branding-success);
+    color: var(--gray-scale-white);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
 }
-#ig .overlayIgInfo a{
-    font-size: 45px;
+ 
+.hotdealInfo {
+    text-align: center;
+}
+ 
+.hotdealTitle {
+    color: var(--branding-success);
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+}
+ 
+.hotdealPrice {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray-scale-gray-–-900);
+    margin-bottom: 8px;
+}
+ 
+.hotdealPrice del {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-scale-gray-–-400);
+    margin-left: 6px;
+}
+ 
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+ 
+.rating .star {
+    color: var(--branding-warning);
+    font-size: 14px;
+}
+ 
+.rating .star.muted {
+    color: var(--gray-scale-gray-–-100);
+}
+ 
+.feedbackCount {
+    color: var(--gray-scale-gray-–-500);
+    font-size: 13px;
+    margin-left: 4px;
+}
+ 
+.hotdealCountdown {
+    margin-top: 16px;
+    border-top: 1px solid var(--gray-scale-gray-–-50);
+    padding-top: 16px;
+}
+ 
+.offerLabel {
+    color: var(--gray-scale-gray-–-500);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+ 
+.countdownTimer {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+ 
+.timeBlock {
+    text-align: center;
+}
+ 
+.timeBlock span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-scale-gray-–-900);
+}
+ 
+.timeBlock small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--gray-scale-gray-–-400);
+    text-transform: uppercase;
+}
+
+
+/* =====================================
+   Discount Banner css Start 
+===================================== */
+#discount-banner{
+    padding: 50px 0;
+}
+#discount-banner .sale-banner {
+    position: relative;
+    width: 100%;
+    min-height: 234px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 6px;
+
+    background-image: url("../img/discount-bannar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#discount-banner .sale-banner__content {
+    position: relative;
+    z-index: 2;
+
+    width: 50%;
+    margin-left: 62%;
+
     color: #fff;
 }
+
+#discount-banner .sale-banner__subtitle {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+
+    color: #fff;
+}
+
+#discount-banner .sale-banner__title {
+    margin: 0 0 12px;
+
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #fff;
+}
+
+#discount-banner .sale-banner__title strong {
+    color: #ff8a00;
+    font-weight: 700;
+}
+
+#discount-banner .sale-banner__description {
+    max-width: 285px;
+
+    margin: 0 0 24px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: #a9a9a9;
+}
+
+#discount-banner .sale-banner__button {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 126px;
+    height: 35px;
+    padding: 0 16px;
+
+    border-radius: 20px;
+
+    background: #00b207;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+/* Shine effect */
+#discount-banner .sale-banner__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 2.8s ease-in-out infinite;
+}
+
+@keyframes buttonShine {
+    0% {
+        left: -100%;
+    }
+
+    45% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+/* Keep content above shine */
+#discount-banner .sale-banner__button iconify-icon,
+.sale-banner__button {
+    isolation: isolate;
+}
+
+#discount-banner .sale-banner__button:hover {
+    background: #009c06;
+}
+
+#discount-banner .sale-banner__button iconify-icon {
+    position: relative;
+    z-index: 2;
+
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+#discount-banner .sale-banner__button:hover iconify-icon {
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+    .sale-banner {
+        min-height: 220px;
+        background-position: center;
+    }
+
+    .sale-banner__content {
+        width: 55%;
+        margin-left: 45%;
+        padding-right: 20px;
+    }
+
+    .sale-banner__title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sale-banner {
+        min-height: 300px;
+
+        background-position: 35% center;
+    }
+
+    .sale-banner__content {
+        width: 100%;
+        margin-left: 0;
+
+        padding: 35px 25px;
+
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.25)
+        );
+    }
+
+    .sale-banner__title {
+        font-size: 32px;
+    }
+}
+
+/* =====================================
+   Discount Banner End 
+===================================== */
+
+/* =====================================
+   Latest News Start
+===================================== */
+
+#news {
+    padding: 60px 0;
+}
+
+#news h2 {
+    margin-bottom: 32px;
+
+    color: var(--gray-scale-gray-–-700);
+    font-size: 34px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* ---------- News Card ---------- */
+
+#news .newsCard {
+    cursor: pointer;
+}
+
+
+/* ---------- News Image ---------- */
+
+#news .newsCard .newsCardImg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+#news .newsCard .newsCardImg > a {
+    display: block;
+    overflow: hidden;
+}
+
+#news .newsCard .newsCardImg img {
+    width: 100%;
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* ---------- Date ---------- */
+
+#news .newsCard .newsCardImg .newsDate {
+    position: absolute;
+    z-index: 2;
+    bottom: 24px;
+    left: 24px;
+
+    min-width: 58px;
+    padding: 10px 14px;
+
+    background-color: var(--gray-scale-white);
+    border-radius: 5px;
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+#news .newsCard .newsCardImg .newsDate h6 {
+    color: var(--gray-scale-gray-–-900);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#news .newsCard .newsCardImg .newsDate p {
+    margin-top: 2px;
+
+    color: var(--gray-scale-gray-–-500);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+
+/* ---------- Content ---------- */
+
+#news .newsCard .newsCardCnt {
+    padding: 24px;
+
+    background-color: var(--gray-scale-white);
+    border: 1px solid var(--gray-scale-gray-–-100);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* ---------- Meta Information ---------- */
+
+#news .newsCard .newsCardCnt .newsInfo .icon {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+#news .newsCard .newsCardCnt .newsInfo .icon a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    margin: 0;
+
+    color: var(--gray-scale-gray-–-700);
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+#news .newsCard .newsCardCnt .newsInfo .icon a iconify-icon {
+    color: var(--gray-scale-gray-–-300);
+    font-size: 20px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ---------- Title ---------- */
+
+#news .newsCard .newsCardCnt .newsInfo h4 {
+    margin: 12px 0 20px;
+
+    color: var(--gray-scale-gray-–-900);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* ---------- Read More ---------- */
+
+#news .newsCard .newsCardCnt .newsInfo > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--branding-success);
+    font-size: 16px;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+#news .newsCard .newsCardCnt .newsInfo > a iconify-icon {
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =====================================
+   Hover Animation
+===================================== */
+
+/* Image Zoom */
+#news .newsCard:hover .newsCardImg img {
+    transform: scale(1.06);
+    filter: brightness(0.96);
+}
+
+
+/* Date Animation */
+#news .newsCard:hover .newsDate {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Card Content */
+#news .newsCard:hover .newsCardCnt {
+    border-color: var(--branding-success);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Meta Text */
+#news .newsCard:hover .newsInfo .icon a {
+    color: var(--branding-success);
+}
+
+
+/* Meta Icons */
+#news .newsCard:hover .newsInfo .icon a iconify-icon {
+    color: var(--branding-success);
+    transform: translateY(-2px);
+}
+
+
+/* Title */
+#news .newsCard:hover .newsInfo h4 {
+    color: var(--branding-success);
+}
+
+
+/* Read More */
+#news .newsCard:hover .newsInfo > a {
+    gap: 10px;
+}
+
+#news .newsCard:hover .newsInfo > a iconify-icon {
+    transform: translateX(4px);
+}
+
+
+/* =====================================
+   Latest News End
+===================================== */
+
+/* =====================================
+   Testimonial Start
+===================================== */
+
+#testimonial {
+    padding: 60px 0;
+    background-color: var(--gray-scale-gray-–-50);
+}
+
+
+/* ---------- Heading ---------- */
+
+#testimonial .testimonialHeading {
+    margin-bottom: 32px;
+}
+
+#testimonial .testimonialHeading h2 {
+    margin: 0;
+
+    color: var(--gray-scale-gray-–-700);
+    font-size: 34px;
+    font-weight: 500;
+}
+
+
+/* ---------- Arrow Navigation ---------- */
+
+#testimonial .testimonialHeading .arrowIcon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#testimonial .testimonialHeading .arrowIcon iconify-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--gray-scale-gray-–-900);
+
+    border: 1px solid var(--gray-scale-gray-–-200);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#testimonial .testimonialHeading .arrowIcon iconify-icon:hover {
+    color: var(--gray-scale-white);
+    background-color: var(--branding-success);
+    border-color: var(--branding-success);
+
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =====================================
+   Testimonial Card
+===================================== */
+
+#testimonial .testimonialCard {
+    height: 100%;
+
+    padding: 24px;
+
+    background-color: var(--gray-scale-white);
+    border: 1px solid var(--gray-scale-gray-–-100);
+    border-radius: 8px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+#testimonial .testimonialCard:hover {
+    border-color: var(--branding-success);
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- Testimonial Content ---------- */
+
+#testimonial .testimonialCard .testimonialCnt {
+    position: relative;
+
+    padding-bottom: 24px;
+}
+
+#testimonial .testimonialCard .testimonialCnt > iconify-icon {
+    margin-bottom: 14px;
+
+    color: var(--branding-success);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+#testimonial .testimonialCard:hover .testimonialCnt > iconify-icon {
+    transform: translateY(-4px) scale(1.05);
+}
+
+#testimonial .testimonialCard .testimonialCnt p {
+    margin: 0;
+
+    color: var(--gray-scale-gray-–-500);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+/* ---------- Person ---------- */
+
+#testimonial .testimonialCard .testimonialPerson {
+    padding-top: 20px;
+
+    border-top: 1px solid var(--gray-scale-gray-–-100);
+}
+
+
+/* ---------- Person Info ---------- */
+
+#testimonial .testimonialCard .personInfo {
+    gap: 12px;
+}
+
+#testimonial .testimonialCard .personImg {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+}
+
+#testimonial .testimonialCard .personImg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+#testimonial .testimonialCard:hover .personImg img {
+    transform: scale(1.1);
+}
+
+
+/* ---------- Person Name ---------- */
+
+#testimonial .testimonialCard .personName h6 {
+    margin: 0 0 4px;
+
+    color: var(--gray-scale-gray-–-900);
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+#testimonial .testimonialCard:hover .personName h6 {
+    color: var(--branding-success);
+}
+
+#testimonial .testimonialCard .personName p {
+    margin: 0;
+
+    color: var(--gray-scale-gray-–-400);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+/* ---------- Rating ---------- */
+
+#testimonial .testimonialCard .rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#testimonial .testimonialCard .rating iconify-icon {
+    color: #ffb800;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon {
+    transform: translateY(-2px);
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon:nth-child(1) {
+    transition-delay: 0.02s;
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon:nth-child(2) {
+    transition-delay: 0.04s;
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon:nth-child(3) {
+    transition-delay: 0.06s;
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon:nth-child(4) {
+    transition-delay: 0.08s;
+}
+
+#testimonial .testimonialCard:hover .rating iconify-icon:nth-child(5) {
+    transition-delay: 0.10s;
+}
+
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 991px) {
+
+    #testimonial {
+        padding: 50px 0;
+    }
+
+    #testimonial .testimonialCard {
+        margin-bottom: 24px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    #testimonial {
+        padding: 40px 0;
+    }
+
+    #testimonial .testimonialHeading h2 {
+        font-size: 28px;
+    }
+
+    #testimonial .testimonialHeading .arrowIcon {
+        gap: 8px;
+    }
+
+    #testimonial .testimonialHeading .arrowIcon iconify-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    #testimonial .testimonialCard {
+        padding: 20px;
+    }
+
+    #testimonial .testimonialCard .testimonialPerson {
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+
+    #testimonial .testimonialCard .rating {
+        padding-top: 5px;
+    }
+
+}
+
+/* =====================================
+   Testimonial End
+===================================== */
+
+/* =====================================
+   Advertisement start 
+===================================== */
+
+#advertisement {
+    padding: 50px 0;
+}
+
+/* =====================================
+   Advertisement start 
+===================================== */
+
+/* =====================================
+   Instagram Start Here
+===================================== */
+
+#instaPost {
+    padding: 60px 0;
+}
+
+#instaPost h2 {
+    margin-bottom: 32px;
+    color: var(--gray-scale-gray-–-700);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Instagram Image */
+#instaPost .instaImg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Image */
+#instaPost .instaImg img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* Glass Overlay */
+#instaPost .instaImg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: rgba(82, 196, 124, 0.35);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+
+    opacity: 0;
+    transform: scale(0.95);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        backdrop-filter 0.4s ease;
+}
+
+/* Instagram Icon */
+#instaPost .instaIcon a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    color: var(--gray-scale-white);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s ease,
+        background 0.3s ease;
+}
+
+/* Hover Overlay */
+#instaPost .instaImg:hover::before {
+    opacity: 1;
+    transform: scale(1);
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+/* Hover Image */
+#instaPost .instaImg:hover img {
+    transform: scale(1.05);
+}
+
+/* Hover Icon */
+#instaPost .instaImg:hover .instaIcon a {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Icon Hover */
+#instaPost .instaIcon a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* =====================================
+   Instagram End Here
+===================================== */
+
 #newsletter{
     padding: 60px 0;
     background: var(--gren-gray-scale-50);
@@ -1750,9 +2995,7 @@ padding: 24px 24px 32px;
   cursor: pointer;
   transition: 0.3s;
 }
-button:hover {
-  background: var(--branding-success-dark);
-}
+
 .login-text {
   margin-top: 15px;
   font-size: 13px;
@@ -3174,6 +4417,147 @@ z-index: 2;
     animation: cardSlide .7s ease forwards;
 
 }
+
+/* ==========================
+   Login Divider
+========================== */
+
+.login-divider {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+.login-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: #e5e7eb;
+}
+
+.login-divider p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================
+   Google Login Button
+========================== */
+
+.google-login-btn {
+    position: relative;
+
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #374151;
+
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+
+/* ==========================
+   Shine Effect
+========================== */
+
+.google-login-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(224, 224, 224, 0.75),
+            transparent
+        );
+
+    transition: .6s;
+}
+
+
+/* ==========================
+   Hover
+========================== */
+
+.google-login-btn:hover::before {
+    left: 100%;
+}
+
+.google-login-btn:hover {
+    border-color: #d1d5db;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .06);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================
+   Google Icon
+========================== */
+
+.google-login-btn iconify-icon {
+    position: relative;
+    z-index: 1;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================
+   Google Text
+========================== */
+
+.google-login-btn span {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 
@@ -4787,34 +6171,41 @@ z-index: 2;
     PRICE
 =========================================*/
 
-#itemDetails .pd-price-row{
+#itemDetails .pd-price-row {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     margin-bottom: 28px;
 }
 
-#itemDetails .pd-price{
-    font-size: 42px;
-    font-weight: 700;
-    color: var(--branding-success);
-    line-height: 1;
-}
-
-#itemDetails .pd-old-price{
-    font-size: 24px;
-    color: var(--gray-scale-gray-–-400);
-    text-decoration: line-through;
-}
-
-#itemDetails .pd-discount{
+#itemDetails .pd-discount {
     padding: 8px 14px;
     border-radius: 30px;
     background: rgba(234, 75, 72, .10);
     color: var(--branding-error);
     font-size: 13px;
     font-weight: 600;
+    display: inline-block;
+}
+
+#itemDetails .pd-price-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#itemDetails .pd-price {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--branding-success);
+    line-height: 1;
+}
+
+#itemDetails .pd-old-price {
+    font-size: 24px;
+    color: var(--gray-scale-gray-–-400);
+    text-decoration: line-through;
 }
 
 /*=========================================
@@ -4994,6 +6385,55 @@ z-index: 2;
     transform: translateY(-4px);
 }
 
+/*=========================================
+    ADD TO CART SHINE EFFECT
+=========================================*/
+
+#itemDetails .pd-cart-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Shine */
+
+#itemDetails .pd-cart-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent
+        );
+
+    transition: .6s;
+}
+
+
+/* Shine Animation */
+
+#itemDetails .pd-cart-btn:hover::before {
+    left: 100%;
+}
+
+
+/* Keep Content Above Shine */
+
+#itemDetails .pd-cart-btn iconify-icon,
+#itemDetails .pd-cart-btn span {
+    position: relative;
+    z-index: 1;
+}
 
 /*=========================================
     SECONDARY BUTTONS
