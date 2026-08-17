@@ -62,6 +62,14 @@
     </a>
 </li>
 
+<!---- Order management ---->
+<li class="menu-item {{ request()->routeIs('admin.orders') ? 'active' : '' }}">
+    <a href="{{ route('admin.orders') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-box"></i>
+        <div>Orders</div>
+    </a>
+</li>
+
 
   
   

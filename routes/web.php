@@ -4,6 +4,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Frontend\ReviewController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
@@ -15,6 +16,8 @@ Route::get('/product/{slug}', [FrontendController::class, 'singleProduct'])->nam
 Route::get('/product-search', [FrontendController::class, 'liveSearch'])->name('shop.product.live');
 
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
+
+Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 
 Auth::routes();
 
