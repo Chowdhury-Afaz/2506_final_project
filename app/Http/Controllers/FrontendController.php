@@ -13,7 +13,7 @@ class FrontendController extends Controller
     {
         $categories = Category::where('status', 1)->take(10)->latest()->get(); 
         $products = Product::latest()->take(25)->get();
-        
+        $cart = null;
         return view('frontend.index', compact('categories', 'products'));
     }
 

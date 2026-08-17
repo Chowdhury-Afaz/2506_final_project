@@ -20,6 +20,14 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'isCustomer' => CustomerCheckMiddleware::class
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            '/success',
+            '/cancel',
+            '/fail',
+            '/ipn',
+            '/pay-via-ajax',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

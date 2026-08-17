@@ -220,13 +220,13 @@
                             icon="clarity:shopping-bag-line">
                         </iconify-icon>
 
-                        <span class="badge">2</span>
+                        <span class="badge">{{ $cartQty ?? 0 }}</span>
 
                     </span>
 
                     <div class="cart-info">
                         <small>Shopping Cart</small>
-                        <strong>$57.00</strong>
+                        <strong>{{ 0 }}</strong>
                     </div>
 
                 </a>

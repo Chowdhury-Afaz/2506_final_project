@@ -159,36 +159,28 @@
 
                 </div>
 
-                <!-- QUANTITY -->
-                <div class="pd-quantity-card">
-
-                    <span class="pd-label">Quantity</span>
-
-                    <div class="pd-qty-box">
-                        <button type="button" id="minusBtn">-</button>
-                        <input type="text" id="quantity" value="1" readonly>
-                        <button type="button" id="plusBtn">+</button>
+                <form action="{{ route('product.cart', $product->id) }}" method="GET">
+                    <!-- QUANTITY -->
+                    <div class="pd-quantity-card">
+                        <span class="pd-label">Quantity</span>
+                        <div class="pd-qty-box">
+                            <button type="button" id="minusBtn">-</button>
+                            <input type="text" id="quantity" value="1" name="qty" readonly>
+                            <button type="button" id="plusBtn">+</button>
+                        </div>
                     </div>
-
-                </div>
-
-                <!-- ACTION BUTTONS -->
-                <div class="pd-actions">
-
-                        <button class="pd-cart-btn">
-
-                            <iconify-icon icon="solar:cart-large-2-bold"></iconify-icon>
-
-                            <span>Add To Cart</span>
-
+                    <!-- ACTION BUTTONS -->
+                    <div class="pd-actions">
+                            <button class="pd-cart-btn">
+                                <iconify-icon icon="solar:cart-large-2-bold"></iconify-icon>
+                                <span>Add To Cart</span>
+                            </button>
+                        <button class="pd-buy-btn">
+                            <iconify-icon icon="solar:flash-bold"></iconify-icon>
+                            Buy Now
                         </button>
-
-                    <button class="pd-buy-btn">
-                        <iconify-icon icon="solar:flash-bold"></iconify-icon>
-                        Buy Now
-                    </button>
-
-                </div>
+                    </div>
+                </form>
 
                 <div class="pd-secondary-actions">
 

@@ -1,7 +1,7 @@
 @extends('layouts.frontendLayout')
 
 @section('title', "Homepage")
-    
+
 
 @section('content')
 <section id="banner">
@@ -68,7 +68,7 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        
+
     </div>
     </div>
 </section>
@@ -156,27 +156,30 @@
 <!-- ==========================
      Category Start here
 ========================== -->
-        
-        <section id="category">
-            <div class="container">
-                <div class="heading d-flex justify-content-between align-items-center">
-                    <h2>Popular Categories</h2>
-                    <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
-                </div>
-                <div class="row">
-                    @foreach ($categories as $category)
-                    <div class="col-lg-2 col-3">
-                        <div class="categoryCard text-center">
-                            <a href="{{ route('shop') }}?category={{ $category->slug }}"><img width="60px" src="{{ getImage($category->image) }}" alt="{{ $category->name }}" class="img-fluid">
-                            <h5>{{ $category->name }}</h5>
-                            </a>
-                        </div>
-                    </div>
-                    @endforeach
-                   
+
+<section id="category">
+    <div class="container">
+        <div class="heading d-flex justify-content-between align-items-center">
+            <h2>Popular Categories</h2>
+            <a href="#">View All <span>
+                    <iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon>
+                </span></a>
+        </div>
+        <div class="row">
+            @foreach ($categories as $category)
+            <div class="col-lg-2 col-3">
+                <div class="categoryCard text-center">
+                    <a href="{{ route('shop') }}?category={{ $category->slug }}"><img width="60px"
+                            src="{{ getImage($category->image) }}" alt="{{ $category->name }}" class="img-fluid">
+                        <h5>{{ $category->name }}</h5>
+                    </a>
                 </div>
             </div>
-        </section>
+            @endforeach
+
+        </div>
+    </div>
+</section>
 
 <!-- ==========================
      Category End here
@@ -184,35 +187,37 @@
 
 <!-- ==========================
      Porduct Start Here
-========================== -->        
+========================== -->
 
-    <section id="product">
-            <div class="container">
-                <div class="heading d-flex justify-content-between align-items-center">
-                    <h2>Popular Products</h2>
-                    <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
-                </div>
-<div class="row">
+<section id="product">
+    <div class="container">
+        <div class="heading d-flex justify-content-between align-items-center">
+            <h2>Popular Products</h2>
+            <a href="#">View All <span>
+                    <iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon>
+                </span></a>
+        </div>
+        <div class="row">
 
-    @forelse($products as $product)
+            @forelse($products as $product)
 
-        <div class="col-lg-3 col-md-4 col-6">
+            <div class="col-lg-3 col-md-4 col-6">
 
-            <div class="productCard">
+                <div class="productCard">
 
-                <div class="productImg">
+                    <div class="productImg">
 
-                    <div class="hoverIcon">
-                        <a href="{{ route('shop.product', $product->slug) }}">
-                            <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
-                        </a>
+                        <div class="hoverIcon">
+                            <a href="{{ route('shop.product', $product->slug) }}">
+                                <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
+                            </a>
 
-                        <a href="{{ route('shop.product', $product->slug) }}">
-                            <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
-                        </a>
-                    </div>
+                            <a href="{{ route('shop.product', $product->slug) }}">
+                                <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
+                            </a>
+                        </div>
 
-                    @if($product->price > $product->selling_price)
+                        @if($product->price > $product->selling_price)
 
                         <div class="discount">
 
@@ -223,30 +228,27 @@
 
                         </div>
 
-                    @endif
+                        @endif
 
-                    <a href="{{ route('shop.product', $product->slug) }}">
+                        <a href="{{ route('shop.product', $product->slug) }}">
 
-                        <img
-                            src="{{ getImage($product->image) }}"
-                            alt="{{ $product->title }}"
-                            class="img-fluid">
+                            <img src="{{ getImage($product->image) }}" alt="{{ $product->title }}" class="img-fluid">
 
-                    </a>
+                        </a>
 
-                </div>
+                    </div>
 
-                <div class="productCnt">
+                    <div class="productCnt">
 
-                    <a href="{{ route('shop.product', $product->slug) }}">
-                        {{ $product->title }}
-                    </a>
+                        <a href="{{ route('shop.product', $product->slug) }}">
+                            {{ $product->title }}
+                        </a>
 
-                    <p>
+                        <p>
 
-                        {{ formatPrice($product->selling_price) }}
+                            {{ formatPrice($product->selling_price) }}
 
-                        @if($product->price > $product->selling_price)
+                            @if($product->price > $product->selling_price)
 
                             <del>
 
@@ -254,23 +256,26 @@
 
                             </del>
 
-                        @endif
+                            @endif
 
-                    </p>
+                        </p>
 
-                    <div class="rating">
+                        <div class="rating">
 
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
 
-                    </div>
-
-                    <div class="addToCart">
-
-                        <iconify-icon icon="ph:handbag"></iconify-icon>
+                        </div>
+                        @auth('customer')
+                        <a href="{{ route('product.cart', $product->id) }}">
+                            <div class="addToCart">
+                                <iconify-icon icon="ph:handbag"></iconify-icon>
+                            </div>
+                        </a>
+                        @endauth
 
                     </div>
 
@@ -278,25 +283,23 @@
 
             </div>
 
+            @empty
+
+            <div class="col-12 text-center py-5">
+                <h5>No Products Available</h5>
+            </div>
+
+            @endforelse
+
         </div>
 
-@empty
 
-    <div class="col-12 text-center py-5">
-        <h5>No Products Available</h5>
     </div>
-
-@endforelse
-
-</div>
-
-
-            </div>
-        </section>
+</section>
 
 <!-- ==========================
      Porduct End Here
-========================== -->   
+========================== -->
 
 
 <section id="cot">
@@ -335,44 +338,47 @@
 
 <section id="hotdeals">
     <div class="container">
- 
-    <div class="heading d-flex justify-content-between align-items-center">
-        <h2>Hot Deals</h2>
-        <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
-    </div>
- 
+
+        <div class="heading d-flex justify-content-between align-items-center">
+            <h2>Hot Deals</h2>
+            <a href="#">View All <span>
+                    <iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon>
+                </span></a>
+        </div>
+
         <div class="hotdealTop">
- 
+
             <!-- Featured card -->
             <div class="hotdealFeatured">
- 
+
                 <div class="hotdealBadges">
                     <span class="badge-sale">Sale 50%</span>
                     <span class="badge-best">Best Sale</span>
                 </div>
- 
+
                 <div class="hotdealImgPlaceholder">
-                    <img class="img-fluid" src="{{ asset('frontend/img/big-apple.png')}}" alt="" width="300px" >
+                    <img class="img-fluid" src="{{ asset('frontend/img/big-apple.png')}}" alt="" width="300px">
                 </div>
- 
+
                 <div class="hotdealActions">
                     <button type="button" class="iconCircle" aria-label="Wishlist">&#9825;</button>
                     <button type="button" class="addToCartBtn">Add to Cart</button>
                     <a href="#" class="iconCircle" aria-label="Quick view">&#128065;</a>
                 </div>
- 
+
                 <div class="hotdealInfo">
                     <a href="#" class="hotdealTitle">Chinese cabbage</a>
- 
+
                     <p class="hotdealPrice">
                         $12.00 <del>$24.00</del>
                     </p>
- 
+
                     <div class="rating">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star muted">★</span>
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star muted">★</span>
                         <span class="feedbackCount">(524 Feedback)</span>
                     </div>
- 
+
                     <div class="hotdealCountdown">
                         <p class="offerLabel">Hurry up! Offer ends in:</p>
                         <div class="countdownTimer" data-end="__SET_END_TIME_MS__">
@@ -383,12 +389,12 @@
                         </div>
                     </div>
                 </div>
- 
+
             </div>
- 
- 
+
+
         </div>
- 
+
     </div>
 </section>
 
@@ -402,31 +408,31 @@
 
 <section id="discount-banner">
 
-<div class="container">
-            
-<div class="sale-banner">
+    <div class="container">
 
-    <div class="sale-banner__content">
-        <span class="sale-banner__subtitle">SUMMER SALE</span>
+        <div class="sale-banner">
 
-        <h2 class="sale-banner__title">
-            <strong>37%</strong> OFF
-        </h2>
+            <div class="sale-banner__content">
+                <span class="sale-banner__subtitle">SUMMER SALE</span>
 
-        <p class="sale-banner__description">
-            Free on all your order, Free Shipping and 30 days
-            money-back guarantee
-        </p>
+                <h2 class="sale-banner__title">
+                    <strong>37%</strong> OFF
+                </h2>
 
-        <a href="#" class="sale-banner__button">
-            Shop Now
-            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-        </a>
+                <p class="sale-banner__description">
+                    Free on all your order, Free Shipping and 30 days
+                    money-back guarantee
+                </p>
+
+                <a href="#" class="sale-banner__button">
+                    Shop Now
+                    <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </a>
+            </div>
+
+        </div>
+
     </div>
-
-</div>
-    
-</div>
 </section>
 <!-- ==========================
      Discount Banner start here
@@ -435,33 +441,35 @@
 <!-- ==================================
      Feature product start here
 ================================= -->
-        <section id="product">
-            <div class="container">
-                <div class="heading d-flex justify-content-between align-items-center mt-5 mt-lg-0">
-                    <h2>Featured Categories</h2>
-                    <a href="#">View All <span><iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon></span></a>
-                </div>
-<div class="row">
+<section id="product">
+    <div class="container">
+        <div class="heading d-flex justify-content-between align-items-center mt-5 mt-lg-0">
+            <h2>Featured Categories</h2>
+            <a href="#">View All <span>
+                    <iconify-icon icon="mynaui:arrow-right" width="24" height="24"></iconify-icon>
+                </span></a>
+        </div>
+        <div class="row">
 
-    @forelse($products as $product)
+            @forelse($products as $product)
 
-        <div class="col-lg-3 col-md-4 col-6">
+            <div class="col-lg-3 col-md-4 col-6">
 
-            <div class="productCard">
+                <div class="productCard">
 
-                <div class="productImg">
+                    <div class="productImg">
 
-                    <div class="hoverIcon">
-                        <a href="{{ route('shop.product', $product->slug) }}">
-                            <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
-                        </a>
+                        <div class="hoverIcon">
+                            <a href="{{ route('shop.product', $product->slug) }}">
+                                <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
+                            </a>
 
-                        <a href="{{ route('shop.product', $product->slug) }}">
-                            <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
-                        </a>
-                    </div>
+                            <a href="{{ route('shop.product', $product->slug) }}">
+                                <iconify-icon icon="solar:eye-outline" width="24" height="24"></iconify-icon>
+                            </a>
+                        </div>
 
-                    @if($product->price > $product->selling_price)
+                        @if($product->price > $product->selling_price)
 
                         <div class="discount">
 
@@ -472,30 +480,27 @@
 
                         </div>
 
-                    @endif
+                        @endif
 
-                    <a href="{{ route('shop.product', $product->slug) }}">
+                        <a href="{{ route('shop.product', $product->slug) }}">
 
-                        <img
-                            src="{{ getImage($product->image) }}"
-                            alt="{{ $product->title }}"
-                            class="img-fluid">
+                            <img src="{{ getImage($product->image) }}" alt="{{ $product->title }}" class="img-fluid">
 
-                    </a>
+                        </a>
 
-                </div>
+                    </div>
 
-                <div class="productCnt">
+                    <div class="productCnt">
 
-                    <a href="{{ route('shop.product', $product->slug) }}">
-                        {{ $product->title }}
-                    </a>
+                        <a href="{{ route('shop.product', $product->slug) }}">
+                            {{ $product->title }}
+                        </a>
 
-                    <p>
+                        <p>
 
-                        {{ formatPrice($product->selling_price) }}
+                            {{ formatPrice($product->selling_price) }}
 
-                        @if($product->price > $product->selling_price)
+                            @if($product->price > $product->selling_price)
 
                             <del>
 
@@ -503,23 +508,25 @@
 
                             </del>
 
-                        @endif
+                            @endif
 
-                    </p>
+                        </p>
 
-                    <div class="rating">
+                        <div class="rating">
 
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon icon="ic:round-star"></iconify-icon>
-                        <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon icon="ic:round-star"></iconify-icon>
+                            <iconify-icon class="mutedStar" icon="ic:round-star"></iconify-icon>
 
-                    </div>
+                        </div>
 
-                    <div class="addToCart">
+                        <div class="addToCart">
 
-                        <iconify-icon icon="ph:handbag"></iconify-icon>
+                            <iconify-icon icon="ph:handbag"></iconify-icon>
+
+                        </div>
 
                     </div>
 
@@ -527,20 +534,18 @@
 
             </div>
 
+            @empty
+
+            <div class="col-12 text-center py-5">
+                <h5>No Products Available</h5>
+            </div>
+
+            @endforelse
+
         </div>
 
-@empty
-
-    <div class="col-12 text-center py-5">
-        <h5>No Products Available</h5>
     </div>
-
-@endforelse
-
-</div>
-
-            </div>
-        </section>
+</section>
 
 <!-- ==================================
      Feature product End here
@@ -568,11 +573,7 @@
                         </div>
 
                         <a href="#">
-                            <img
-                                src="{{ asset('frontend/img/news-malta.png') }}"
-                                class="img-fluid"
-                                alt=""
-                            >
+                            <img src="{{ asset('frontend/img/news-malta.png') }}" class="img-fluid" alt="">
                         </a>
                     </div>
 
@@ -624,11 +625,7 @@
                         </div>
 
                         <a href="#">
-                            <img
-                                src="{{ asset('frontend/img/news-egg.png') }}"
-                                class="img-fluid"
-                                alt=""
-                            >
+                            <img src="{{ asset('frontend/img/news-egg.png') }}" class="img-fluid" alt="">
                         </a>
                     </div>
 
@@ -679,11 +676,7 @@
                         </div>
 
                         <a href="#">
-                            <img
-                                src="{{ asset('frontend/img/news-salad.png') }}"
-                                class="img-fluid"
-                                alt=""
-                            >
+                            <img src="{{ asset('frontend/img/news-salad.png') }}" class="img-fluid" alt="">
                         </a>
                     </div>
 
@@ -742,17 +735,9 @@
             <h2>Client Testimonial</h2>
 
             <div class="arrowIcon">
-                <iconify-icon
-                    icon="si:arrow-left-line"
-                    width="24"
-                    height="24"
-                ></iconify-icon>
+                <iconify-icon icon="si:arrow-left-line" width="24" height="24"></iconify-icon>
 
-                <iconify-icon
-                    icon="si:arrow-right-line"
-                    width="24"
-                    height="24"
-                ></iconify-icon>
+                <iconify-icon icon="si:arrow-right-line" width="24" height="24"></iconify-icon>
             </div>
         </div>
 
@@ -765,11 +750,7 @@
                 <div class="testimonialCard">
 
                     <div class="testimonialCnt">
-                        <iconify-icon
-                            icon="mdi:format-quote-close"
-                            width="40"
-                            height="40"
-                        ></iconify-icon>
+                        <iconify-icon icon="mdi:format-quote-close" width="40" height="40"></iconify-icon>
 
                         <p>
                             Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
@@ -783,11 +764,7 @@
                         <div class="personInfo d-flex align-items-center">
 
                             <div class="personImg">
-                                <img
-                                    src="{{ asset('frontend/img/robert.png') }}"
-                                    class="img-fluid"
-                                    alt="Robert Fox"
-                                >
+                                <img src="{{ asset('frontend/img/robert.png') }}" class="img-fluid" alt="Robert Fox">
                             </div>
 
                             <div class="personName">
@@ -816,11 +793,7 @@
                 <div class="testimonialCard">
 
                     <div class="testimonialCnt">
-                        <iconify-icon
-                            icon="mdi:format-quote-close"
-                            width="40"
-                            height="40"
-                        ></iconify-icon>
+                        <iconify-icon icon="mdi:format-quote-close" width="40" height="40"></iconify-icon>
 
                         <p>
                             Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
@@ -834,11 +807,8 @@
                         <div class="personInfo d-flex align-items-center">
 
                             <div class="personImg">
-                                <img
-                                    src="{{ asset('frontend/img/dianne.png') }}"
-                                    class="img-fluid"
-                                    alt="Dianne Russell"
-                                >
+                                <img src="{{ asset('frontend/img/dianne.png') }}" class="img-fluid"
+                                    alt="Dianne Russell">
                             </div>
 
                             <div class="personName">
@@ -867,11 +837,7 @@
                 <div class="testimonialCard">
 
                     <div class="testimonialCnt">
-                        <iconify-icon
-                            icon="mdi:format-quote-close"
-                            width="40"
-                            height="40"
-                        ></iconify-icon>
+                        <iconify-icon icon="mdi:format-quote-close" width="40" height="40"></iconify-icon>
 
                         <p>
                             Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
@@ -885,11 +851,7 @@
                         <div class="personInfo d-flex align-items-center">
 
                             <div class="personImg">
-                                <img
-                                    src="{{ asset('frontend/img/eleanor.png') }}"
-                                    class="img-fluid"
-                                    alt="Eleanor Pena"
-                                >
+                                <img src="{{ asset('frontend/img/eleanor.png') }}" class="img-fluid" alt="Eleanor Pena">
                             </div>
 
                             <div class="personName">
@@ -931,56 +893,32 @@
 
             <!-- Advertisement Logo 01 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/step.png') }}"
-                    class="img-fluid"
-                    alt="Steps"
-                >
+                <img src="{{ asset('frontend/img/step.png') }}" class="img-fluid" alt="Steps">
             </div>
 
             <!-- Advertisement Logo 02 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/mango-company.png') }}"
-                    class="img-fluid"
-                    alt="Mango"
-                >
+                <img src="{{ asset('frontend/img/mango-company.png') }}" class="img-fluid" alt="Mango">
             </div>
 
             <!-- Advertisement Logo 03 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/food.png') }}"
-                    class="img-fluid"
-                    alt="Food"
-                >
+                <img src="{{ asset('frontend/img/food.png') }}" class="img-fluid" alt="Food">
             </div>
 
             <!-- Advertisement Logo 04 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/food-2.png') }}"
-                    class="img-fluid"
-                    alt="Food"
-                >
+                <img src="{{ asset('frontend/img/food-2.png') }}" class="img-fluid" alt="Food">
             </div>
 
             <!-- Advertisement Logo 05 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/bookoff.png') }}"
-                    class="img-fluid"
-                    alt="BookOff"
-                >
+                <img src="{{ asset('frontend/img/bookoff.png') }}" class="img-fluid" alt="BookOff">
             </div>
 
             <!-- Advertisement Logo 06 -->
             <div class="col-lg-2 col-2">
-                <img
-                    src="{{ asset('frontend/img/g-seris.png') }}"
-                    class="img-fluid"
-                    alt="G-Series"
-                >
+                <img src="{{ asset('frontend/img/g-seris.png') }}" class="img-fluid" alt="G-Series">
             </div>
 
         </div>
@@ -1011,11 +949,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-tomatto.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-tomatto.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1028,11 +962,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-leaf.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-leaf.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1045,11 +975,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-waterleaf.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-waterleaf.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1062,11 +988,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-salad.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-salad.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1079,11 +1001,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-lotleaf.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-lotleaf.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1096,11 +1014,7 @@
                 </div>
 
                 <a href="#">
-                    <img
-                        src="{{ asset('frontend/img/instra-malta.png') }}"
-                        class="img-fluid"
-                        alt="Instagram Post"
-                    >
+                    <img src="{{ asset('frontend/img/instra-malta.png') }}" class="img-fluid" alt="Instagram Post">
                 </a>
             </div>
 
@@ -1114,9 +1028,9 @@
 
 
 
- 
+
 <script>
-document.querySelectorAll('.countdownTimer').forEach(function (timer) {
+    document.querySelectorAll('.countdownTimer').forEach(function (timer) {
     // Default: 1 day 23h 34m 57s from page load, since there's no backend end-time yet.
     // Once the backend is ready, set data-end to a real timestamp (ms) and this will pick it up automatically.
     var endAttr = timer.dataset.end;
