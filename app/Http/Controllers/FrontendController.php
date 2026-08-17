@@ -83,5 +83,9 @@ class FrontendController extends Controller
             ]);
         }
     }
+    function checkout()
+    {
+        return view('frontend.checkout');
+    }
 
 }
