@@ -16,6 +16,8 @@ Route::get('/product-search', [FrontendController::class, 'liveSearch'])->name('
 
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
 
+Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkoutg');
+
 Auth::routes();
 
 // Product Edit
