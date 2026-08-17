@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
@@ -19,6 +20,8 @@ Route::get('/product-search', [FrontendController::class, 'liveSearch'])->name('
 Route::get('/cart/{id}', [CartController::class, 'addToCart'])->name('product.cart');
 
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
+
+Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 
 Auth::routes();
 

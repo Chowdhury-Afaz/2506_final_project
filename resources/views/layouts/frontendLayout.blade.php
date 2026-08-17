@@ -212,7 +212,7 @@
 
                 <div class="divider"></div>
 
-                <a href="#" class="action-item cart">
+                <a href="#" class="action-item cart" id="cartOpenBtn">
 
                     <span class="cart-icon">
 
@@ -425,6 +425,113 @@
                 </div>
             </div>
         </div>
+
+<!-- ==========================
+     Cart Sidebar
+========================== -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-sidebar-header">
+        <div>
+            <h3>Shopping Cart</h3>
+            <span>2 Items</span>
+        </div>
+
+        <button type="button" class="cart-close" id="cartCloseBtn">
+            <iconify-icon icon="mdi:close"></iconify-icon>
+        </button>
+    </div>
+
+    <div class="cart-sidebar-body">
+
+        <!-- Cart Item -->
+        <div class="cart-sidebar-item">
+
+            <div class="cart-item-image">
+                <img src="{{ asset('frontend/img/Apple.png') }}" alt="Green Apple">
+            </div>
+
+            <div class="cart-item-content">
+
+                <h4>Green Apple</h4>
+
+                <span class="cart-item-price">$15.00</span>
+
+                <div class="cart-item-bottom">
+
+                        <div class="cart-quantity">
+                            <button type="button" class="quantity-minus">−</button>
+                            <span class="quantity-value">1</span>
+                            <button type="button" class="quantity-plus">+</button>
+                        </div>
+
+                    <button type="button" class="cart-remove">
+                        <iconify-icon icon="mdi:trash-can-outline"></iconify-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Cart Item -->
+        <div class="cart-sidebar-item">
+
+            <div class="cart-item-image">
+                <img src="{{ asset('frontend/img/Malta.png') }}" alt="Indian Malta">
+            </div>
+
+            <div class="cart-item-content">
+
+                <h4>Indian Malta</h4>
+
+                <span class="cart-item-price">$15.00</span>
+
+                <div class="cart-item-bottom">
+
+                    <div class="cart-quantity">
+                        <button type="button" class="quantity-minus">−</button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="quantity-plus">+</button>
+                    </div>
+
+                    <button type="button" class="cart-remove">
+                        <iconify-icon icon="mdi:trash-can-outline"></iconify-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-sidebar-footer">
+
+        <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <strong>$30.00</strong>
+        </div>
+
+        <a href="{{ route('checkout') }}" class="cart-checkout-btn">
+            Proceed to Checkout
+        </a>
+
+        <button type="button" class="continue-shopping" id="continueShoppingBtn">
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
     </header>
 
     {{-- Main Content --}}
@@ -590,6 +697,7 @@
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/jQuery.countdown-master/jQuery.countdown-master/dist/jquery.countdown.min.js') }}">
     </script>
+    
     <script>
         $('#searchInput').focus(function(){
             $('.searchResult').fadeIn()
@@ -638,6 +746,56 @@
 
         })
 
+        // Cart 
+
+        $(document).ready(function () {
+
+    $('#cartOpenBtn').on('click', function (e) {
+        e.preventDefault();
+
+        $('#cartSidebar').addClass('active');
+        $('#cartOverlay').addClass('active');
+
+        $('body').css('overflow', 'hidden');
+    });
+
+
+    $('#cartCloseBtn, #cartOverlay, #continueShoppingBtn').on('click', function () {
+
+        $('#cartSidebar').removeClass('active');
+        $('#cartOverlay').removeClass('active');
+
+        $('body').css('overflow', '');
+    });
+
+});
+
+//cart quantity count 
+
+$(document).on('click', '.quantity-plus', function () {
+
+    let quantityElement = $(this)
+        .siblings('.quantity-value');
+
+    let quantity = parseInt(quantityElement.text());
+
+    quantityElement.text(quantity + 1);
+
+});
+
+
+$(document).on('click', '.quantity-minus', function () {
+
+    let quantityElement = $(this)
+        .siblings('.quantity-value');
+
+    let quantity = parseInt(quantityElement.text());
+
+    if (quantity > 1) {
+        quantityElement.text(quantity - 1);
+    }
+
+});
         
     </script>
     <script src="{{ asset('frontend/js/app.js') }}"></script>

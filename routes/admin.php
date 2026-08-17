@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Admin\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,5 +45,22 @@ Route::prefix('categories')
         Route::get('/{id}/approve', 'approve')->name('approve');
 
         Route::get('/{id}/delete', 'destroy')->name('delete');
+
+    });
+
+Route::prefix('/orders')
+    ->controller(OrderController::class)
+    ->group(function () {
+
+        Route::get('/', 'index')->name('orders');
+
+        Route::get('/show', 'show')
+        ->name('orders.show');
+
+        Route::put('/{id}/status', 'updateStatus')
+            ->name('orders.status.update');
+
+        Route::delete('/{id}', 'destroy')
+            ->name('orders.destroy');
 
     });

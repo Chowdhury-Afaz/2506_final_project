@@ -36,6 +36,8 @@
         class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/demo.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/category.css') }}" />
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/category.css') }}" />
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/admin-orders.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
     <script src="{{ asset('backend/assets/vendor/js/helpers.js') }}"></script>

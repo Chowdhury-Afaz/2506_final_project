@@ -84,4 +84,10 @@ class FrontendController extends Controller
         }
     }
 
+    //Chechout
+    public function checkout()
+{
+    return view('frontend.checkout');
+}
+
 }
