@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Cart Data Fetch
         view()->composer('layouts.frontendLayout', function ($view) {
-            $cartQty =Cart::select('qty')->sum('qty');
+            $cartQty =Cart::where('customer_id', auth('customer')?->id() ?? 0)->select('qty')->sum('qty');
             
             $view->with('cartQty', $cartQty);
         });

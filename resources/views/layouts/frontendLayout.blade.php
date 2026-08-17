@@ -799,6 +799,8 @@ $(document).on('click', '.quantity-minus', function () {
         
     </script>
     <script src="{{ asset('frontend/js/app.js') }}"></script>
+
+    @stack('script')
 </body>
 
 </html>
