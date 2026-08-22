@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\OrderController;
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
 
@@ -46,6 +47,7 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
-
+Route::post('/checkout/store', [OrderController::class, 'store'])->name('checkout.store');
+Route::get('/order-success', [OrderController::class, 'orderSuccess'])->name('order.success');
 
 require __DIR__ . '/User.php';
